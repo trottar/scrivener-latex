@@ -1,0 +1,250 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{report}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+Title: PhD Thesis Author: R.L. Trotta
+
+\markedchapter{Introduction}{Introduction}\label{Chapter-1}
+
+\hypertarget{Section-1.1}{%
+\section{Historical Context}\label{Section-1.1}}
+
+\hypertarget{subsection}{%
+\subsection{Subsection}\label{subsection}}
+
+testindex \index{testindex} \cite{Zongkerchicken2005}
+
+\hypertarget{subsubsection}{%
+\subsubsection{Subsubsection}\label{subsubsection}}
+
+\hypertarget{Section-1.2}{%
+\section{Accessing Hadron Structure}\label{Section-1.2}}
+
+\hypertarget{subsection-1}{%
+\subsection{Subsection}\label{subsection-1}}
+
+\hypertarget{subsubsection-1}{%
+\subsubsection{Subsubsection}\label{subsubsection-1}}
+
+\hypertarget{Section-1.3}{%
+\section{Global Picture}\label{Section-1.3}}
+
+\hypertarget{Section-1.4}{%
+\section{Experiment Overview}\label{Section-1.4}}
+
+\markedchapter{Theory}{Theory}\label{Chapter-2}
+
+\hypertarget{Section-2.1}{%
+\section{Quantum Chromodynamics}\label{Section-2.1}}
+
+\hypertarget{Section-2.2}{%
+\section{Generalized Parton Distributions and Transverse Momentum
+Distributions}\label{Section-2.2}}
+
+\hypertarget{Section-2.3}{%
+\section{Parton Distribution Functions and Form
+Factors}\label{Section-2.3}}
+
+\markedchapter{Phenomenology}{Phenomenology}\label{Chapter-3}
+
+\hypertarget{Section-3.1}{%
+\section{Sullivan Process}\label{Section-3.1}}
+
+\hypertarget{Section-3.2}{%
+\section{Off-Shell Considerations}\label{Section-3.2}}
+
+\hypertarget{Section-3.3}{%
+\section{Model Descriptions}\label{Section-3.3}}
+
+\markedchapter{Experimental Validation}{Experimental Validation}\label{Chapter-4}
+
+\hypertarget{Section-4.1}{%
+\section{Kinematic Definitions}\label{Section-4.1}}
+
+\hypertarget{Section-4.2}{%
+\section{Cross Sections}\label{Section-4.2}}
+
+\markedchapter{Results and Discussion}{Measurements at Jlab Hall C}\label{Chapter-5}
+
+\hypertarget{Section-5.1}{%
+\section{Overview}\label{Section-5.1}}
+
+\hypertarget{Section-5.2}{%
+\section{Accelerator}\label{Section-5.2}}
+
+\hypertarget{Section-5.3}{%
+\section{Beam Line}\label{Section-5.3}}
+
+\hypertarget{Section-5.4}{%
+\section{Target}\label{Section-5.4}}
+
+\hypertarget{Section-5.5}{%
+\section{Spectrometers}\label{Section-5.5}}
+
+\hypertarget{Section-5.6}{%
+\section{Detectors}\label{Section-5.6}}
+
+\hypertarget{Section-5.7}{%
+\section{Trigger Logic and Data Acquisition}\label{Section-5.7}}
+
+\markedchapter{Data Analysis}{Data Analysis}\label{Chapter-6}
+
+\hypertarget{Section-6.1}{%
+\section{Python Analysis Framework}\label{Section-6.1}}
+
+\hypertarget{Section-6.2}{%
+\section{Event Reconstruction}\label{Section-6.2}}
+
+\hypertarget{Section-6.3}{%
+\section{Particle Identification}\label{Section-6.3}}
+
+\hypertarget{Section-6.4}{%
+\section{Efficiency Corrections}\label{Section-6.4}}
+
+\hypertarget{Section-6.5}{%
+\section{Experimental Offsets}\label{Section-6.5}}
+
+\markedchapter{Monte Carlo Simulations}{Monte Carlo Simulations}\label{Chapter-7}
+
+\hypertarget{Section-7.1}{%
+\section{Overview}\label{Section-7.1}}
+
+\hypertarget{Section-7.2}{%
+\section{Event Generation}\label{Section-7.2}}
+
+\hypertarget{Section-7.3}{%
+\section{Spectrometer Models}\label{Section-7.3}}
+
+\hypertarget{Section-7.4}{%
+\section{Material Interactions}\label{Section-7.4}}
+
+\hypertarget{Section-7.5}{%
+\section{Kaon Decay}\label{Section-7.5}}
+
+\hypertarget{Section-7.6}{%
+\section{Radiative Corrections}\label{Section-7.6}}
+
+\hypertarget{Section-7.7}{%
+\section{Elastic Scattering}\label{Section-7.7}}
+
+\markedchapter{Experimental Cross Section Overview}{Experimental Cross Section Overview}\label{Chapter-8}
+
+\hypertarget{Section-8.1}{%
+\section{Monte Carlo Equivalent Yield}\label{Section-8.1}}
+
+\hypertarget{Section-8.2}{%
+\section{Cross Section Determination}\label{Section-8.2}}
+
+\hypertarget{Section-8.3}{%
+\section{Model Cross Section}\label{Section-8.3}}
+
+\hypertarget{Section-8.4}{%
+\section{Model and Data Comparison}\label{Section-8.4}}
+
+\hypertarget{Section-8.5}{%
+\section{Error Analysis}\label{Section-8.5}}
+
+\markedchapter{KaonLT Results and Discussion}{KaonLT Results and Discussion}\label{Chapter-9}
+
+\hypertarget{Section-9.1}{%
+\section{Overview}\label{Section-9.1}}
+
+\hypertarget{Section-9.2}{%
+\section{Experimental Cross Sections}\label{Section-9.2}}
+
+\hypertarget{Section-9.3}{%
+\section{Unseparated Cross Sections}\label{Section-9.3}}
+
+\hypertarget{Section-9.4}{%
+\section{Separated Cross Sections}\label{Section-9.4}}
+
+\hypertarget{Section-9.5}{%
+\section{\texorpdfstring{Extraction of \(K^{+}\) Form
+Factor}{Extraction of K\^{}\{+\} Form Factor}}\label{Section-9.5}}
+
+\hypertarget{Section-9.6}{%
+\section{Discussion}\label{Section-9.6}}
+
+\markedchapter{Future Measurements at EIC}{Future Measurements at EIC}\label{Chapter-10}
+
+\hypertarget{Section-10.1}{%
+\section{Overview}\label{Section-10.1}}
+
+\hypertarget{Section-10.2}{%
+\section{Collider}\label{Section-10.2}}
+
+\hypertarget{Section-10.3}{%
+\section{Far Forward}\label{Section-10.3}}
+
+\markedchapter{EIC Far Forward Detector Optimization}{EIC Far Forward Detector Optimization}\label{Chapter-11}
+
+\hypertarget{Section-11.1}{%
+\section{Overview}\label{Section-11.1}}
+
+\hypertarget{Section-11.2}{%
+\section{Meson Structure Function Projections}\label{Section-11.2}}
+
+\hypertarget{Section-11.3}{%
+\section{Detector Simulations}\label{Section-11.3}}
+
+\hypertarget{Section-11.4}{%
+\section{Discussion and Outlook}\label{Section-11.4}}
+
+\markedchapter{Conclusion}{Conclusion}\label{Chapter-12}
+
+\hypertarget{Section-12.1}{%
+\section{Jlab, EIC, and Beyond}\label{Section-12.1}}
+
+\end{document}

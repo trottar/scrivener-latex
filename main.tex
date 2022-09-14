@@ -1,0 +1,146 @@
+\documentclass[
+12pt,
+natbib,
+a4paper, 
+oneside, % Uncomment this for digital (see styles)
+%twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
+%openright, % Uncomment this for printing. Right side shifted. (see styles)
+ ]{book}
+% ]{scrbook}
+% ]{report}
+
+% Ragged bottom prevents variable spacing text and floats (done usually to keep last lines in both pages same in book format.)
+\raggedbottom
+
+% Fonts
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{parskip}
+
+% Add bibliography to TOC
+\usepackage[nottoc]{tocbibind}
+
+% Graphics and other packages for text and figures
+\usepackage{graphicx}
+\graphicspath{ {figures/cropped/} }
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem, siunitx, mathtools, amsfonts}
+\usepackage[font=small, labelfont=bf, singlelinecheck=false, width=.95\textwidth, labelsep=colon]{caption}
+\usepackage[rightFloats, CaptionBefore]{styles/fltpage}
+\newtagform{brackets}{[}{]}
+\usetagform{brackets}
+\newcommand{\figuretitle}{}
+\DeclareCaptionFormat{myformat}{#1 #2 \textbf{\figuretitle} \\ #3}
+\captionsetup{format=myformat}
+\captionsetup[FPfigure]{format=myformat}
+\newenvironment{Mfigure}[1]
+	{\renewcommand{\figuretitle}{#1}
+	\begin{figure}[htbp]}
+	{\end{figure}}
+\newenvironment{MFPfigure}[1]
+	{\renewcommand{\figuretitle}{#1}
+	\begin{FPfigure}}
+	{\end{FPfigure}}
+\newenvironment{Mtable}[1]
+	{\renewcommand{\figuretitle}{#1}
+	\begin{table}[htbp]}
+	{\end{table}}	
+\usepackage{subcaption}
+
+% Packages to make the thesis beautiful.
+\usepackage{standalone} % load only in the main file
+\usepackage{fancyhdr} %For header
+\usepackage{emptypage} % Removes header from empty pages
+\usepackage{longtable} % Multipage Tables
+\usepackage{imakeidx} %To make index page
+\usepackage[totoc]{idxlayout} %To get index into TOC
+\usepackage[acronym,toc]{glossaries} %Acronyms, TOC option will add it to TOC
+\usepackage[titletoc,title]{appendix} %For Appendix
+%\raggedbottom
+%\setlength{\parskip}{1em plus .1em minus 1.em}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Short chapter and section headings
+\newcommand{\markedchapter}[2]{\chapter[#2]{#2%
+\chaptermark{#1}}
+\chaptermark{#1}}
+\newcommand{\markedsection}[2]{\section[#2]{#2%
+\sectionmark{#1}}
+\sectionmark{#1}}
+
+% Need to remove section numbers of appendix from TOC
+\usepackage{etoolbox}
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
+% reinstate the correct level for list of tables and figures
+
+\appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
+
+%Create new style to add header on each page
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+% \newcommand{\mymark}{\chaptername\ \thechapter.\ \ \leftmark}
+\makeatletter
+\fancyhead[RO]{\if@mainmatter \slshape\nouppercase{\leftmark} \else \slshape\nouppercase{\leftmark} \fi}
+\fancyhead[LE]{\if@mainmatter \slshape\nouppercase{\rightmark} \else \slshape\nouppercase{\leftmark} \fi}
+\makeatother
+\cfoot{\fancyplain{}{\thepage}}
+\setlength{\headheight}{15pt}
+
+% Footnote related command
+\newcommand\pubnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
+% Author, title information
+\author{Richard L. Trotta}
+\usepackage[
+pdfauthor={Richard L. Trotta},
+pdftitle ={Determination of Pion and Kaon Structure Using the Sullivan Process at Moderate to Large Fractional Momentum},
+pdfsubject={Physics},
+pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and hyperlinks
+
+% Comment following Hypersetup during printing
+\hypersetup{ 
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = BurntOrange, %Colour of internal links
+	citecolor   = teal %Colour of citations
+}
+
+\makeindex %Makes index file.
+
+\begin{document}
+
+	\frontmatter
+	\input{front_matter/title_page}
+        \input{front_matter/abstract}
+	\input{front_matter/certificate}
+	\input{front_matter/copyrights}
+	\input{front_matter/acknowledgment}
+
+	\printglossary[type=\acronymtype,title={Abbreviations}, style=alttree]
+        \tableofcontents
+	\addcontentsline{toc}{chapter}{\listfigurename}
+	\listoffigures
+	\addcontentsline{toc}{chapter}{\listtablename}
+	\listoftables
+
+	\mainmatter
+        \input{temp} %% This line is required to properly autogenerate tex files.
+        
+	\input{helpers/bib} %Include bibliography
+
+        % acronymns etc
+	% \input{helpers/acronym} %Include add acronyms
+        
+        % Add Index Chapter at end
+        \printindex
+        
+\end{document}

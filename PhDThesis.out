@@ -1,0 +1,72 @@
+\BOOKMARK [0][-]{chapter*.2}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{Certificate}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{Copyrights}{}% 3
+\BOOKMARK [0][-]{chapter*.5}{Acknowledgments}{}% 4
+\BOOKMARK [0][-]{chapter*.6}{List of Figures}{}% 5
+\BOOKMARK [0][-]{chapter*.7}{List of Figures}{}% 6
+\BOOKMARK [0][-]{chapter*.7}{List of Tables}{}% 7
+\BOOKMARK [0][-]{chapter*.8}{List of Tables}{}% 8
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 9
+\BOOKMARK [1][-]{section.1.1}{Historical Context}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.2}{Accessing Hadron Structure}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.3}{Global Picture}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.4}{Experiment Overview}{chapter.1}% 13
+\BOOKMARK [0][-]{chapter.2}{Theory}{}% 14
+\BOOKMARK [1][-]{section.2.1}{Quantum Chromodynamics}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.2}{Generalized Parton Distributions and Transverse Momentum Distributions}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Parton Distribution Functions and Form Factors}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Phenomenology}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Sullivan Process}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Off-Shell Considerations}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Model Descriptions}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Experimental Validation}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Kinematic Definitions}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Cross Sections}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{Measurements at Jlab Hall C}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Overview}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{Accelerator}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{Beam Line}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.4}{Target}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.5}{Spectrometers}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.6}{Detectors}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.7}{Trigger Logic and Data Acquisition}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{Data Analysis}{}% 33
+\BOOKMARK [1][-]{section.6.1}{Python Analysis Framework}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.2}{Event Reconstruction}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.3}{Particle Identification}{chapter.6}% 36
+\BOOKMARK [1][-]{section.6.4}{Efficiency Corrections}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.5}{Experimental Offsets}{chapter.6}% 38
+\BOOKMARK [0][-]{chapter.7}{Monte Carlo Simulations}{}% 39
+\BOOKMARK [1][-]{section.7.1}{Overview}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.2}{Event Generation}{chapter.7}% 41
+\BOOKMARK [1][-]{section.7.3}{Spectrometer Models}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.4}{Material Interactions}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.5}{Kaon Decay}{chapter.7}% 44
+\BOOKMARK [1][-]{section.7.6}{Radiative Corrections}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.7}{Elastic Scattering}{chapter.7}% 46
+\BOOKMARK [0][-]{chapter.8}{Experimental Cross Section Overview}{}% 47
+\BOOKMARK [1][-]{section.8.1}{Monte Carlo Equivalent Yield}{chapter.8}% 48
+\BOOKMARK [1][-]{section.8.2}{Cross Section Determination}{chapter.8}% 49
+\BOOKMARK [1][-]{section.8.3}{Model Cross Section}{chapter.8}% 50
+\BOOKMARK [1][-]{section.8.4}{Model and Data Comparison}{chapter.8}% 51
+\BOOKMARK [1][-]{section.8.5}{Error Analysis}{chapter.8}% 52
+\BOOKMARK [0][-]{chapter.9}{KaonLT Results and Discussion}{}% 53
+\BOOKMARK [1][-]{section.9.1}{Overview}{chapter.9}% 54
+\BOOKMARK [1][-]{section.9.2}{Experimental Cross Sections}{chapter.9}% 55
+\BOOKMARK [1][-]{section.9.3}{Unseparated Cross Sections}{chapter.9}% 56
+\BOOKMARK [1][-]{section.9.4}{Separated Cross Sections}{chapter.9}% 57
+\BOOKMARK [1][-]{section.9.5}{Extraction of K\136\173+\175 Form Factor}{chapter.9}% 58
+\BOOKMARK [1][-]{section.9.6}{Discussion}{chapter.9}% 59
+\BOOKMARK [0][-]{chapter.10}{Future Measurements at EIC}{}% 60
+\BOOKMARK [1][-]{section.10.1}{Overview}{chapter.10}% 61
+\BOOKMARK [1][-]{section.10.2}{Collider}{chapter.10}% 62
+\BOOKMARK [1][-]{section.10.3}{Far Forward}{chapter.10}% 63
+\BOOKMARK [0][-]{chapter.11}{EIC Far Forward Detector Optimization}{}% 64
+\BOOKMARK [1][-]{section.11.1}{Overview}{chapter.11}% 65
+\BOOKMARK [1][-]{section.11.2}{Meson Structure Function Projections}{chapter.11}% 66
+\BOOKMARK [1][-]{section.11.3}{Detector Simulations}{chapter.11}% 67
+\BOOKMARK [1][-]{section.11.4}{Discussion and Outlook}{chapter.11}% 68
+\BOOKMARK [0][-]{chapter.12}{Conclusion}{}% 69
+\BOOKMARK [1][-]{section.12.1}{Jlab, EIC, and Beyond}{chapter.12}% 70
+\BOOKMARK [0][-]{chapter*.11}{Bibliography}{}% 71
+\BOOKMARK [0][-]{chapter*.12}{Index}{}% 72
