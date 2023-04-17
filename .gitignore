@@ -1,3 +1,19 @@
+# Latex
+PhDThesis.tex
+*.aux
+*.pdf
+*.out
+*.bbl
+*.blg
+*.docx
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.md
+*.toc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
