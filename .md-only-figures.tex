@@ -12,9 +12,6 @@ oneside, % Uncomment this for digital (see styles)
 % Ragged bottom prevents variable spacing text and floats (done usually to keep last lines in both pages same in book format.)
 \raggedbottom
 
-% Some latex symbols (e.g. degree)
-\usepackage{gensymb}
-
 % Fonts
 \usepackage[english]{babel}
 \usepackage{fontspec}
@@ -40,20 +37,17 @@ oneside, % Uncomment this for digital (see styles)
 \graphicspath{ {figures/cropped/} }
 \usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem, siunitx, mathtools, amsfonts}
-% \usepackage[font=small, labelfont=bf, singlelinecheck=false, width=.95\textwidth, labelsep=colon]{caption} % Original version, singlelinecheck=false offsets to left
-\usepackage[font=small, labelfont=bf, width=.95\textwidth, labelsep=colon]{caption} 
+\usepackage[font=small, labelfont=bf, singlelinecheck=false, width=.95\textwidth, labelsep=colon]{caption}
 \usepackage[rightFloats, CaptionBefore]{styles/fltpage}
 \newtagform{brackets}{[}{]}
 \usetagform{brackets}
 \newcommand{\figuretitle}{}
-% \DeclareCaptionFormat{myformat}{#1 #2 \textbf{\figuretitle} \\ #3} % Original version, // goes to next line and removed \textbf{\figuretitle} which is the figure description
-\DeclareCaptionFormat{myformat}{#1 #2 #3}
+\DeclareCaptionFormat{myformat}{#1 #2 \textbf{\figuretitle} \\ #3}
 \captionsetup{format=myformat}
 \captionsetup[FPfigure]{format=myformat}
 \newenvironment{Mfigure}[1]
 	{\renewcommand{\figuretitle}{#1}
-          \begin{figure}[htbp]
-          \centering} % Added for centering of figures
+	\begin{figure}[htbp]}
 	{\end{figure}}
 \newenvironment{MFPfigure}[1]
 	{\renewcommand{\figuretitle}{#1}
@@ -76,10 +70,6 @@ oneside, % Uncomment this for digital (see styles)
 \usepackage[titletoc,title]{appendix} %For Appendix
 %\raggedbottom
 %\setlength{\parskip}{1em plus .1em minus 1.em}
-
-% Allow multi-line footnotes
-\usepackage{bigfoot}
-\setlength{\footnotesep}{0.5cm} % Adjust the value as needed
 
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -138,33 +128,7 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
 \makeindex %Makes index file.
 
 \begin{document}
-
-	\frontmatter
-	\input{front_matter/title_page}
-        \doublespacing
-        \input{front_matter/abstract}
-        \begin{singlespace}
-          \input{front_matter/certificate}
-          \input{front_matter/copyrights}
-        \end{singlespace}
-	\input{front_matter/acknowledgment}
-
-	\printglossary[type=\acronymtype,title={Abbreviations}, style=alttree]
-        \begin{singlespace}
-          \tableofcontents
-          \listoffigures
-          \listoftables
-        \end{singlespace}
-
-	\mainmatter        
-        \input{temp} %% This line is required to properly autogenerate tex files.
-        
-	\input{helpers/bib} %Include bibliography       
-        
-        % acronymns etc
-	% \input{helpers/acronym} %Include add acronyms
-        
-        % Add Index Chapter at end
-        \printindex
-        
+\graphicspath{ {figures/compressed/} } 
+\clearpage\mbox{}\clearpage\input{figures/all-figures.tex}
 \end{document}
+

@@ -1,6 +1,8 @@
 # Latex
-PhDThesis.tex
+PhDThesis.*
+!PhDThesis.md
 *.pdf
+*.png
 *.aux
 *.out
 *.bbl
