@@ -250,6 +250,42 @@ Monitors (BPMs), and Beam Current Monitors (BCMs) are the primary
 components used for diagnostics.
 \input{figures/texs/fig:2-2_beamline.tex}
 
+\hypertarget{beam-energy-measurement}{%
+\subsection{Beam Energy Measurement}\label{beam-energy-measurement}}
+
+The beam energy is determined by measuring the deflection of the
+electron beam when it traverses through a known magnetic field in the
+hall arc (see figure \ref{fig:2-2_hallc_arc}). In essence, the beam
+energy is found by using the hall arc as a spectrometer
+\cite{yan_beam_1993}. Using the basic description of a magnetic force
+acting on an electron
+
+\begin{equation} 
+|\vec{F_{B}}|=e|\vec{v_e}\times\vec{B}|=ev_{e}B_{\perp}=\frac{\gamma m_{e}v^2_e}{r_c}
+\label{eq:magnetic_force} 
+\end{equation}
+
+where \(e\) is the elementary charge , \(v_e\) is the electron velocity,
+\(B_{\perp}\) is the magnetic field perpendicular to the velocity,
+\(r_c\) is the radius of curvature, and \(\gamma\equiv(1-v^2_e/c^2)\).
+Then using \(p_e=\gamma m_e v_e\) and \(r_c=dl/d\theta\), eq.
+\ref{eq:magnetic_force} can be rewritten in terms of the electron
+momentum
+
+\begin{equation} 
+p_e=\frac{e}{\theta_{arc}}\int B dl
+\label{eq:electron_momentum} 
+\end{equation}
+
+where \(\theta_{arc}\) is the arc bend angle and \(dl\) is the
+infintesimal arc length. Previous survey determined that the
+\(\theta_{arc}\) was 34.3\(\degree\) and \(\int B dl\) is found by
+mapping the magnetic fields of the arc dipoles at their corresponding
+currents. The beam position and profile are measured superharps (see the
+following sections) located at the entrance, middle, and exit of the
+hall arc \cite{yan_superharp_1995}. Together there is an achievable
+precision of \(\frac{\delta p}{p}\approx 5\times 10^{-4}\).
+
 \hypertarget{beam-position-monitors-bpms}{%
 \subsection{Beam Position Monitors
 (BPMs)}\label{beam-position-monitors-bpms}}
@@ -270,8 +306,6 @@ Physics and Industrial Control System (EPICS).
 
 \input{figures/texs/fig:2-2_beamline_components.tex}
 
-\input{figures/texs/fig:2-2_beamline_bigbpms.tex}
-
 The BPMs can be read in by either of the two datastreams: EPICS or CODA.
 The EPICS store the averaged position over 0.3 seconds while the
 event-by-event information (i.e.~what is the processed by the ADC) is
@@ -281,22 +315,29 @@ experiment because of their simplicity
 Once the raw beam values are obtained, the Hall C analysis software
 (i.e.~calibrates relative to absolute beam position. The ratio of the
 differences technique is used to determine the relative position of the
-beam within 100 microns for currents above 1 \(\mu\)A. The superharps
+beam within 100 microns for currents above one \(\mu\)A. The superharps
 (see next section) are calibrated with the BPMs to find the absolute
 position.
+
+\input{figures/texs/fig:2-2_beamline_bigbpms.tex}
 
 \hypertarget{harps}{%
 \subsection{Harps}\label{harps}}
 
 In order to obtain high precision measurements of the beam's profile and
-position, the superharps are used. There are two pairs of superharps at
-the beginning and end of the hall arc which use a rotary encoder to
-determine absolute postion and three wires connected to a fork to
-determine the profile \cite{yan_superharp_1995}. The superharp is
-attached to a step motor where the linear movement is translated into
-rotary motion. As the step motor moves, the encoder generates pulses
-equal to the number of steps taken. This allows a relation between steps
-and beam position which, along with the BPM infomation, is part of the
+position, the superharps are used. There are several superharps
+throughout the beamline. There are two at the beginning and end of the
+hall arc (see figure \ref{fig:2-2_hallc_arc}), one that is used by the
+polarimeters (see figure \ref{fig:2-2_hallc_arc}), and the last two are
+located just before the target (see figure
+\ref{fig:2-2_beamline_components}).
+
+Harps use a rotary encoder to determine absolute postion and three wires
+connected to a fork to determine the profile. The superharp is attached
+to a step motor where the linear movement is translated into rotary
+motion. As the step motor moves, the encoder generates pulses equal to
+the number of steps taken. This allows a relation between steps and beam
+position which, along with the BPM information, is part of the
 calibrations used in determining the absolute position. The step motor
 movement also causes the wires the pass through the beam, where a signal
 is generated in the form of a current produced by secondary electron
@@ -308,32 +349,352 @@ done as an initial procedure when beam first becomes available.
 \hypertarget{raster}{%
 \subsection{Raster}\label{raster}}
 
-Blank text
+The beam intensity can be so extreme that, after prolonged exposure,
+there can be localized heating or damage to the target chamber or, even,
+detectors. To prevent such damages, a raster is used to spread the beam
+over a larger area, which, in turn, distributes the beam's power more
+uniformly over the target. A raster applies small, controlled
+oscillations, in both the horizontal and vertical directions, causing
+the beam to scan back and forth or in a circular pattern, depending on
+the desired beam profile. These oscillations are applied to the beam
+steering elements, such as the magnets.
 
-\hypertarget{beam-energy-measurement}{%
-\subsection{Beam Energy Measurement}\label{beam-energy-measurement}}
+\input{figures/texs/fig:2-2_raster.tex}
 
-Blank text
+Hall C has three types of rasters available: M\(\o{}\)ller, fast, and
+slow. The M\(\o{}\)ller and slow rasters are used for special
+circumstances. The fast raster is primarily used. It works by driving AC
+current from a 250 W audio amplifier to horizontal and vertical air-core
+magnets, creating a rectangular beam dispersion. A 2x2 m\(m^2\) fast
+raster was used throughout the experiment.
 
 \hypertarget{beam-current-monitors-bcms}{%
 \subsection{Beam Current Monitors
 (BCMs)}\label{beam-current-monitors-bcms}}
 
-Blank text
+Beam current is measured using BCMs, which, in Hall C, take two primary
+forms: Unser monitor or RF cavity. An Unser monitor, also known as a
+Parametric Current Transformer (PCT), is a toroidial transformer that is
+designed to be non-destructive and acts as the absolute reference frame
+\cite{unser_parametric_1992}. The circular magnetic field of the toroid
+magnetizes strips of permeable matrial as the beam passes through it,
+this sends a current, proportional to the beam current, to a
+compensating coil thus canceling out the field of the beam. RF cavities,
+on the other-hand, are cylindrical, stainless steal cavities that work
+off the basic ideas of a waveguide. When the beam passes through them at
+their resonant frequency (i.e.~\(f_0\)), they are excited and an antenna
+inside couples this power to a heliax cable to eventually be processed.
+
+An Unser monitor and two RF cavities (BCM1 and BCM2) wrapped in thermal
+blankets, for temperature stabilization, make up the primary current
+monitoring system and are located upstream from the target. There is
+also an additional three RF cavities (BCM4A, BCM4B, and BCM4C) enclosed
+in a thermally stabilized box that are aviable if the beamline
+configuration allows. These are located further upstream than the Unser
+or BCM1, just inside the hall entrance. Finally, there is one last BCM
+(BCM17) located upstream from the Compton polarimeter on the 3C17
+girder. In addition to these BCMs, that are part of the Hall C current
+measurement system, there is another BCM immediately upstrem of the
+target which is used to monitor beam loss and is primarily there for
+machine protection.
+
+\input{figures/texs/fig:2-2_bcm_unser.tex}
+
+The signal for the Unser monitor drifts significantly over the course of
+a few minutes, so it cannot be used as a continuous current monitor.
+Still, being the absolute reference frame means that the Unser can be
+used to calibrate the cavities which are used for continous current
+monitoring. In order to correct for this drift, a ``Unser wire
+calibration'' is performed, wherein, a wire, with a known current, is
+run through the Unser and is used to measure the gain of the electronic
+chain (see figure \ref{fig:2-2_bcm_unser}). This gain is then
+calibrated, which corrects for the drift in the absolute frame. The
+combination of the Unser monitor with BCM1 and BCM2 allows a beam
+current with an absolute accuracy of about 1 \cite{denard_high_2001}.
 
 \hypertarget{Section-4.4}{%
 \section{Target}\label{Section-4.4}}
 
+At the end of the beamline, the electron beam has finally reached the
+target chamber. The target chamber was designed to isolate the beam line
+vacuum from the rotating spectrometers. The chamber houses a loop of
+cryogenic targets (see figure \ref{fig:2-3_target_loop}), such as liquid
+hydrogen, as well as a variety of solid targets on the ladder, such as
+Aluminum. All available targets during the E12-09-011 experiment can be
+seen in table \ref{tab:2-3_target_loop}.
+
+\input{figures/texs/fig:2-3_target_loop.tex}
+
+\input{figures/texs/tab:2-3_target_loop.tex}
+
+This experiment required a proton target so the primary one used was
+liquid hydrogen (\(LH_2\)). The \(LH_2\) was contained in loop 2, while
+the liquid Deuterium (\(LD_2\)) was in loop 3 and loop 3 was empty, only
+containing \(^{2}\mathrm{He}\) gas to keep vacuum pressure. \(LH_2\) is
+kept at a temperature of 19 \(\pm 0.1\) K(\textasciitilde25 psia) and
+density of 0.07231 g/\(cm^3\) \cite{smith_g_hall_2016}. There needs to
+be special care taken with all cryogenic targets as they have a strict
+freezing and boiling points, therefore the temperatures need to be
+closely monitored by the target operators to avoid disaster. For
+\(LH_2\), the freezing and boiling point, respectively, are 13.8 K and
+22.1 K.
+
+The \(LH_2\) target may have been the main target used but it was not
+the only one used. The 10 cm Aluminum Dummy target was also used
+extensively. This solid target consists of aluminum foils mounted in
+separate frame that correspond to the cryogenic entrance and exit
+windows. This setup is purposeful as the 10 cm Aluminum Dummy target is
+used for ``dummy subtractions'' which are the removal of background
+events in the data associated with the aluminum frames that house the
+cryogenic targets.
+
+The the Carbon 1.5\% target was also used. Because these targets are
+made of carbon, they withstand very high currents, which makes them
+excellent for sieve and luminosity studies. These studies examine optics
+and efficiencies, respectively, and will be discussed in more detail in
+following sections and chapters.
+
+Beyond these two targets used for data, there are also the Carbon Hole,
+Optics-1 targets which are used for beam centering and spectrometer
+optics, respectively. The Carbon Hole is a thin carbon foil that has
+been cut so that there is a central 2 mm diameter hole. Similar to
+figure \ref{fig:2-2_raster}, the rastered beam can be used to adjust the
+beam to a more central position. With a Carbon Hole target, a rastered
+XY plot will now have a hole showing the beam's central position. Shift
+workers communicate adjustments to MCC so that it can be steered to its
+proper position. The Optics-1 target is made of carbon foils located at
+5 cm in front the entrance and 5 cm behind the exit cryogenic target
+windows. These are used for spectrometer optics optimization studies,
+which will be discussed in a following section.
+
 \hypertarget{Section-4.5}{%
 \section{Spectrometers}\label{Section-4.5}}
+
+The distinctive feature of Hall C lies in its possession of two high
+luminosity (\(10^{39}\text{cm}^{-2}\text{s}^{-1}\)) magnetic
+spectrometers, namely the High Momentum Spectrometer (HMS) and the Super
+High Momentum Spectrometer (SHMS). These cutting-edge instruments
+empower physicists to conduct unparalleled precision in cross-section
+experiments. Each spectrometer rests on rotatable support structures
+that can move along rails, all while keeping the optical elements and
+detectors aligned relative to the target.
+
+\input{figures/texs/tab:2-4_spectrometer.tex}
+
+A breakdown of the spectrometer specifications and capablilities are
+given in table \ref{tab:2-4_spectrometer}. The sucess of the HMS at
+hadron detection during the 6 GeV era inspired the SHMS. Because of
+this, the two spectrometers are very similar in design. Inside their
+heavily shielded detector hut, both consist of a series of dipoles and
+quadrupoles followed by a lineup of particle detectors. The dipoles and
+quadrupoles, together known as the optical elements, are used to steer
+the scattered particles to the detectors from the target chamber. These
+steered particles are then tracked through drift chambers (DC) by
+reconstructing their trajectories from the focal plane back to the
+target. These tracked particles are then identified through a series of
+hodoscopes, cerenkov detectors and calorimeters.
+
+\input{figures/texs/fig:2-4_spec_setup.tex}
+
+\hypertarget{high-momentum-spectrometer-hms}{%
+\subsection{High Momentum Spectrometer
+(HMS)}\label{high-momentum-spectrometer-hms}}
+
+The HMS (labeled on the right in figure \ref{fig:2-4_spec_setup}) was
+used to detect electrons in this experiment. There are four optical
+components of the HMS consisting of three quadrupoles and one dipole
+(seen in figure \ref{fig:2-4_hms_magnets}) arranged in a QQQD
+configuration. At the entrance of the first quadrupole, is a slit system
+containing two collimators (the large and pion collimators) and a sieve
+slit that are used to define the angular acceptance and for spectrometer
+optical studies, respectively.
+
+\input{figures/texs/fig:2-4_hms_magnets.tex}
+
+The collimators are rectangular blocks (90\% W and 10\% Cu/Ni)
+consisting of an octagonal-shaped aperture that restrict the path of
+particles entering the spectrometers. By carefully selecting the size
+and arrangement of the aperture, the collimator ensures that only
+particles within a specific angular range, defined by the acceptance
+angle, are allowed to pass through to the detectors. The outer size of
+the collimators is 11.75'' vertical by 8.25'' horizontal and a thickness
+of 2.5''.
+
+The sieve slits are very similar to the collimators, but, instead of
+having an octagonal-shaped aperture, there are many closely space holes
+drilled into it. As particles pass through the sieve slit, their
+trajectories are slightly altered due to holes they must pass through,
+thus it can cause a known and controlled amount of deflection to the
+particle trajectories. The deflection caused by the sieve slit can be
+used to understand the optics of the spectrometer by comparing the
+measured deflection to the known pattern of the sieve slit. The outer
+size of the sieve slit is 10.00'' vertical by 8.25'' horizontal and a
+thickness 1.25''.
+
+\input{figures/texs/tab:2-4_hms_slit.tex}
+
+The quadrupoles and dipole are superconducting magnets that are used to
+optimize the magnetic field strength and configuration to achieve
+precise and accurate particle tracking within the spectrometer. The
+quadrupole provides point-to-point focusing while the dipole bends the
+scattered particles in the dispersive direction and determines the
+central momentum of the spectrometer.
+
+\hypertarget{super-high-momentum-spectrometer-shms}{%
+\subsection{Super High Momentum Spectrometer
+(SHMS)}\label{super-high-momentum-spectrometer-shms}}
+
+The SHMS (labeled on the left in figure \ref{fig:2-4_spec_setup}) was
+used to detect kaons in this experiment. There are five optical
+components of the HMS consisting of three quadrupoles, one dipole, and a
+horizontal bender (seen in figure \ref{fig:2-4_shms_magnets}) arranged
+in a HBQQQD configuration. Similar to the HMS, there is a slit system
+before the first quadrupole containing a collimator and two sieve slits.
+This slit system has the same use as the HMS.
+
+\input{figures/texs/fig:2-4_shms_magnets.tex}
+
+The collimator is a rectangular block (90\% W, 6\% Ni and 4\% Cu)
+consisting of an octagonal-shaped aperture. The outer size of the
+collimators is 6.693'' vertical by 9.843'' horizontal and a thickness of
+2.5''. The first sieve slit has 11 columns of holes, centered at the 6th
+column. The second sieve slit, the shifted sieve slit, has 10 columns
+and is offset by half a column from the center. This shifted sieve slit
+is in place to study the optics of the horizontal bender, which lies
+just before the slit system.
+
+\input{figures/texs/tab:2-4_shms_slit.tex}
+
+Like the HMS, the quadrupoles and dipole are superconducting magnets
+that are used to optimize the magnetic field strength and configuration
+to achieve precise and accurate particle tracking within the
+spectrometer. At angles below \textasciitilde12\(\degree\), fringe
+fields from the SHMS HB, Q1, and Q2 magnets can deflect the beam which
+may result in it missing the beam dump. The Horizontal Bender (HB) is
+used to steer the scattered particles by an additional 3\(\degree\) away
+from the beamline in order to prevent this.
 
 \hypertarget{Section-4.6}{%
 \section{Detectors}\label{Section-4.6}}
 
+The HMS and SHMS consist of a very similar set of particle detectors
+that are aligned in almost exactly the same order. This was a purposeful
+choice based off the success of previous Hall C electroproduction
+experiments (see Ref. \cite{horn_determination_2006},
+\cite{blok_charged_2008}) that used the HMS and the Short Orbit
+Spectrometer (SOS), which the SHMS replaced. The basic design consists
+of a pair of drift chambers (DC) for track reconstruction, two pairs of
+hodoscopes for triggering and time-of-flight (TOF) measurements, and a
+combination of cerenkov detectors and calorimeters for particle
+identification (PID).
+
+\input{figures/texs/fig:2-4_hms_detectors.tex}
+
+The HMS detector stack can be seen in figure
+\ref{fig:2-4_hms_detectors}. As a scattered electron leaves the HMS
+dipole exit window, it passes through the vacuum vessel which is
+low-pressure environment used to removing air and other gases from the
+vicinity of the detectors. This is essential because the presence of gas
+molecules can cause scattering and interactions with the particles being
+detected, potentially affecting the accuracy of the measurements. Once
+the electron exits the vacuum vessel, it passes through the pair of
+drift chambers (DC1 and DC2). In the E12-09-011 experiment, the HMS
+aerogel detector was not installed because only electrons were detected
+in this spectrometer and, as well be explained in the next sections, the
+aerogel is used for \(p\)/\(\pi\)/\(K\) separation. Instead, the
+electron will next pass through the first pair of hodoscopes (1X and
+1Y). The electron will then pass through the HMS cerenkov, then the
+second pair of hodoscopes (2X and 2Y). Finally, the electron ends its
+journey by going through the preshower and shower counters that make up
+the HMS calorimeter.
+
+\input{figures/texs/fig:2-4_shms_detectors.tex}
+
+The SHMS detector stack can be seen in figure
+\ref{fig:2-4_shms_detectors}. As a scattered kaon leaves the SHMS dipole
+exit window, it passes through its own vacuum vessel which is extended
+using a vacuum extension pipe. This is because the Noble Gas Cerenkov
+(NGC) was not installed during this experiment, thus the extension pipe
+is necessary. Like the electron in the HMS, the kaon will first travel
+through a pair of drift chambers and the first pair of hodoscopes. The
+kaon will then pass through the SHMS aerogel cerenkov detector, followed
+by the SHMS Heavy Gas Cerenkov (HGC) detector. Finally, the kaon will go
+through the second pair of hodoscopes before ending in the preshower and
+shower counters of the SHMS calorimeter.
+
+\hypertarget{drift-chambers}{%
+\subsection{Drift Chambers}\label{drift-chambers}}
+
+The HMS drift chambers were upgraded in 2017 to match the design of the
+SHMS, which itself is based off the previous chambers used in the Hall C
+program \cite{pandey_status_2017} \cite{tang_hall_2017}
+\cite{christy_hall_2016}. The basic design consists of two cathode
+windows, eight cathode planes, six anode (wire) planes, two aluminum
+frames, and a middle plane with card carriers and readout electronics
+(see figure \ref{fig:2-4_dc_view}).
+
+\input{figures/texs/fig:2-4_dc_view.tex}
+
+The two drift chambers (DC1 and DC2) are separated by the focal plane
+which defines the focus point of the spectrometer optics. \#\#\#
+Hodoscopes
+
+Blank Text
+
+\hypertarget{cerenkov-detectors}{%
+\subsection{Cerenkov Detectors}\label{cerenkov-detectors}}
+
+Blank Text
+
+\hypertarget{shms-aerogel-cerenkov-detectors}{%
+\subsection{SHMS Aerogel Cerenkov
+Detectors}\label{shms-aerogel-cerenkov-detectors}}
+
+Blank Text
+
+\hypertarget{lead-glass-calorimeters}{%
+\subsection{Lead Glass Calorimeters}\label{lead-glass-calorimeters}}
+
+Blank Text
+
 \hypertarget{Section-4.7}{%
 \section{Trigger Logic and Data Acquisition}\label{Section-4.7}}
 
-\markedchapter{Data Analysis}{Data Analysis}\label{Chapter-5}
+Blank text
+
+\hypertarget{hms-detector-hut-electronics}{%
+\subsection{HMS Detector Hut
+Electronics}\label{hms-detector-hut-electronics}}
+
+Blank Text
+
+\hypertarget{shms-detector-hut-electronics}{%
+\subsection{SHMS Detector Hut
+Electronics}\label{shms-detector-hut-electronics}}
+
+Blank Text
+
+\hypertarget{counting-house-electronics}{%
+\subsection{Counting House
+Electronics}\label{counting-house-electronics}}
+
+Blank Text
+
+\hypertarget{hms-trigger-setup}{%
+\subsection{HMS Trigger Setup}\label{hms-trigger-setup}}
+
+Blank Text
+
+\hypertarget{shms-trigger-setup}{%
+\subsection{SHMS Trigger Setup}\label{shms-trigger-setup}}
+
+Blank Text
+
+\hypertarget{electronic-dead-time-monitor-edtm}{%
+\subsection{Electronic Dead Time Monitor
+(EDTM)}\label{electronic-dead-time-monitor-edtm}}
+
+Blank Text \markedchapter{Data Analysis}{Data Analysis}\label{Chapter-5}
 
 \hypertarget{Section-5.1}{%
 \section{Cross Section Definiton}\label{Section-5.1}}
