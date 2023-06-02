@@ -248,6 +248,7 @@ Along this path, there are several beam diagnostic components that track
 and monitor various aspects of the beam. The harps, Beam Position
 Monitors (BPMs), and Beam Current Monitors (BCMs) are the primary
 components used for diagnostics.
+
 \input{figures/texs/fig:2-2_beamline.tex}
 
 \hypertarget{beam-energy-measurement}{%
@@ -492,7 +493,7 @@ the scattered particles to the detectors from the target chamber. These
 steered particles are then tracked through drift chambers (DC) by
 reconstructing their trajectories from the focal plane back to the
 target. These tracked particles are then identified through a series of
-hodoscopes, cerenkov detectors and calorimeters.
+hodoscopes, Cerenkov detectors and calorimeters.
 
 \input{figures/texs/fig:2-4_spec_setup.tex}
 
@@ -585,7 +586,7 @@ experiments (see Ref. \cite{horn_determination_2006},
 Spectrometer (SOS), which the SHMS replaced. The basic design consists
 of a pair of drift chambers (DC) for track reconstruction, two pairs of
 hodoscopes for triggering and time-of-flight (TOF) measurements, and a
-combination of cerenkov detectors and calorimeters for particle
+combination of Cerenkov detectors and calorimeters for particle
 identification (PID).
 
 \input{figures/texs/fig:2-4_hms_detectors.tex}
@@ -603,7 +604,7 @@ aerogel detector was not installed because only electrons were detected
 in this spectrometer and, as well be explained in the next sections, the
 aerogel is used for \(p\)/\(\pi\)/\(K\) separation. Instead, the
 electron will next pass through the first pair of hodoscopes (1X and
-1Y). The electron will then pass through the HMS cerenkov, then the
+1Y). The electron will then pass through the HMS Cerenkov, then the
 second pair of hodoscopes (2X and 2Y). Finally, the electron ends its
 journey by going through the preshower and shower counters that make up
 the HMS calorimeter.
@@ -617,7 +618,7 @@ using a vacuum extension pipe. This is because the Noble Gas Cerenkov
 (NGC) was not installed during this experiment, thus the extension pipe
 is necessary. Like the electron in the HMS, the kaon will first travel
 through a pair of drift chambers and the first pair of hodoscopes. The
-kaon will then pass through the SHMS aerogel cerenkov detector, followed
+kaon will then pass through the SHMS aerogel Cerenkov detector, followed
 by the SHMS Heavy Gas Cerenkov (HGC) detector. Finally, the kaon will go
 through the second pair of hodoscopes before ending in the preshower and
 shower counters of the SHMS calorimeter.
@@ -625,60 +626,225 @@ shower counters of the SHMS calorimeter.
 \hypertarget{drift-chambers}{%
 \subsection{Drift Chambers}\label{drift-chambers}}
 
-The HMS drift chambers were upgraded in 2017 to match the design of the
-SHMS, which itself is based off the previous chambers used in the Hall C
-program \cite{pandey_status_2017} \cite{tang_hall_2017}
+Drift chambers measure the horizontal and vertical angles and positions
+of the scattered particles. The charge of the particles induces
+ionization in the gas of the chamber (50:50 argon/ethane) which produces
+free electrons that are caught by sense wires. The HMS drift chambers
+were upgraded in 2017 to match the design of the SHMS, which itself is
+based off the previous chambers used in the Hall C program
+\cite{pandey_status_2017} \cite{tang_hall_2017}
 \cite{christy_hall_2016}. The basic design consists of two cathode
 windows, eight cathode planes, six anode (wire) planes, two aluminum
 frames, and a middle plane with card carriers and readout electronics
 (see figure \ref{fig:2-4_dc_view}).
 
+There are six planes of wires in all the drift chamber pairs (see figure
+\ref{fig:2-4_dc_view}). The wires are set such that a 180\(\degree\)
+rotation of the unprimed wire planes (e.g.~U) about the z-axis result in
+the primed wire planes (e.g.~U'), but slightly shifted to resolve the
+left-right ambiguity in the case of multi-hits. The x/x' and y/y' planes
+determine the dispersive (vertical) and non-dispersive (horizontal)
+track positions, respectively. To improve tracking resolution, the u/u'
+and v/v' planes are set \(\pm60\degree\) relative to x/x'.
+
 \input{figures/texs/fig:2-4_dc_view.tex}
 
 The two drift chambers (DC1 and DC2) are separated by the focal plane
-which defines the focus point of the spectrometer optics. \#\#\#
-Hodoscopes
+which defines the focus point of the spectrometer optics. The focus
+point is where the scattered particle should be when it is moving equal
+to the central momentum. By knowing each component of the angles and
+positions for both drift chambers, along with the location of the focal
+plane, the charged particle's momenta and trajectories can be
+calculated.
 
-Blank Text
+\hypertarget{hodoscopes}{%
+\subsection{Hodoscopes}\label{hodoscopes}}
+
+Two pairs of hodoscopes are used in each spectrometer. These use a very
+basic design where each pair consists of two planes, perpendicular to
+each other, and the planes consist of a series of detector paddles made
+of long narrow strips of scintillator material (either plastic or
+quartz) with photomultiplier tubes (PMTs) attached to both ends (see
+figure \ref{fig:2-4_hodo_view}). In order to eliminate gaps between
+elements, the scintillator paddles are arranged such that they overlap.
+Plastic scintillators are used in the HMS and the first three planes of
+the SHMS. The last plane in the SHMS uses a quartz scintillator. Since
+the SHMS sees very high rates, the quartz scintillator improves the
+already fast timing of the plastic scintillators to optimize the
+hodoscope tracking efficiency.
+
+\input{figures/texs/fig:2-4_hodo_view.tex}
+
+The hodoscopes are mainly used as triggers for particle events, although
+they can also be used in TOF PID for lower momenta. When the scattered
+particle passes through a hodoscope pair, the particle's charge ionizes
+the scintillator material which excites its electrons. These electrons
+fall back to their ground state and emit photons which bounce off of
+reflective material that is wrapped around the scintillator. These
+photons continue to propagate through the scintillator, via total
+internal reflection, until they hit one of the two PMTs. The reflective
+material is a layer of aluminum foil and multiple layers of Tedlar (HMS)
+or electrical tape (SHMS). The quartz scintillator is slightly different
+as it uses Cerenkov radiation (more on this in the next section) to
+detect events.
 
 \hypertarget{cerenkov-detectors}{%
 \subsection{Cerenkov Detectors}\label{cerenkov-detectors}}
 
-Blank Text
+There are two types of Cerenkov detectors used in the spectrometers.
+Both spectrometers use a Heavy Gas Cerenkov (HGC) detector and the SHMS
+also uses an aerogel Cerenkov detector. The basic principle behind
+Cerenkov detectors is the use of the Cerenkov effect, in which particles
+passing through a medium travel faster than light in that medium. This
+creates an effect analogous to a ``sonic boom,'' where a conic wave, of
+light rather than sound, trails the particle. The angle that the light
+is emitted is described by
 
-\hypertarget{shms-aerogel-cerenkov-detectors}{%
-\subsection{SHMS Aerogel Cerenkov
-Detectors}\label{shms-aerogel-cerenkov-detectors}}
+\begin{equation} 
+cos(\theta_c) = \frac{1}{n\beta}
+\label{eq:theta_cer} 
+\end{equation}
 
-Blank Text
+where \(n\) is the index of refraction of the medium and \(\beta=v/c\),
+where \(v\) is the velocity of the particle in a vacuum. Since Cerenkov
+light can only be produced if the particle travels faster than light in
+the medium, \(\theta_c\) \textless{} \(\pi/2\) and we are left with
+\(\beta > 1/n\). The velocity can be related to the momentum with
+\(\beta=p/\sqrt{m^2+p^2}\) such that
+
+\begin{equation} 
+n >\frac{\sqrt{m^2+p^2}}{p}
+\label{eq:index_cer} 
+\end{equation}
+
+and thus because certain index of refractions will produce light at
+certain particle momenta, we can determine the PID from these Cerenkov
+detectors.
+
+\hypertarget{heavy-gas-cerenkov-detectors}{%
+\subsubsection{Heavy Gas Cerenkov
+Detectors}\label{heavy-gas-cerenkov-detectors}}
+
+\input{figures/texs/fig:2-4_shms_hgc.tex}
+
+The HGC used in each spectrometer is a large cylindrical tank filled
+with a gas (i.e.~the medium). The Cerenkov light is then reflected to
+PMTs using mirrors. The HMS Cerenkov is 1.5 meters long and uses two
+spherical mirrors that focus the light to two PMTs
+\cite{noauthor_threshold_1995}. The gas of the HMS Cerenkov can be
+adjusted to discriminate between either \(e\)/\(\pi\) (\(C_4F_{10}\) or
+\(N_2\)) or \(\pi\)/\(p\) (Freon-12). The SHMS Cerenkov is 1.3 meters
+long and uses four spherical mirrors that focus the light to four PMTs
+\cite{li_heavy_2012}. The gas of the SHMS Cerenkov can be adjusted to
+discriminate between either \(e\)/\(\pi\) or \(\pi\)/\(K\). The gases
+used (\(C_4F_{10}\) or \(C_4F_8O\)) are set for different particle
+separation by adjusting the pressure of the gas.
+
+\hypertarget{shms-aerogel-cerenkov-detector}{%
+\subsubsection{SHMS Aerogel Cerenkov
+Detector}\label{shms-aerogel-cerenkov-detector}}
+
+\input{figures/texs/fig:2-4_shms_aero.tex}
+
+The aerogel Cerenkov detector used by the SHMS has two main components:
+a tray to hold the aerogel material and a light diffusion box with PMTs,
+which are both covered with a diffuse reflector material
+\cite{horn_aerogel_2017}. In order to separate kaons at such a high
+momentum (2.6 to 7.2 GeV/c), a refractive index between gases and
+liquids is required. Aerogel is one of the few materials with such a
+property. Aerogel is an extremely low density, near translucent
+material. It is composed of a gel-like structure in which the liquid
+component has been replaced with gas, resulting in a solid material that
+is mostly composed of air. The Cerenkov effect is used in just the same
+way as the HGC, only instead of mirrors, a diffuse reflector material is
+used to reflect the Cerenkov light to the PMTs.
+
+\input{figures/texs/tab:2-4_aero_threshold.tex}
+
+Four identical trays for aerogel of nominal refractive indices of 1.030,
+1.020, 1.015, and 1.011 (also names SP-30, SP-20, SP-15, SP-11,
+respectively) were used over the course of the experiment. The active
+area for SP-11 was 60 cm width by 90 cm height and the rest of the
+nominal refractive indices (SP-30, SP-20, SP-15) had an active area of
+100 cm width by 110 cm height. A comparison of threshold momenta and
+their corresponding nominal refractive indices can be seen in table
+\ref{tab:2-4_aero_threshold}. The SP-30 and SP-20 aerogel trays have
+their inner surfaces coated with a 0.45 μm thick Millipore paper
+Membrane GSWP-0010 (Millipore), which has a reflectivity of
+approximately 96\%. In the case of the SP-15 and SP-11 trays with lower
+refractive indices, a 1 mm thick Gore diffusive reflector material
+(DRP-1.0-12x30-PSA) with a reflectivity of about 99\% was used to
+optimize light collection.
+
+\input{figures/texs/fig:2-4_aero_tray.tex}
+
+In order to exchange trays, the Hall C technical staff with experts'
+assistance had to be brought in to assure a safe removal and
+installation. Once all HV is turned off, the roof of the SHMS hut was
+removed to make enough room for the tray to be removed via crane. The
+crane holds the support structure for the tray while all bolts that
+connect the tray with diffusion box are loosened. The support structure
+fixes the tray such that the position is as the SHMS normal operational
+angle (\textasciitilde18\(\degree\)). Once the straps of the support
+structure are tightened, the bolts can be removed and the tray is slowly
+disconnected from the diffusion box. The diffusion box and tray are
+shielded to keep the volume clean. The crane is then used to lift the
+tray out of the hut and onto a pallet, facing up. The tray is guided by
+hand onto the tray to prevent shifting of the tiles. The procedure is
+repeated in reverse when installing the new tray. This process was
+repeated six???? times without issue.
 
 \hypertarget{lead-glass-calorimeters}{%
 \subsection{Lead Glass Calorimeters}\label{lead-glass-calorimeters}}
 
-Blank Text
+Both spectrometers use calorimeters with similar designs. The main
+difference is that the SHMS has both a shower and preshower. By means of
+Cerenkov light detection, the showers capture all the electromagnetic
+(EM) showers (via PMTs) that are produced by Bremmstrahlung radiation
+and pair production processes. The Bremmstrahlung radiation is produced
+when a scattered particle is suddenly slowed down by the calorimeter
+radiator. These Bremmstrahlung photons decay to \(e^-e^+\) pairs
+(i.e.~pair production) which in turn emit Bremmstrahlung radiation. This
+creates the EM shower that is captured by the shower. The preshower,
+which is positioned in front of the shower, serves a similar purpose
+only it has a shorter radiation length, which allows for PID by
+distinguishing the early EM showers of an electron versus the later EM
+showers of a hadron.
+
+\input{figures/texs/fig:2-4_shms_cal.tex}
+
+The HMS and SHMS calorimeters are made of several stacked layers of
+thick lead blocks to ensure that nearly all the scattered particle's
+incident radiation is captured \cite{mkrtchyan_lead-glass_2013}. This
+block stack is tilted by a a few degrees (5\(\degree\) for the HMS and
+2\(\degree\) for the SHMS) relative to the central ray of the
+spectrometer so that the losses due to particles passing through the
+gaps between blocks can be minimized. The HMS uses 52 TF-1 lead glass 10
+cm thick blocks for the shower. It has a radiation length of
+\textasciitilde14.6. The SHMS uses 28 TF-1 lead glass 10 cm thick blocks
+for the preshower and 224 F-101 lead glass 50 cm thick blocks for the
+shower. The preshower has a radiation length of 3.6 and the shower has a
+radiation length of 18.
 
 \hypertarget{Section-4.7}{%
 \section{Trigger Logic and Data Acquisition}\label{Section-4.7}}
 
-Blank text
+The hardware trigger system is one of the main components of the data
+acquisition. It is used to filter real events from likely backgrounds by
+reducing the high rates and electronic deadtime while keeping the
+trigger efficiency high. Each detector's output signal, whether that be
+from PMTs or drift chambers, are digitized with high speed ADCs and
+time-to-digital converters (TDCs).
 
-\hypertarget{hms-detector-hut-electronics}{%
-\subsection{HMS Detector Hut
-Electronics}\label{hms-detector-hut-electronics}}
-
-Blank Text
-
-\hypertarget{shms-detector-hut-electronics}{%
-\subsection{SHMS Detector Hut
-Electronics}\label{shms-detector-hut-electronics}}
-
-Blank Text
-
-\hypertarget{counting-house-electronics}{%
-\subsection{Counting House
-Electronics}\label{counting-house-electronics}}
-
-Blank Text
+FADC250 with 16 channel ADC modules, running with a 4 ns period, are
+used to digitize the input signals from the calorimeters, Cerenkov
+detectors and hodoscopes. CAEN V1190A TDCs with 128 channels each are
+used to digitized discriminated signals with 100 ps of resolution, which
+are used by hodoscopes and drift chambers. Most of these ADC/TDCs are
+read out by Read-Out Controllers (ROCs) crates located in the Hall C
+Counting House Electronics Room. The exceptions being, the HMS/SHMS
+drift chamber TDCs and SHMS shower ADCs are read out by ROCs in their
+own respective detector huts.
 
 \hypertarget{hms-trigger-setup}{%
 \subsection{HMS Trigger Setup}\label{hms-trigger-setup}}
