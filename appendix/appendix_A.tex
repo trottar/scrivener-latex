@@ -1,0 +1,18 @@
+\chapter[Appendices]{Appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Appendix A
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{ltsep Python Package}
+\label{appendix_A}
+
+The ltsep python package is comprised of four python modules and eight classes, of which only four classes are required. The main module is $\textbf{ltsep.py}$, containing the $\textbf{ROOT}$ class which is required by all scripts.
+
+\begin{lstlisting}[language=Python, caption={}, label={lst:call_ltsep}]
+  # Import package for cuts
+  from ltsep import Root  
+  lt=Root(os.path.realpath(__file__))
+\end{lstlisting}

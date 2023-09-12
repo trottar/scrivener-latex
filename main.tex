@@ -1,6 +1,6 @@
 \documentclass[
 12pt,
-natbib,
+%natbib,
 a4paper, 
 oneside, % Uncomment this for digital (see styles)
 %twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
@@ -9,6 +9,11 @@ oneside, % Uncomment this for digital (see styles)
 % ]{scrbook}
 % ]{report}
 
+% Load the chicago package for Chicago style formatting
+% \usepackage{chicago}
+% \usepackage{natbib}
+\usepackage[numbers]{natbib}
+ 
 % Ragged bottom prevents variable spacing text and floats (done usually to keep last lines in both pages same in book format.)
 \raggedbottom
 
@@ -25,6 +30,9 @@ oneside, % Uncomment this for digital (see styles)
 
 % Indent first paragraph in each section
 \usepackage{indentfirst}
+
+% Used for code 
+\usepackage{listings}
 
 % Define indent spaces
 \setlength{\parindent}{4em}
@@ -52,7 +60,7 @@ oneside, % Uncomment this for digital (see styles)
 \captionsetup[FPfigure]{format=myformat}
 \newenvironment{Mfigure}[1]
 	{\renewcommand{\figuretitle}{#1}
-          \begin{figure}[htbp]
+          \begin{figure}[!htbp]
           \centering} % Added for centering of figures
 	{\end{figure}}
 \newenvironment{MFPfigure}[1]
@@ -76,6 +84,9 @@ oneside, % Uncomment this for digital (see styles)
 \usepackage[titletoc,title]{appendix} %For Appendix
 %\raggedbottom
 %\setlength{\parskip}{1em plus .1em minus 1.em}
+
+% Used to make timeline
+\usepackage{tikz}
 
 % Allow multi-line footnotes
 \usepackage{bigfoot}
@@ -158,6 +169,9 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
 
 	\mainmatter        
         \input{temp} %% This line is required to properly autogenerate tex files.
+
+        \appendix
+        \input{appendix/appendix_A}
         
 	\input{helpers/bib} %Include bibliography       
         

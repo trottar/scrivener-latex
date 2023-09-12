@@ -23,7 +23,7 @@
 \begin{Mfigure}{Schematic of CEBAF 12 GeV Upgrade}
   \centering
   \includegraphics[width=0.75\linewidth]{cebaf_12gev.pdf}
-  \caption{Schematic of CEBAF 12 GeV Upgrade \cite{pilat_12_2012}.}
+  \caption{Schematic of CEBAF 12 GeV Upgrade.}
   \label{fig:2-1_cebaf12gev}
 \end{Mfigure}
 
@@ -36,7 +36,7 @@
 \begin{Mfigure}{Hall C Arc to Beamline}
   \centering
   \includegraphics[width=0.75\linewidth]{hallc_arc.pdf}
-  \caption{The Hall C arc which steers the beam to the beamline \cite{yero_cross_2020}. Electron synchrotron radiation loss is shown with the yellow arrows.}
+  \caption{The Hall C arc which steers the beam to the beamline. Electron synchrotron radiation loss is shown with the yellow arrows.}
   \label{fig:2-2_hallc_arc}
 \end{Mfigure}
 
@@ -50,7 +50,7 @@
 \begin{Mfigure}{Hall C Beamline Components}
   \centering
   \includegraphics[width=0.75\linewidth]{beamline_components.pdf}
-  \caption{The Hall C beamline components from entrance of hall to the target scattering chamber \cite{yero_cross_2020}. The relevant distances from the scattering chamber are labeled.}
+  \caption{The Hall C beamline components from entrance of hall to the target scattering chamber. The relevant distances from the scattering chamber are labeled.}
   \label{fig:2-2_beamline_components}
 \end{Mfigure}
 
@@ -72,7 +72,7 @@
   \centering
   \includegraphics[width=0.75\linewidth]{bcm_unser.pdf}
   \captionsetup{width=0.95\textwidth} % Adjust the caption width here
-  \caption{Drawing showing BCM1 and BCM2 on either side of the Unser monitor \cite{denard_high_2001}. A Unser wire calibration can be performed by passing a wire (labeled calibration wire), with an accurately known current, through the Unser monitor to measure the gain of the electronic chain.}
+  \caption{Drawing showing BCM1 and BCM2 on either side of the Unser monitor. A Unser wire calibration can be performed by passing a wire (labeled calibration wire), with an accurately known current, through the Unser monitor to measure the gain of the electronic chain.}
   \label{fig:2-2_bcm_unser}
 \end{Mfigure}
 
@@ -95,23 +95,11 @@
     \hline
     \textbf{Loop Number} & \textbf{Target} & \textbf{Length} & \textbf{Current Limits} \\
     \hline
-    1 & $^{2}\mathrm{He}$ & 4 cm & - \\
-    1 & $^{2}\mathrm{He}$ & 10 cm & - \\
-    2 & L$H_2$ & 10 cm & - \\
-    3 & L$D_2$ & 10 cm & - \\
-    - & Dummy + C & 10 cm & - \\
-    - & Dummy & 10 cm  & - \\
-    - & Dummy & 4 cm  & - \\
-    - & Optics 1 & 20 cm  & - \\
-    - & Optics 2 & -  & - \\
-    - & Carbon Hole & -  & - \\
-    - & Carbon 6\% A & -  & - \\
-    - & Carbon 6\% B & -  & - \\
-    - & Carbon 0.5\% & -  & - \\
-    - & $B_4$C-10 & -  & - \\
-    - & $B_4$C-11 & -  & - \\
-    - & Be & -  & - \\
-    - & Carbon 1.5\% & -  & - \\
+    2 & L$H_2$ & 10 cm & ???? \\
+    - & Dummy & 10 cm  & ???? \\
+    - & Optics 1 & 20 cm  & ???? \\
+    - & Carbon Hole & ???  & ???? \\
+    - & Carbon 1.5\% & ???  & ???? \\
     \hline
     \end{tabular}
   \caption{Break down of all targets available during the running period. The three cryogenic targets are labeled alongside their corresponding loops. The target length is also provided for each type.}
@@ -287,3 +275,241 @@
 % Chapter 2, section 5
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Mfigure}{SHMS Trigger and DAQ}
+  \centering
+  \includegraphics[width=0.75\linewidth]{shms_trigger.pdf}
+  \caption{Overview of the SHMS trigger and DAQ system. The HMS shares a similar trigger and DAQ system.}
+  \label{fig:2-5_shms_trigger}
+\end{Mfigure}
+
+\begin{Mtable}{Hall C Pre-triggers}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Input Triggers} & \textbf{Pre-trigger} \\
+    \hline    
+    \text{pTRIG1} & \text{pHODO 3/4} \\
+    \text{pTRIG2} & \text{pEL REAL} \\
+    \text{pTRIG3} & \text{hEL REAL} \\
+    \text{pTRIG4} & \text{hHODO 3/4} \\
+    \text{pTRIG5} & \text{hEL REAL + pHODO 3/4} \\
+    \text{pTRIG6} & \text{hEL REAL + pEL REAL} \\
+    \hline
+  \end{tabular}
+  \caption{The input triggers of the TM (i.e. ROC 02) compared to their corresponding single-arm ptr-trigger combinations.}
+  \label{tab:2-5_pretriggers}
+\end{Mtable}
+
+\begin{Mtable}{Hall C Pre-triggers}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline    
+    \text{reference time}  = \text{TDC Start, single-arm pre-trigger} - \text{TDC Stop, L1ACCP} \\
+    \text{detector raw time}  = \text{TDC Start, detector signal} - \text{TDC Stop, L1ACCP} \\
+    \text{detector time}  = \text{detector raw time} - \text{reference time} \\
+    \hline    
+  \end{tabular}
+  \label{tab:2-5_ref_sub}
+\end{Mtable}
+
+\begin{Mtable}{Hall C Pre-triggers}
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Value} & \textbf{Prescale Factor} & \textbf{Rate Prescaled from 100 kHz} \\
+    \hline    
+    0   &        1 & 100000 \\
+    1   &        2 & 50000 \\
+    2   &        3 & 33333 \\
+    3   &        5 & 20000 \\
+    4   &        9 & 11111 \\
+    5   &       17 & 5882 \\
+    6   &       33 & 3030 \\
+    7   &       65 & 1538 \\
+    8   &      129 & 775 \\
+    9   &      257 & 389 \\
+    0   &      513 & 194 \\
+    1   &     1025 & 97 \\
+    2   &     2049 & 48 \\
+    3   &     4097 & 24 \\
+    4   &     8193 & 12 \\
+    5   &    16385 & 6 \\
+    6   &    32769 & 3 \\
+    \hline
+  \end{tabular}
+  \caption{List of prescale values to their corresponding factor. The third column shows an example of a prescaled rate from 100 kHz.}
+  \label{tab:2-5_prescale}
+\end{Mtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Chapter 3, section 1
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Mfigure}{Stage 1 of Analysis Procedure}
+  \centering
+  \includegraphics[width=0.85\linewidth]{LT_Analysis_Workflow_1.pdf}
+  \caption{First step of the analysis workfow.}
+  \label{fig:3-1_LT_Analysis_Workflow_1}
+\end{Mfigure}
+
+\begin{Mfigure}{Stage 2 of Analysis Procedure}
+  \centering
+  \includegraphics[width=0.85\linewidth]{LT_Analysis_Workflow_2.pdf}
+  \caption{Second step of the analysis workfow.} 
+  \label{fig:3-1_LT_Analysis_Workflow_2}
+\end{Mfigure}
+
+\begin{Mfigure}{Stage 3 of Analysis Procedure}
+  \centering
+  \includegraphics[width=0.85\linewidth]{LT_Analysis_Workflow_3.pdf}
+  \caption{Final step of the analysis workfow.}
+  \label{fig:3-1_LT_Analysis_Workflow_3}
+\end{Mfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Chapter 3, section 3
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Mfigure}{Cerenkov PID????}
+  \centering
+  \includegraphics[width=0.85\linewidth]{hms_cer_pid.pdf}
+  \caption{Plot of HMS cerenkov histogram showing where an appropriate cut is applied.}
+  \label{fig:3-3_hms_cer_pid}
+\end{Mfigure}
+
+\begin{Mfigure}{Calorimeter PID????}
+  \centering
+  \includegraphics[width=0.85\linewidth]{hms_cal_pid.pdf}
+  \caption{Plot of HMS calorimeter histogram showing where an appropriate cut is applied.}
+  \label{fig:3-3_hms_cal_pid}
+\end{Mfigure}
+
+% {"P_RF_Dist" : (P_RF_Dist > (0.75) ) & (P_RF_Dist < (1.75) )}, {"H_hod_goodstarttime" : (H_hod_goodstarttime == 1.0)}, {"P_hod_goodstarttime" : (P_hod_goodstarttime ==  1.0)}, {"P_hod_goodstarttime" : (P_hod_goodstarttime == 1.0)}, {"H_hod_goodstarttime" : (H_hod_goodstarttime == 1.0)}, {"H_gtr_dp" : ((H_gtr_dp > -8) & (H_gtr_dp < 8))},% {"P_gtr_dp" : ((P_gtr_dp > -10) & (P_gtr_dp < 20))}, {"P_gtr_beta" : ((abs(P_gtr_beta-1)) < 0.3)}, {"P_hgcer_npeSum" : (P_hgcer_npeSum < 1.5)}, {"P_aero_npeSum" : (P_aero_npeSum > 3)}, {"H_cal_etottracknorm" : (H_cal_etottracknorm > 0.7)}, {"P_cal_etottracknorm" : (P_cal_etottracknorm >= 0.0)}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{cccc}
+    \multicolumn{4}{c}{\large\textbf{Detector Cuts}} \\    
+    \textbf{Detector/Particle} & \textbf{Gas Cerenkov [NPE]} & \textbf{Aerogel [NPE]} & \textbf{Calorimeter [$\mathbf{E_{cal}}$/E]} \\
+    \hline
+    HMS electron & >0.6??? & -    & >0.7     \\
+    SHMS kaon    & <1.5    & >4.0 & $\ge$0.0 \\
+    \multicolumn{4}{c}{\large\textbf{Acceptance Cuts}} \\
+     & \textbf{$\mathbf{\delta}$ [\%]} & \textbf{$\mathbf{x'_{tar}}$} & \textbf{$\mathbf{y'_{tar}}$}  \\
+    \hline
+    HMS electron & - & ????  & ???? \\
+    SHMS kaon    & - & ????  & ???? \\
+    \multicolumn{4}{c}{\large\textbf{Timing Cuts}} \\
+     & \textbf{$\mathbf{\left|\beta-1\right|}$}  & \textbf{RF} & \textbf{Cointime} \\
+    \hline
+    HMS electron & < 0.3 & ????          & ???? \\
+    SHMS kaon    & < 0.3 &  $\pm$0.5???? & ???? \\
+    \multicolumn{4}{c}{\large\textbf{MM Cuts}} \\
+     & \textbf{$\mathbf{p(e, e'K^+)\Lambda}$}  &  & \\
+    \hline
+    HMS electron & ???? & & \\
+    SHMS kaon    & ???? & & \\
+  \end{tabular}
+  \caption{}
+  \label{tab:3-3_cuts}
+\end{table}
+
+\begin{Mfigure}{Reflector Rings}
+  \centering
+  \includegraphics[width=0.85\linewidth]{reflector_rings.pdf}
+  \caption{Acrylic reflector rings applied to PMT 1 and 2 of the SHMS heavy gas cerenkov.}
+  \label{fig:3-3_reflector_rings}
+\end{Mfigure}
+
+%\begin{Mfigure}{Reflector Cones}
+%  \centecone
+%  \includegraphics[width=0.85\linewidth]{reflector_cones.pdf}
+%  \caption{AluMet reflector cones applied to all four PMTs of the SHMS heavy gas cerenkov.}
+%  \label{fig:3-3_reflector_cones}
+%\end{Mfigure}
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{hgcer_hole_3233.pdf}
+    \subcaption{Run 3233}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{hgcer_hole_4787.pdf}
+    \subcaption{Run 4787}
+  \end{minipage}
+  
+  \vspace{0.5cm}
+  
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{hgcer_hole_6619.pdf}
+    \subcaption{Run 6619}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{hgcer_hole_7095.pdf}
+    \subcaption{Run 7095}
+  \end{minipage}
+  
+  \caption{Comparison of the SHMS heavy gas cerenkov hole for runs 3233 (a), 4783 (b), 6619 (c), and 7095 (d). Run 3233 is the original HGCer configuration, run 4783 is after the first mirror adjustments and the optics replaced with an Acrylic ring, run 6619 is with the cones installed, and run 7095 is with the second alignment and with the cones installed. All runs are for electron PID (Calorimeter cut > 0.9) and with consistent calibrations. The NPE increased with each iteration, but neither alignment decreased the hole back to its original size.}
+  \label{fig:3-3_hgcer_hole}
+\end{figure}
+
+\begin{Mfigure}{EDTM?????}
+  \centering
+  \includegraphics[width=0.85\linewidth]{edtm_runnum.pdf}
+  \caption{Total Live Times of all production data.}
+  \label{fig:3-4_edtm_runnum}
+\end{Mfigure}
+
+\begin{Mfigure}{Scaler, no track, and track luminosity yield?????}
+  \centering
+  \includegraphics[width=0.85\linewidth]{carbon_lumi_yield.pdf}
+  \caption{The HMS Carbon-12 scaler (left), no track (middle) and track (right) yields for runs taken at $P_{HMS}$=-3.09, $\theta_{HMS}$=35.010.}
+  \label{fig:3-4_carbon_lumi_yield}
+\end{Mfigure}
+
+\begin{Mfigure}{HMS Linear Regression?????}
+  \centering
+  \includegraphics[width=0.85\linewidth]{hms_linear_regress.pdf}
+  \caption{All HMS Carbon-12 fit with a weighted linear regression using least squares.}
+  \label{fig:3-4_hms_linear_regress}
+\end{Mfigure}
+
+\begin{Mfigure}{SHMS Linear Regression?????}
+  \centering
+  \includegraphics[width=0.85\linewidth]{shms_linear_regress.pdf}
+  \caption{All SHMS Carbon-12 fit with a weighted linear regression using least squares.}
+  \label{fig:3-4_shms_linear_regress}
+\end{Mfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Chapter 4, section 5
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Mtable}{Target Loop}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Decay Channel} & \textbf{Branching Fracion} \\
+    \hline
+    $K^+\rightarrow \mu^++\nu_{\mu}$ & 63.55\% \\
+    $K^+\rightarrow \pi^++\pi^0$ & 20.66\% \\
+    $K^+\rightarrow \pi^++\pi^++\pi^0$ & 5.59\% \\
+    $K^+\rightarrow e+\pi^0+\nu_e$ & 5.07\% \\
+    $K^+\rightarrow \mu^++\pi^0+\nu_{\mu}$ & 3.35\% \\
+    $K^+\rightarrow \pi^++\pi^0+\pi^0$ & 1.76\% \\
+    \hline
+    \end{tabular}
+  \caption{Most probable decay channels of $K^+$ and their respective branching fractions. There are many decay channels for the kaon but these make up >99.98\% of the kaon decay's phase space.}
+  \label{tab:4-5_kaon_decay}
+\end{Mtable}

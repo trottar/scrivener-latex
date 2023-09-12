@@ -176,24 +176,56 @@ Sullivan Process and Off-Shell Considerations
 
 Table of kinematics and purpose of each \(Q^2\) value (\(Q^2\), \(W\),
 \(x\), \(t\)). Include phase space plots.
-\markedchapter{Results and Discussion}{Measurements at Jlab Hall C}\label{Chapter-4}
+\markedchapter{Measurements at Jlab Hall C}{Measurements at Jlab Hall C}\label{Chapter-4}
+
+\begin{minipage}[t]{0.2\textwidth}
+    \begin{tikzpicture}[transform shape, scale=2]
+        % Vertical line
+        \draw[line width=1pt] (-1,0) -- (-1,3);
+        % Horizontal lines and labels
+        \foreach \y/\year in {0/1980s, 1/1980s, 2/1970s, 3/1960s} {
+            \draw[line width=1pt] (-1.2,\y) -- (-0.8,\y);
+            \node[anchor=east] at (-1.2,\y) {\year};
+        }
+    \end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.7\textwidth}
+    \begin{tikzpicture}[scale=2]
+    \setstretch{1} % Set single spacing
+        \node[align=left, text width=8.5cm] at (0,3.7) {\parbox{8.5cm}{The Standford Linear Accelerator Center (SLAC) became the world's first linear accelerator.}};
+        \node[align=left, text width=8.5cm] at (0,2.7) {\parbox{8.5cm}{The SLAC facility constructed a storage ring called the Standford Positron-Electron Asymmetric Ring (SPEAR).}};
+        \node[align=left, text width=8.5cm] at (0,1.7) {\parbox{8.5cm}{The European Organization for Nuclear Research (CERN) built the Large Electron-Positron collider (LEP).}};
+        \node[align=left, text width=8.5cm] at (0,0.7) {\parbox{8.5cm}{In parallel developments at CERN, the SLAC facility constructed the Standford Linear Collider (SLC).}};
+    \end{tikzpicture}
+\end{minipage}
+
+Above is a rough timeline of the accelerators and colliders that lead to
+the eventual construction of the Continuous Wave Electron Accelerator
+Facility (CEBAF) \cite{cahn_experimental_1989}. In the early 1990s, the
+Continuous Wave Electron Accelerator Facility (CEBAF) was completed and
+subsequently named Thomas Jefferson National Accelerator Facility
+(Jlab), operated by SURA/PAE Applied Technologies for the U.S.
+Department of Energy. In the 2000s, an upgrade to the CEBAF's 6 GeV
+accelerator was approved and commissioning experiments began in the
+Spring of 2018. The KaonLT (E12-09-011) experiment was performed in Hall
+C at Jlab, running from September to December of 2018, with three weeks
+off for the SIDIS experiments (E12-09-002 and E12-09-017), and
+continuing from March to April of 2019.
 
 \hypertarget{Section-4.1}{%
-\section{Overview}\label{Section-4.1}}
+\section{Accelerator}\label{Section-4.1}}
 
-\hypertarget{Section-4.2}{%
-\section{Accelerator}\label{Section-4.2}}
-
-Since 1995, the Continuous Wave Electron Accelerator Facility (CEBAF) at
-Jlab has been cornerstone to medium energy nuclear research. CEBAF uses
-a high intensity continuous wave (CW) beam to deliver electrons to four
-experimental halls (Halls A, B, C, and D). In reality, this CW beam is
-not truly continuous, rather contains an intrinsic microstructure of
-\textasciitilde2 ps short beam pulses that occur at a fundamental
-frequency (\(f_0\)) of 1497 MHz \cite{reece_continuous_2016}. This is a
-result of the Radio-Frequency (RF) power used in the SRF resonate
-cavities which allows for four sequential electron bunches that are
-subsequently sent to the four halls.
+Since 1995, the CEBAF at Jlab has been cornerstone to medium energy
+nuclear research. CEBAF uses a high intensity continuous wave (CW) beam
+to deliver electrons to four experimental halls (Halls A, B, C, and D).
+In reality, this CW beam is not truly continuous, rather contains an
+intrinsic microstructure of \textasciitilde2 ps short beam pulses that
+occur at a fundamental frequency (\(f_0\)) of 1497 MHz
+\cite{reece_continuous_2016}. This is a result of the Radio-Frequency
+(RF) power used in the SRF resonant cavities which allows for four
+sequential electron bunches that are subsequently sent to the four
+halls.
 
 \input{figures/texs/fig:2-1_cebaf12gev.tex}
 
@@ -229,15 +261,15 @@ separator called the ``5th pass separator'', was added which operates at
 \ref{fig:2-1_cebaf12gev}) sends the separated beam around the 10th west
 arc to Hall D.
 
-\hypertarget{Section-4.3}{%
-\section{Hall C Beam Line}\label{Section-4.3}}
+\hypertarget{Section-4.2}{%
+\section{Hall C Beam Line}\label{Section-4.2}}
 
 Halls C accepts the beam through a long pipe that starts at the Beam
 Switch Yard (BSY) and ends at the transport line
 \cite{sta_jeerson_2019}. In order to reach the hall, the beam is bent in
 the Hall C arc (see figure \ref{fig:2-2_hallc_arc}) using a series of
 eight dipole magnets. From there, it enters the Hall C alcove where it
-passes the Compton and \$\text{M\o{}ller} polarimeters to check the
+passes the Compton and \(\text{M\o{}ller}\) polarimeters to check the
 polarity of the beam. At this point, the beam has entered the hall where
 it will travel to the scattering chamber and, any beam not incidented
 off the target, will end its journey in the beam dump.
@@ -262,8 +294,8 @@ energy is found by using the hall arc as a spectrometer
 acting on an electron
 
 \begin{equation} 
-|\vec{F_{B}}|=e|\vec{v_e}\times\vec{B}|=ev_{e}B_{\perp}=\frac{\gamma m_{e}v^2_e}{r_c}
-\label{eq:magnetic_force} 
+  |\vec{F_{B}}|=e|\vec{v_e}\times\vec{B}|=ev_{e}B_{\perp}=\frac{\gamma m_{e}v^2_e}{r_c}
+  \label{eq:magnetic_force} 
 \end{equation}
 
 where \(e\) is the elementary charge , \(v_e\) is the electron velocity,
@@ -274,8 +306,8 @@ Then using \(p_e=\gamma m_e v_e\) and \(r_c=dl/d\theta\), eq.
 momentum
 
 \begin{equation} 
-p_e=\frac{e}{\theta_{arc}}\int B dl
-\label{eq:electron_momentum} 
+  p_e=\frac{e}{\theta_{arc}}\int B dl
+  \label{eq:electron_momentum} 
 \end{equation}
 
 where \(\theta_{arc}\) is the arc bend angle and \(dl\) is the
@@ -362,8 +394,8 @@ steering elements, such as the magnets.
 
 \input{figures/texs/fig:2-2_raster.tex}
 
-Hall C has three types of rasters available: M\(\o{}\)ller, fast, and
-slow. The M\(\o{}\)ller and slow rasters are used for special
+Hall C has three types of rasters available: \(\text{M\o{}ller}\), fast,
+and slow. The \(\text{M\o{}ller}\) and slow rasters are used for special
 circumstances. The fast raster is primarily used. It works by driving AC
 current from a 250 W audio amplifier to horizontal and vertical air-core
 magnets, creating a rectangular beam dispersion. A 2x2 m\(m^2\) fast
@@ -413,16 +445,18 @@ calibrated, which corrects for the drift in the absolute frame. The
 combination of the Unser monitor with BCM1 and BCM2 allows a beam
 current with an absolute accuracy of about 1 \cite{denard_high_2001}.
 
-\hypertarget{Section-4.4}{%
-\section{Target}\label{Section-4.4}}
+\hypertarget{Section-4.3}{%
+\section{Target}\label{Section-4.3}}
 
 At the end of the beamline, the electron beam has finally reached the
 target chamber. The target chamber was designed to isolate the beam line
 vacuum from the rotating spectrometers. The chamber houses a loop of
 cryogenic targets (see figure \ref{fig:2-3_target_loop}), such as liquid
 hydrogen, as well as a variety of solid targets on the ladder, such as
-Aluminum. All available targets during the E12-09-011 experiment can be
-seen in table \ref{tab:2-3_target_loop}.
+Aluminum. Targets used during the E12-09-011 experiment can be seen in
+table \ref{tab:2-3_target_loop}. Additional targets, used for other
+experiments, were on the ladder, see Ref. \cite{sta_jeerson_2019} for
+more details.
 
 \input{figures/texs/fig:2-3_target_loop.tex}
 
@@ -468,8 +502,8 @@ proper position. The Optics-1 target is made of carbon foils located at
 windows. These are used for spectrometer optics optimization studies,
 which will be discussed in a following section.
 
-\hypertarget{Section-4.5}{%
-\section{Spectrometers}\label{Section-4.5}}
+\hypertarget{Section-4.4}{%
+\section{Spectrometers}\label{Section-4.4}}
 
 The distinctive feature of Hall C lies in its possession of two high
 luminosity (\(10^{39}\text{cm}^{-2}\text{s}^{-1}\)) magnetic
@@ -575,8 +609,10 @@ may result in it missing the beam dump. The Horizontal Bender (HB) is
 used to steer the scattered particles by an additional 3\(\degree\) away
 from the beamline in order to prevent this.
 
-\hypertarget{Section-4.6}{%
-\section{Detectors}\label{Section-4.6}}
+\hypertarget{Section-4.5}{%
+\section{Detectors}\label{Section-4.5}}
+
+\label{sec:chap_3_detectors}
 
 The HMS and SHMS consist of a very similar set of particle detectors
 that are aligned in almost exactly the same order. This was a purposeful
@@ -601,12 +637,12 @@ detected, potentially affecting the accuracy of the measurements. Once
 the electron exits the vacuum vessel, it passes through the pair of
 drift chambers (DC1 and DC2). In the E12-09-011 experiment, the HMS
 aerogel detector was not installed because only electrons were detected
-in this spectrometer and, as well be explained in the next sections, the
+in this spectrometer and, as will be explained in the next sections, the
 aerogel is used for \(p\)/\(\pi\)/\(K\) separation. Instead, the
 electron will next pass through the first pair of hodoscopes (1X and
 1Y). The electron will then pass through the HMS Cerenkov, then the
 second pair of hodoscopes (2X and 2Y). Finally, the electron ends its
-journey by going through the preshower and shower counters that make up
+journey by going through the pre-shower and shower counters that make up
 the HMS calorimeter.
 
 \input{figures/texs/fig:2-4_shms_detectors.tex}
@@ -620,8 +656,8 @@ is necessary. Like the electron in the HMS, the kaon will first travel
 through a pair of drift chambers and the first pair of hodoscopes. The
 kaon will then pass through the SHMS aerogel Cerenkov detector, followed
 by the SHMS Heavy Gas Cerenkov (HGC) detector. Finally, the kaon will go
-through the second pair of hodoscopes before ending in the preshower and
-shower counters of the SHMS calorimeter.
+through the second pair of hodoscopes before ending in the pre-shower
+and shower counters of the SHMS calorimeter.
 
 \hypertarget{drift-chambers}{%
 \subsection{Drift Chambers}\label{drift-chambers}}
@@ -701,8 +737,8 @@ light rather than sound, trails the particle. The angle that the light
 is emitted is described by
 
 \begin{equation} 
-cos(\theta_c) = \frac{1}{n\beta}
-\label{eq:theta_cer} 
+  cos(\theta_c) = \frac{1}{n\beta}
+  \label{eq:theta_cer} 
 \end{equation}
 
 where \(n\) is the index of refraction of the medium and \(\beta=v/c\),
@@ -713,8 +749,8 @@ the medium, \(\theta_c\) \textless{} \(\pi/2\) and we are left with
 \(\beta=p/\sqrt{m^2+p^2}\) such that
 
 \begin{equation} 
-n >\frac{\sqrt{m^2+p^2}}{p}
-\label{eq:index_cer} 
+  n >\frac{\sqrt{m^2+p^2}}{p}
+  \label{eq:index_cer} 
 \end{equation}
 
 and thus because certain index of refractions will produce light at
@@ -795,17 +831,18 @@ repeated in reverse when installing the new tray. This process was
 repeated six???? times without issue.
 
 \hypertarget{lead-glass-calorimeters}{%
-\subsection{Lead Glass Calorimeters}\label{lead-glass-calorimeters}}
+\subsection{\texorpdfstring{Lead Glass Calorimeters
+\label{Chapter-4-5-4}}{Lead Glass Calorimeters }}\label{lead-glass-calorimeters}}
 
 Both spectrometers use calorimeters with similar designs. The main
-difference is that the SHMS has both a shower and preshower. By means of
-Cerenkov light detection, the showers capture all the electromagnetic
+difference is that the SHMS has both a shower and pre-shower. By means
+of Cerenkov light detection, the showers capture all the electromagnetic
 (EM) showers (via PMTs) that are produced by Bremmstrahlung radiation
 and pair production processes. The Bremmstrahlung radiation is produced
 when a scattered particle is suddenly slowed down by the calorimeter
 radiator. These Bremmstrahlung photons decay to \(e^-e^+\) pairs
 (i.e.~pair production) which in turn emit Bremmstrahlung radiation. This
-creates the EM shower that is captured by the shower. The preshower,
+creates the EM shower that is captured by the shower. The pre-shower,
 which is positioned in front of the shower, serves a similar purpose
 only it has a shorter radiation length, which allows for PID by
 distinguishing the early EM showers of an electron versus the later EM
@@ -822,151 +859,1422 @@ spectrometer so that the losses due to particles passing through the
 gaps between blocks can be minimized. The HMS uses 52 TF-1 lead glass 10
 cm thick blocks for the shower. It has a radiation length of
 \textasciitilde14.6. The SHMS uses 28 TF-1 lead glass 10 cm thick blocks
-for the preshower and 224 F-101 lead glass 50 cm thick blocks for the
-shower. The preshower has a radiation length of 3.6 and the shower has a
-radiation length of 18.
+for the pre-shower and 224 F-101 lead glass 50 cm thick blocks for the
+shower. The pre-shower has a radiation length of 3.6 and the shower has
+a radiation length of 18.
 
-\hypertarget{Section-4.7}{%
-\section{Trigger Logic and Data Acquisition}\label{Section-4.7}}
+\hypertarget{Section-4.6}{%
+\section{Trigger Logic and Data Acquisition}\label{Section-4.6}}
 
 The hardware trigger system is one of the main components of the data
 acquisition. It is used to filter real events from likely backgrounds by
 reducing the high rates and electronic deadtime while keeping the
-trigger efficiency high. Each detector's output signal, whether that be
-from PMTs or drift chambers, are digitized with high speed ADCs and
-time-to-digital converters (TDCs).
+trigger efficiency high. Each detector's discriminated signal, whether
+that be from PMTs or drift chambers, are digitized with high speed ADCs
+or time-to-digital converters (TDCs). FADC250 with 16 channel ADC
+modules, running with a 4 ns period, are used to digitize the
+discriminated signals from the calorimeters, Cerenkov detectors and
+hodoscopes. CAEN V1190A TDCs with 128 channels each are used to
+digitized discriminated signals with 100 ps of resolution, which are
+used by hodoscopes and drift chambers. The discriminated signals are
+alos processed by the scalers, which are essentially counters, that keep
+track of the accumulated number of events. These are daisy-chained
+scalers where the output of one scaler is connected to the input of the
+next scaler, forming a linear chain. Once the analog signals are
+digitized and saved in the scalers, Read-Out Controllers (ROCs) buffer
+the data, storing it temporarily before transferring it to the data
+acquisition system (DAQ). Most of the ADC/TDCs are read out by ROCs
+located in the Hall C Counting House Electronics Room. The exceptions
+being, the HMS/SHMS drift chamber TDCs and SHMS shower ADCs are read out
+by ROCs in their own respective detector huts (see figure
+\ref{fig:2-5_shms_trigger}). The Trigger Interface (TI) module then
+communicates the digitized detector signals and scaler information from
+the ROCs to the trigger logic for analysis and comparison against the
+predefined trigger conditions \cite{pooserPrivateConversation2018}
+\cite{yeroHall12GeV2019}.
 
-FADC250 with 16 channel ADC modules, running with a 4 ns period, are
-used to digitize the input signals from the calorimeters, Cerenkov
-detectors and hodoscopes. CAEN V1190A TDCs with 128 channels each are
-used to digitized discriminated signals with 100 ps of resolution, which
-are used by hodoscopes and drift chambers. Most of these ADC/TDCs are
-read out by Read-Out Controllers (ROCs) crates located in the Hall C
-Counting House Electronics Room. The exceptions being, the HMS/SHMS
-drift chamber TDCs and SHMS shower ADCs are read out by ROCs in their
-own respective detector huts.
+\input{figures/texs/fig:2-5_shms_trigger.tex}
 
-\hypertarget{hms-trigger-setup}{%
-\subsection{HMS Trigger Setup}\label{hms-trigger-setup}}
+These trigger conditions can be broken down into two stages: the
+pre-trigger and trigger. The pre-trigger is the initial step in the
+event selection process, where preliminary decisions are made to
+identify potential events of interest. Every detector has their own
+pre-trigger, which follow the procedure explained above. The Trigger
+Supervisor circuit (TS) receives the pre-trigger signals from the
+detectors of both spectrometers, which, depending on the state of the
+TS, form either the HMS, SHMS or coincidence (COIN) pre-triggers, along
+with their own respective scalers. Each spectrometer pre-trigger
+(i.e.~HMS, SHMS, COIN), is sent to a P/S Model 755 logic unit where it
+is combined with other inputs and evaluated against the final trigger
+conditions. If the combined conditions are satisfied, indicating that
+the event meets the predefined criteria, a Level 1 Accepted (L1ACCP)
+trigger is formed which is used for analysis.
 
-Blank Text
+\hypertarget{trigger-setup}{%
+\subsection{Trigger Setup}\label{trigger-setup}}
 
-\hypertarget{shms-trigger-setup}{%
-\subsection{SHMS Trigger Setup}\label{shms-trigger-setup}}
+\hypertarget{hms}{%
+\subsubsection{HMS}\label{hms}}
 
-Blank Text
+The HMS pre-trigger (HMS TRG) is formed by a combination of the
+hodoscopes along with the HMS Cerenkov and calorimeter. The procedure
+for forming each pre-trigger follows the general logic explained above.
+At each stage, copies of all pre-triggers are saved, along with
+corresponding scalers.
+
+The hodoscope pre-trigger is formed initially by each plane (h1X, h1Y,
+h2X and h2Y). From these plane pre-triggers, coincidence pre-triggers
+(h1 = h1X \(\textbf{OR}\) h1Y, h2 = h2X \(\textbf{OR}\) h2Y) is made for
+each XY plane pair. Finally, the standard hodoscope pre-trigger (hHODO
+3/4) is formed by achieving 3/4 plane coincidence. For low momenta,
+another pre-trigger (hSTOF = h1 \(\textbf{AND}\) h2) can be used to
+measure the TOF between any of the two front and back planes. The HMS
+Cerenkov pre-trigger (hCER TRG) is formed with a -50 mV threshold and a
+30 ns?????? gate width. The calorimeter pre-trigger is formed initially
+by summing each layer (hA = hA+ + hA- and hB = hB+ + hB-). Layer A (hA)
+forms the pre-shower pre-triggers (hPreSH LO and hPreSH HI) while all
+the layers (hA, hB, hC and hD), together, form the shower pre-trigger
+(hShower LO). These pre-triggers share a gate width of 30 ns???? And
+have thresholds of -40 mV, -60 mV and -45mV, respectively.
+
+All the HMS detector pre-triggers come together to make the HMS
+pre-trigger. The three single-arm pre-triggers (hHODO 3/4, hEL REAL and
+hEL CLEAN) are sent to the TI in ROC 01 and, in single-arm mode, a copy
+of these pre-triggers form the L1ACCP triggers which is sent to all ROCs
+associated with the HMS.
+
+\hypertarget{shms}{%
+\subsubsection{SHMS}\label{shms}}
+
+The SHMS pre-trigger (SHMS TRG) is formed by a combination of the
+hodoscopes along with the HGC, aerogel Cerenkov and calorimeter. This
+pre-trigger follows the same procedure outlined for the HMS. The
+hodoscope pre-trigger is formed initially by each plane (S1X, S1Y, S2X
+and S2Y). From these plane pre-triggers, coincidence pre-triggers (S1 =
+S1X \(\textbf{OR}\) S1Y, S2 = S2X \(\textbf{OR}\) S2Y) is made for each
+XY plane pair. Finally, the standard hodoscope pre-trigger (pHODO 3/4)
+is formed by achieving 3/4 plane coincidence. For low momenta, another
+pre-trigger (pSTOF = S1 \(\textbf{AND}\) S2) can be used to measure the
+TOF between any of the two front and back planes. The SHMS heavy gas
+(hHGC TRG) and aerogel (hAERO TRG) Cerenkov pre-triggers are formed with
+a -50 mV???? threshold and a 100 ns?????? gate width. The calorimeter
+pre-shower pre-triggers (pPreSH LO and pPreSH HI) are formed by summing
+each layer. The shower pre-trigger (pShower LO) does not form part of
+the trigger because of the high channel density and is sent directly to
+ROC4. These pre-triggers share a gate width of 100 ns???? and have
+thresholds of -40 mV????, -60 mV???? and -45mV????, respectively.
+
+Like the HMS, all the SHMS detector pre-triggers (except pShower LO)
+come together to make the SHMS pre-trigger. The three single-arm
+pre-triggers (pHODO 3/4, pEL REAL and pEL CLEAN) are sent to the TI in
+ROC 01 and, in single-arm mode, a copy of these pre-triggers form the
+L1ACCP triggers which is sent to all ROCs associated with the SHMS.
+
+\hypertarget{coin}{%
+\subsubsection{COIN}\label{coin}}
+
+\input{figures/texs/tab:2-5_pretriggers.tex}
+
+The first spectrometer single-arm pre-trigger (i.e.~HMS or SHMS TRG)
+that arrives in the COIN logic module opens a coincidence time window
+(???? ns), if the other spectrometer single-arm pre-trigger arrives
+within this window then the two trigger events are correlated. In
+coincidence mode, the timing of the pre-trigger signals is synchronized
+to prioritize the coincidence signal over the single-arm pre-triggers.
+This is achieved by introducing a delay in the timing of the single-arm
+pre-triggers relative to the coincidence. The timed pre-trigger signals
+are then sent to the front-end of the TM, where the first arriving
+signal is accepted (L1ACCP). The L1ACCP is then distributed to all
+HMS/SHMS crates, triggering the data readout in the ADC/TDC modules of
+every crate. There are a total of 6 input triggers (see table
+\ref{tab:2-5_pre-triggers}); four single-arm triggers and two
+coincidence triggers.
+
+\input{figures/texs/tab:2-5_ref_sub.tex}
+
+There is an \textasciitilde25 ns intrinsic noise associated with the
+internal clock of the ADC/TDC modules that needs to be reduced in order
+to achieve the \textasciitilde0.1 ns design resolution
+\cite{yero_quick_2023}. This is done by subtracting the reference time,
+a copy of \(\textbf{OR}\)'ed pre-trigger logic signals (e.g.~hEL\_REAL
+\(\textbf{OR}\) hHODO 3/4), from every channel in every ADC/TDC module
+on an event-by-event basis. The \(\textbf{OR}\)'ed pre-triggers are used
+to assure that there is a reference time associated with every event.
+
+\hypertarget{data-acquisition}{%
+\subsection{Data Acquisition}\label{data-acquisition}}
+
+At this point, all the triggers have been formed and are sent to the
+DAQ. Upon receiving a trigger signal, the DAQ starts collecting and
+storing the data associated with the triggered event. This system is
+managed by the CEBAF Online Data Aquisition (CODA) software. CODA is
+responsible for overseeing the entire lifecycle of an experiment, which
+encompasses initiating and concluding data acquisition runs, pausing and
+resuming data collection, and managing various run-time conditions, such
+as trigger selection and prescaling.
+
+\hypertarget{prescaling}{%
+\subsubsection{Prescaling}\label{prescaling}}
+
+\input{figures/texs/tab:2-5_prescale.tex}
+
+Rates can exceed those of the DAQ's capabilities, so in order to keep
+data at a high quality and deadtimes low (see next section), the data is
+prescaled. Prescaling is intentionally skipping a certain fraction of
+the events. This is done through CODA by simply setting the input
+trigger that is being used to a certain prescaled value. Each prescaled
+value is assigned a factor (see \ref{tab:2-5_prescale}), and when an
+event meets the trigger condition (i.e.~L1ACCP), it undergoes comparison
+with the corresponding prescale factor. If the event's selection index
+matches the prescale factor (e.g.~for a prescale factor of 10, events
+with index 10, 20, 30, etc.), the event is saved by the DAQ.
 
 \hypertarget{electronic-dead-time-monitor-edtm}{%
 \subsection{Electronic Dead Time Monitor
 (EDTM)}\label{electronic-dead-time-monitor-edtm}}
 
-Blank Text \markedchapter{Data Analysis}{Data Analysis}\label{Chapter-5}
+The DAQ can experience inefficiencies in its hardware and software which
+lead to electronic and computer deadtimes, respectively. In order to
+correct for such inefficiencies, an Electronic Dead Time Monitor (EDTM)
+was used to keep track of both the electronic and computer deadtimes,
+and a correction factor was subsequently applied to the cross section
+(see next chapter). The EDTM generates a known and well-defined pulses
+that mimics the characteristics of the signals produced by the detectors
+that form the trigger. Due to practical restraints, the EDTM logic
+pulses are injected in the Counting House at the trigger logic level.
+
+The rate of the generated signals are compared with the rate of the
+detected signals after passing through the system. By comparing these
+rates, the EDTM can estimate the fraction of deadtime introduced by the
+system, which allows the deadtime to be continuously monitored. At the
+trigger logic level, the EDTM is treated as a real trigger, therefore a
+frequency big enough to gather sufficient statistics, but small enough
+to minimize the probability of blocking physics triggers should be used
+(on the order of \textasciitilde1-5\% of the trigger rates).
+
+The EDTM pulse is inserted into the HMS/SHMS/COIN pre-trigger logic
+before the TM, creating a pseudo-trigger. Because of this, the EDTM is
+always associated with all six input triggers (i.e.~those in
+\ref{tab:2-5_pretriggers}), but only one EDTM pseudo-trigger is copied,
+along with a corresponding scalers, are created (which is later used for
+deadtime calculations) \cite{murphy_private_2022}
+\cite{murphy_graphical_2022}. The HMS/SHMS/COIN pre-trigger along with
+the EDTM pseudo-trigger go through the TM where it is subsequently
+L1ACCP.
+
+\markedchapter{Data Analysis}{Data Analysis}\label{Chapter-5}
+
+The data acquired by CODA is analyzed by using CERN's software framework
+called \(\textbf{ROOT}\). The current C++ framework of ROOT was started
+in 1995 as an updated system to replace the old Fortran77 version
+\cite{brun_history_2011}. Since then, ROOT has become the standard
+analysis software in medium to high energy nuclear physics.
+
+The ROOT framework is comprised of a set of libraries and tools that
+facilitate the handling and analysis of large datasets. These libraries
+cover a wide range of mathematical and analysis purposes such as
+\(\textbf{MathCore}\), which provides the major mathematical functions,
+and \(\textbf{Minuit}\), a numerical minimization software. Using a
+built in C++ interpreter, either \(\textbf{CLING}\) or
+\(\textbf{ACLiC}\) (specifically, for compiling macros in a ROOT
+session), data can be quickly analyzed \cite{root_team_root_2023}.
+
+Hall C has adapted this ROOT framework into a hall specific one called
+\(\textbf{hcana}\). It was developed to replace the old Hall C analyzer,
+\(\textbf{ENGINE}\) (written in Fortran), and is an extension of the
+Hall A analyzer, \(\textbf{PODD}\) \cite{jones_hall_2022}
+\cite{brash_github_2014}. hcana is compiled using scons and subsequently
+ready for use in analysis. It is used just the same as ROOT, but with
+its own built in classes and objects that are Hall C specific.
 
 \hypertarget{Section-5.1}{%
-\section{Cross Section Definiton}\label{Section-5.1}}
+\section{Python Analysis Framework}\label{Section-5.1}}
+
+In the KaonLT experiment, hcana was just the first stage of the analysis
+procedure. As outlined in figure \ref{fig:3-1_LT_Analysis_Workflow_1},
+the kinematic offsets were applied to the data and then analyzed through
+hcana. This analysis also calculated most of the efficiencies and
+systematic
+uncertainties\footnote{Specifically, the hcana framework calculated the hodoscope, HMS Cerenkov, SHMS aeorgel and tracking efficiencies and systematic uncertainties.}
+(additional details regarding this matter will be provided in the
+subsequent sections). This stage of the analysis was conducted in the
+\(\textbf{hallc\_replay\_lt}\) directory, which contains all the
+parameters and definition files required for the hcana analysis
+\cite{kay_github_2018-1}. The output ROOT files of the hcana analysis
+are then processed by scripts using the custom \(\textbf{ltsep}\) Python
+package where the PID/cointime cuts are defined.
+
+\input{figures/texs/fig:3-1_LT_Analysis_Workflow_1.tex}
+
+The ltsep Python package was created in order to allow flexibility and
+modularity to the more rigid hcana framework \cite{trotta_github_2020}.
+Python, with its extensive library of publicly available packages, is a
+highly intuitive and dynamic programming language that excels in data
+analysis. Although it takes a hit in speed and performance compared to
+its C++ counterpart, the tools available in Python outweigh these
+shortcomings. For these reasons, it was decided that, beyond the initial
+step, the analysis framework would revolve around
+Python\footnote{Python3.4 was used because it is the standard version of Python used for ROOT 6.18.04 in the Jlab farm}.
+
+The ltsep Python package allows for dynamic cuts, automatic
+file/directory pathing and run specific ROOT file
+creation\footnote{This functionality is true for versions ltsep 3.3+.}.
+It primarily relies on the \(\textbf{PyROOT}\) and \(\textbf{uproot}\)
+packages for handling ROOT files, trees and branches, although various
+other packages such as \(\textbf{numpy}\) and \(\textbf{pandas}\) are
+utilized as well \cite{pivarski_Python_2021} \cite{root_team_how_2023}
+\cite{numpy_developers_numpy_2023} \cite{numfocus_inc_pandas_2023}. For
+more information on the ltsep Python package, see Appendix
+\ref{appendix_A}.
+
+Using this custom Python package, scripts were developed for the next
+stage of the analysis which included calculating the remaining
+efficiencies and systematic uncertainties, as well as, defining PID and
+cointime cuts (again see figure \ref{fig:3-1_LT_Analysis_Workflow_1}).
+This stage of the analysis was conducted in the
+\(\textbf{UTIL\_KAONLT}\) directory, which also contains scripts used
+during the online analysis \cite{kay_github_2018}.
+
+\input{figures/texs/fig:3-1_LT_Analysis_Workflow_2.tex}
+
+The remainder of the analysis is performed in \(\textbf{LT\_analysis}\)
+directory \cite{trotta_github_2022}. Once the PID and cointime cuts were
+established and the efficiencies and systematic uncertainties were
+compiled, the data is prepped for binning. This involves applying the
+PID and cointime cuts to the data and then merging all runs for a
+particular setting (e.g combining all runs for \(Q^2=5.5\), high
+epsilon, left setting) into one ROOT file. In conjunction with this, the
+effective charge and uncertainty are calculated per run (see subsequent
+sections for more on the effective charge). These two steps procedures
+are brought together and read in by the final scripts of this stage. The
+first script does four main things. It first applies diamond cuts (the
+final cut) to assure the data is in the kinematically accessible region
+of the high and low epsilon. Then, it subtracts the dummy, background,
+and any large \(\pi\)/p peaks that slip through the cuts. Next, it bins
+the data in t and \(\phi\). Finally, it calculates the yields and
+uncertainty per bin. The other script then takes this generated binned
+data and prepares it for the next stage of the analysis. Figure
+\ref{fig:3-1_LT_Analysis_Workflow_2} outlines the workflow described
+above, along with the specific script names that can be found in Ref.
+\cite{trotta_github_2022}.
+
+\input{figures/texs/fig:3-1_LT_Analysis_Workflow_3.tex}
+
+The final step is ?????? \textless Work in progress, still under
+analysis\textgreater.
 
 \hypertarget{Section-5.2}{%
-\section{LT Separation Procedure}\label{Section-5.2}}
+\section{Event Reconstruction}\label{Section-5.2}}
+
+In order to calculate the cross section, angles and momenta of the kaon
+and scattered electron at the interaction vertex (i.e.~at the target)
+must be found. The hcana analysis framework uses a set of matrices to
+reconstruct the particles' track backwards through the spectrometer to
+the target. This track reconstruction aims to connect these individual
+detector hits, via the DCs and hodoscopes, into continuous trajectories
+(i.e.~tracks) that correspond to the paths of charged particles by
+analyzing the measured hits and inferring the most likely paths that
+particles took through the detector.
+
+\hypertarget{track-reconstruction}{%
+\subsection{Track Reconstruction}\label{track-reconstruction}}
+
+The track is defined by the position (\(x_{fp}\), \(y_{fp}\)) and
+direction (\(x’_{fp}=dx/dz\), \(y’_{fp}=dy/dz\)) of the particle in the
+spectrometer's focal plane. A potential track must be a hit (i.e.~a
+signal from a DC wire) and it must fire at least five out of six of the
+DC planes \cite{usman_shms_2022}.
+
+Track reconstruction matrices are utilized by track finding algorithms,
+which use a combination of pattern recognition techniques and
+statistical analysis to identify the track associated with the trigger
+or golden track \cite{jones_track_2020}. There are three track finding
+algorithms implemented in hcana.
+
+\begin{itemize}
+  \item $\chi^2$ minimization
+  \item Scintillator method
+    \begin{itemize}
+      \item Select the best track through the HMS by seeing which track is closest to S2Y. 
+      \item If there is none, then select the track closest to S2X.
+      \item If there is still none, then $\chi^2$ minimization
+    \end{itemize}
+  \item Prune method
+    \begin{itemize}
+      \item Loop over the following quantities: xptar, yptar, ytar, $\delta$, DipoleExit, ToF, $\beta$, number of degrees of freedom (DoF) on track, $\chi^2$, number of PMT hits on track, $\chi^2$ of $\beta$, focal plane time relative to nominal time, and a hit in S2Y+S2X. Then reject all tracks which have a greater value than any other of these quantities.
+      \item If there is still none, then $\chi^2$ minimization
+    \end{itemize}
+\end{itemize}
+
+The DC code finds space points, clusters of hits, then each one is
+linearly fit to find \(x’_{fp}\), \(x_{fp}\) and \(y_{fp}\). A pair of
+space points in the two chambers are matched by looping through all
+space points and a possible track is found. All space points within a
+particular circle are considered a single space point and the radius of
+this circle defines the selection criterion, which eliminates matches
+between chambers. If there are hits from a pair of unlike planes, so
+called combos, outside the selection criterion a new space point is
+created.
+
+The combination of space point information from all planes, a stub, is
+considered a track if the slopes and positions between the two chambers
+are correlated. This potential track is not yet accepted until it passes
+one of the track finding algorithms above. The effectiveness of the
+track reconstruction algorithms and matrices are evaluated through
+studying the track efficiency (see subsequent sections).
+
+\hypertarget{target-coordinates-reconstruction}{%
+\subsection{Target Coordinates
+Reconstruction}\label{target-coordinates-reconstruction}}
+
+Once the tracks are established, the optics of the spectrometer can be
+used to transport the tracks backwards to the target using a matrix
+transformation.
+
+\begin{equation} 
+  \begin{bmatrix}
+    x’_{tar} \\
+    y_{tar} \\
+    y’_{tar} \\
+    \delta \\
+  \end{bmatrix}=\textbf{M}  \begin{bmatrix}
+    x_{fp} \\
+    x’_{fp} \\
+    y_{fp} \\
+    y’_{fp} \\
+    x_{tar} \\
+  \end{bmatrix}
+  \label{eq:fp_transform} 
+\end{equation}
+
+\noindent where \(\textbf{M}\) is the optical matrix used to transport
+to the target, \(x_{tar}\) is the out of plane position in the
+spectrometer, \(x’_{tar}\) is the out of plane scattering angle at the
+target, \(y_{tar}\) is the in of plane position in the spectrometer,
+\(y’_{tar}\) is the in of plane scattering angle relative to the
+spectrometer central angle, and \(\delta\) is fractional momentum
+deviation of the detected particle with respect to the central momentum
+of the SHMS (\(\delta=100*[P_{K}-P_{SHMS}]/P_{SHMS}\)).
+
+\textless Saturation details?????\textgreater{}
 
 \hypertarget{Section-5.3}{%
-\section{Python Analysis Framework}\label{Section-5.3}}
+\section{Particle Identification}\label{Section-5.3}}
+
+As discussed in Chapter \ref{sec:chap_3_detectors}, scattered particles
+were detected using a combinations of Cerenkov detectors and
+calorimeters. The four planes of hodoscopes for Time of Flight (ToF) and
+coincidence timing were used to further improve PID. The goal of the
+setup was for the HMS to identify clean electron samples while the SHMS
+would identify kaons, but the reality is more complicated due to a
+litany of accidental particles that can still leak through this
+spectrometer setup.
+
+The determination of cuts are established through a variety of methods.
+For the cerenkovs, cuts are determined by looking at the position
+dependence of the mean photoelectron yield. It is important that these
+cuts are tight, but not so tight as to sacrifice efficiency across the
+acceptance. Calorimeter cuts are determined by looking at the fractional
+energy deposition, which is a ratio of the energy of the particle
+deposited in the calorimeter over the total energy determined from
+tracking. The timing cuts are
+
+\input{figures/texs/fig:3-3_hms_cer_pid.tex}
+
+\input{figures/texs/fig:3-3_hms_cal_pid.tex}
+
+A summary of the electron PID cuts are listed in \ref{tab:3-3_cuts}. The
+electron PID is very straight forward in comparison to kaon PID. Owing
+to the specific kinematics employed and the precise implementation of
+timing cuts, the occurrence of \(\pi^-\) leakthrough was minimized,
+resulting in very clean electron samples.
+
+\input{figures/texs/tab:3-3_cuts.tex}
+
+The kaon PID cuts are also listed in \ref{tab:3-3_cuts}. Unlike
+electrons, the kaon samples had significant leakthrough and knock-on
+effects. A large \(\pi^+\) is inherent to the process and the dedicated
+aerogel detector of the SHMS was able to remove most of these background
+events. However, a significant contribution to the leakthrough was due
+to a hole in the center of the heavy gas cerenkov detector. This allowed
+significantly more protons and secondary interactions contributing to a
+larger background.
+
+\hypertarget{shms-heavy-gas-cerenkov}{%
+\subsection{SHMS Heavy Gas Cerenkov}\label{shms-heavy-gas-cerenkov}}
+
+\input{figures/texs/fig:3-3_reflector_rings.tex}
+
+input\{figures/texs/fig:3-3\_reflector\_cones.tex\}
+
+During the running of the KaonLT experiment the mirrors for the SHMS
+heavy gas cerenkov were adjusted twice; before the fall run and before
+the spring run. The initial optical alignments were to correct for a
+small hole caused by the mirrors not being properly aligned. This
+alignment increased the hole size but increased the overall NPE. It was
+proposed that because the experiment was running and the mirrors could
+not be adjusted till the winter that reflector rings could be added to
+PMT 1 and PMT 2 which would increase the overall NPE. Reflector rings
+(see Figure \ref{fig:3-3_reflector_rings}) are often made from materials
+with high reflectivity, in this case Acrylic, that efficiently bounce
+light back towards the PMT. The application of these rings was a
+success. It was then proposed to use reflector cones to focus the
+cerenkov light towards the PMTs. Relector cones are optical components
+used to direct and focus light from a larger area onto a smaller,
+sensitive region, such as a detector or a sensor. AluMet reflector cones
+have been added to all four PMTs. Once the fall run was complete, there
+was an opportunity to adjust the mirrors. This shrank the hole from the
+fall 2018 adjustment but was still larger than the original
+configuration. A comparision of the HGCer hole for each iteration can be
+found in Figure \ref{fig:3-3_hgcer_hole}.
+
+\input{figures/texs/fig:3-3_hgcer_hole.tex}
+
+\hypertarget{geometric-cuts}{%
+\subsection{\texorpdfstring{Geometric Cuts
+\label{Chapter-5-3-2}}{Geometric Cuts }}\label{geometric-cuts}}
+
+In order to account for the hole in the analysis, two sets of geometric
+cuts (one for fall 2018 and one for spring 2019) were drawn around the
+hole. These geometric cuts were applied to data and SIMC which
+subsequently removed this area of particle detection. This showed a
+significant reduction in protons and secondary interactions that were
+leaking into the kaon sample.
+
+input\{figures/texs/fig:3-3\_hgcer\_hole\_cuts.tex\}
+
+In addition to geometric cuts for the HGCer, the aerogel and calorimeter
+also had geometric cuts implimented on the data and SIMC. These cuts
+were needed to assure no additional secondary interactions can leak
+through areas beyond it.
+
+The aerogel tray is smaller than the overall size of the detector and
+thus events outside the tray should be removed. The two tray sizes,
+90x60 cm for SP-11 and 110x100 cm for all other indices, were
+implimented.
+
+Based on the position of a track in the calorimeter, a fiducial cut is
+required so that it aligns with the real position of an event. This
+corresponds to a 5 cm border from the edge of the blocks.
+
+\hypertarget{timing-cuts}{%
+\subsection{Timing Cuts}\label{timing-cuts}}
+
+Precise selection of the correct coincidence timing information is of
+critical imporance for distinguishing between real and random events.
+The particle timing information is determined by the four hodoscope
+planes of each spectrometer. Particle velocities, used to distinguish
+between real and randoms, can be retrieved from this timing information.
+Depending on the expected kinematics, the real events can be ascertained
+with relatively basic cuts applied to the cointime and RF time and
+\(\beta\), where cointime is timing coincidence between the electron and
+kaon detected within a specific time window, the RF time is the time it
+takes for the RF waveform to complete one full cycle and \(\beta\) is
+the particle velocity in units of the speed of light.
+
+input\{figures/texs/fig:3-3\_RF\_time.tex\}
+input\{figures/texs/fig:3-3\_cointime.tex\}
+input\{figures/texs/fig:3-3\_cointime\_beta.tex\}
+input\{figures/texs/fig:3-3\_cointime\_MM.tex\}
+
+\hypertarget{missing-mass-cuts}{%
+\subsection{\texorpdfstring{Missing Mass Cuts
+\label{Chapter-5-3-4}}{Missing Mass Cuts }}\label{missing-mass-cuts}}
+
+Kaon electroproduction is an exclusive process and, thus, allows for the
+reconstruction of the missing mass events, based off the basic idea of
+energy-momentum conservation. This can be used to further clean the kaon
+sample by explicitly applying cuts around the final state of
+\(p(e, e' K^+)X\), where X is the final state channel. For the scope of
+this thesis, the \(\Lambda\)(1115) channel was the primary focus. Higher
+channels, such as \(\Sigma\), are to be analyzed in upcoming papers and
+is discussed in Chapter \ref{Chapter-10}. Due to Bremmstrahlung the
+\(\Lambda\) peak has a tail to its right which must be properly modeled
+to find the proper cuts.
+
+\textless MM cuts?????\textgreater{}
 
 \hypertarget{Section-5.4}{%
-\section{Event Reconstruction}\label{Section-5.4}}
+\section{Efficiency Corrections}\label{Section-5.4}}
+
+The efficiencies are one of the most imporant aspects of a L-T
+separation because of a \(1/\Delta\epsilon\) amplification in the
+systematic uncertainties (see Chapter \ref{Chapter-7}). Since the kaon
+electroproduction cross section is proportional to the number of
+\(p(e, e' K^+)\Lambda\) events, efficiencies are direct contributors to
+the overall systematics. The number of events is related to the cross
+section through the normalized yield (see Chapter \ref{Chapter-7}),
+which is normalized by the effective charge. The normalized yield is
+defined as
+
+\begin{equation} 
+  Y_{exp}=\frac{N}{Q_{eff}}
+  \label{eq:norm_yield} 
+\end{equation}
+
+\noindent where N is the total number of events and \(Q_{eff}\) is the
+effective charge defined by
+
+\begin{equation} 
+  Q_{eff}=Q_{total}\cdot\epsilon_{tot}
+  \label{eq:eff_charge} 
+\end{equation}
+
+\noindent where \(Q_{tot}\) is the total charge for a setting and
+\(\epsilon_{tot}\) is the total efficiency is defined by
+
+\begin{equation} 
+  \epsilon_{tot}=\epsilon_{tot det}\cdot\epsilon_{TLT}\cdot\epsilon_{K track}\cdot\epsilon_{e track}\cdot\epsilon_{boil}\cdot\epsilon_{coinblock}
+  \label{eq:tot_eff} 
+\end{equation}
+
+\noindent where the \(\epsilon_{tot det}\), \(\epsilon_{TLT}\),
+\(\epsilon_{K track}\), \(\epsilon_{e track}\), \(\epsilon_{boil}\), and
+\(\epsilon_{coinblock}\) are the total detector, total live time, kaon
+tracking, electron tracking, target boiling, and coincidence blocking
+efficiencies, respectively.
+
+\hypertarget{detector-efficiencies-epsilon_tot-det}{%
+\subsection{\texorpdfstring{Detector Efficiencies,
+\(\epsilon_{tot det}\)}{Detector Efficiencies, \textbackslash epsilon\_\{tot det\}}}\label{detector-efficiencies-epsilon_tot-det}}
+
+As described in earlier sections, the particle detectors used are not
+perfect for PID so due to cuts and inherent inefficiencies each detector
+has an associated efficiency that must be incorporated into the total
+efficiency.
+
+\hypertarget{hodoscope-efficiency}{%
+\subsubsection{Hodoscope Efficiency}\label{hodoscope-efficiency}}
+
+The hodoscope efficiency is
+
+\begin{equation} 
+  \epsilon_{h(p)hodo}=
+  \label{eq:hodo_eff} 
+\end{equation}
+
+\hypertarget{calorimeter-efficiency}{%
+\subsubsection{Calorimeter Efficiency}\label{calorimeter-efficiency}}
+
+The calorimeter efficiency is
+
+\begin{equation} 
+  \epsilon_{h(p)cal}=
+  \label{eq:cal_eff} 
+\end{equation}
+
+\hypertarget{cerenkov-efficiencies}{%
+\subsubsection{Cerenkov Efficiencies}\label{cerenkov-efficiencies}}
+
+The heavy gas detectors of the HMS and SHMS, as well as the SHMS aerogel
+calculate their efficiencies in the same way. It is simply the ratio of
+the number of events that did pass the cuts over the number of events
+that should have passed, given the spectrometer acceptance.
+
+\begin{equation} 
+  \epsilon_{hcer}=
+  \label{eq:hcer_eff} 
+\end{equation}
+
+\begin{equation} 
+  \epsilon_{paero}=
+  \label{eq:paero_eff} 
+\end{equation}
+
+\begin{equation} 
+  \epsilon_{pcer}=
+  \label{eq:pcer_eff} 
+\end{equation}
+
+\noindent where
+
+input\{figures/texs/fig:3-4\_hcer\_eff.tex\}
+input\{figures/texs/fig:3-4\_paero\_eff.tex\}
+input\{figures/texs/fig:3-4\_pcer\_eff.tex\}
+
+A balance must be reached between cuts tight enough to produce a clean
+sample, without taking a hit to the detectors overall efficiency. The
+efficiency of the HMS cerenkov and SHMS aerogel was very good
+(\textgreater95\%????). As discussed in the previous section, the SHMS
+HGCer hole had to be dealt with as a special curcumstance. The region
+inside the hole saw a very low efficiency (\textless20) while the region
+outside the hole saw an efficiency consistent with the other cerenkovs
+(i.e.~\textgreater95\%????). Since the hole was cut, this low efficiency
+was not an issue. However, the region bordering the hole, that was
+included, saw a lower efficiency then the outside
+(\textasciitilde40-80\%????). In the end, it was determined that,
+besides the geometric cut on the HGCer hole, there was no need to over
+complicate things and thus the HGCer was no longer used in PID.
+
+\hypertarget{tracking-efficiency-epsilon_k-track-and-epsilon_e-track}{%
+\subsection{\texorpdfstring{Tracking Efficiency, \(\epsilon_{K track}\)
+and
+\(\epsilon_{e track}\)}{Tracking Efficiency, \textbackslash epsilon\_\{K track\} and \textbackslash epsilon\_\{e track\}}}\label{tracking-efficiency-epsilon_k-track-and-epsilon_e-track}}
+
+The tracking algorithms defined at the start of this section can still
+allow bad tracks which must be accounted for as a tracking efficiency.
+The tracking efficiency is calculated in analogous way to the cerenkov
+efficiencies, that is
+
+\begin{equation} 
+  \epsilon_{k(e)track}=\frac{N_{did}}{N_{should}}
+  \label{eq:track_eff} 
+\end{equation}
+
+\noindent where \(N_{did}\) are the number of events with at least one
+track formed by the tracking algorithm and \(N_{should}\) are the number
+of events where broadly at least one track was expected.
+
+input\{figures/texs/fig:3-4\_e\_track.tex\}
+input\{figures/texs/fig:3-4\_k\_track.tex\}
+
+Overall, there was very good kaon and electron tracking. The electron
+tracking was consistently \textgreater95\%???? while the kaon tracking
+had a bit of rate dependence but still always maintained an efficiency
+above \textasciitilde90\%????.
+
+\hypertarget{computer-and-electronic-livetimes-epsilon_tlt}{%
+\subsection{\texorpdfstring{Computer and Electronic Livetimes,
+\(\epsilon_{TLT}\)}{Computer and Electronic Livetimes, \textbackslash epsilon\_\{TLT\}}}\label{computer-and-electronic-livetimes-epsilon_tlt}}
+
+As discussed in the previous chaper, the EDTM keeps track of both the
+electronic and computer livetimes. The ratio of L1ACCP EDTM
+pseudo-trigger and the EDTM scaler that determine the total dead time.
+Since the EDTM scaler is saved prior to the pseudo-trigger reaching the
+TM, the L1ACCP EDTM pseudo-trigger is prescaled while the EDTM scaler is
+not \cite{murphy_edtm_2022}. This necessitates a correction due to the
+simultaneous EDTM pulse across all triggers, resulting in the recording
+of only one event per pulse. So when the prescale conditions are
+satisfied, the earliest trigger consistently captures the EDTM event,
+limiting the recording of EDTM events. This means that only EDTM events
+that are ``rejected'' by earlier trigger prescale conditions have the
+possibility of being recorded by later triggers. During physics
+production, such an issue can be avoided because the COIN trigger is
+never prescaled and subsequently all events are accepted by the DAQ.
+This results in a fairly straightforward equation for the Total Live
+Time (TLT) for production
+
+\begin{equation} 
+  \epsilon_{prodTLT}=\frac{EDTM_{accept}}{EDTM_{sent}}
+  \label{eq:tlt_prod} 
+\end{equation}
+
+\noindent where \(EDTM_{accept}\) are the accepted triggers and
+\(EDTM_{sent}\) are the sent EDTM scalers. This is the equation used for
+all production TLT (i.e.~that used in eqn \ref{eq:tot_eff}). There was a
+fairly good TLT across the experiment, never dipping below
+\textasciitilde87\%.
+
+\input{figures/texs/fig:3-4_edtm_runnum.tex}
+
+This may seem like the end of things, but in order to understand the
+luminosity data, used for boiling studies and useful for various
+efficiency studies (see next subsection), a correction factor must be
+applied. Assuming a prescale factor greater than one, that is, greater
+than that set for production, EDTM pulses can be prescaled away thus
+dropping the TLT significantly. This grows even more complicated by the
+fact that a majority of the luminosity data was run with prescaled
+singles triggers in both arms (i.e.~HMS and SHMS triggers). This means
+that both single arm triggers can lose events due to prescaling. To
+account for this, eqn. \ref{eq:tlt_prod} must have correction factors
+applied to become
+
+\begin{equation} 
+  \epsilon_{\#TLT}=\frac{EDTM^{\#}_{accept}}{C_{\#}\cdot EDTM_{sent}}
+  \label{eq:tlt_prescale} 
+\end{equation}
+
+\noindent where \# refers to the pTRIG\# and \(C_{\#}\) is the
+correction factor based on the trigger and prescaling scheme (see ref.
+\ref{murphy_edtm_2022} for a breakdown of the correction factors).
+
+\hypertarget{boiling-correction-epsilon_boil}{%
+\subsection{\texorpdfstring{Boiling Correction,
+\(\epsilon_{boil}\)}{Boiling Correction, \textbackslash epsilon\_\{boil\}}}\label{boiling-correction-epsilon_boil}}
+
+As discussed in Chapter \ref{Chapter-4}, the raster protects the target
+by distributing the beam's power more uniformly. Still, there can be
+localized boiling, or density reductions, of the target that can cause
+the data yield to drop by a few percent. Luminosity, or target boiling,
+studies can be performed to better understand and apply a correction
+factor to compensate for such a yield lost. This is done by gathering
+data at fixed kinematics and a variety of beam currents for the
+cryotarget (i.e.~LH2) and Carbon-12.
+
+Carbon-12 is used because of it's high boiling point (4098 K), which far
+exceeds any heat the beam can create
+\cite{thomas_jefferson_national_accelerator_facility_-_office_of_science_education_its_2023}.
+This Carbon-12 data, therefore, is used as a reference point. By looking
+at the relative yield, that is, the yield of all currents normalized by
+the lowest current, the trend of the yields versus current is clear. For
+Carbon-12, this relative yield should be approximately one for all
+currents, so any deviation is an indication of issues to be resolved.
+This makes the Carbon-12 data not just an excellent reference for
+obtaining a boiling factor correction, it also provides incredibly
+useful insights into the rate and current dependence of efficiencies.
+
+The procedure begins with looking at the Carbon-12 scaler yields. The
+scaler yields use a modified version of eqn. \ref{eq:norm_yield},
+
+\begin{equation} 
+  Y_{scaler}=\frac{N_{scaler}}{Q_{tot}}
+  \label{eq:scaler_yield} 
+\end{equation}
+
+\noindent where \(N_{scaler}\) are the number of scaler triggers and
+\(Q_{tot}\) is the total charge with no efficiencies are introduced.
+This is because the first step is to assure there are no issues with the
+scalers and that the current cuts applied are not too tight. When the
+luminosity data is taken it is critical that the beam is steady for at
+least a few minutes to assure that the yields are represented by just
+that nominal current, without ramp ups or trips. To further assure a
+stable current, strict current cuts are applied around this nominal
+current, \(\left|I_{nom}-I_{thres}\right|\), where \(I_{nom}\) is the
+nominal current and \(I_{thres}\) is a threshold current cut. These
+scaler yields are useful in determining a good \(I_{thres}\) for each
+current such that the cut assures a flat fit (see figure
+\ref{fig:3-4_carbon_lumi_yield}, left).
+
+\input{figures/texs/fig:3-4_carbon_lumi_yield.tex}
+
+Once it is determined that the scaler yields are sufficiently flat for
+the expected rates, the Carbon-12 ``no track'' yields can be
+investigated. These are calculated, again, using a modified version of
+eqn. \ref{eq:norm_yield},
+
+\begin{equation} 
+  Y_{nt}=\frac{N_{nt}}{Q_{eff,nt}}
+  \label{eq:nt_yield} 
+\end{equation}
+
+\noindent where \(N_{nt}\) is the number of events, but it is crucial
+that this is calculated using a non-track dependent variable
+(e.g.~H(P)\_cal\_etotnorm, normalized total energy deposition of the
+calorimeter). \(Q_{eff,nt}\) is the effective charge of non-tracked
+efficiencies,
+\(Q_{eff,nt}=Q_{tot}\cdot\epsilon_{TLT}\)\footnote{Note that, in general, the detector efficiencies are not included because luminosity are primarily taken at elastic kinematics with electrons in both arms so the samples are very clean.}.
+The no track yields are useful for understanding the TLT, which, as been
+elluded to in previous sections, was of particular difficulty in these
+luminosity studies. Because the data was taken with prescaled singles
+triggers in both arms (i.e.~HMS and SHMS triggers), the complicated
+correction factor had to be used. This was a long process to get the TLT
+in a well understood place but, as seen in figure
+\ref{fig:3-4_carbon_lumi_yield}, middle, things eventually were
+resolved.
+
+The final step of the Carbon-12 luminosity analysis is to look at the
+tracked data. These are calculated using a similar version of eqn.
+\ref{eq:norm_yield},
+
+\begin{equation} 
+  Y_{track}=\frac{N_{track}}{Q_{eff,track}}
+  \label{eq:track_yield} 
+\end{equation}
+
+\noindent where \(N_{track}\) is the number of events, calculated using
+track dependent variables (e.g.~H(P)\_cal\_etottracknorm, normalized
+total energy of tracked particles deposition of the calorimeter).
+\(Q_{eff,track}\) is the effective charge including tracked
+efficiencies,
+\(Q_{eff,track}=Q_{tot}\cdot\epsilon_{TLT}\cdot\epsilon_{track}\). This
+final step should bring everything together and build an understanding
+of track efficiencies. Luminosity studies are usually just electron
+detection in both arms, but it was decided that setting the SHMS to
+positive polarity would be useful for understanding the kaon tracking
+efficiency in greater detail. This Carbon-12 luminosity data was used
+for tracking alogorithm comparisons in order to optimize for the best
+kaon tracking efficiency.
+
+Normally, the Carbon-12 data should be in a good enough place to move
+onto the cryogenic target (i.e.~LH2), but there were issues with a
+significant number of runs due to a combination of factors. There were a
+number of runs with poor beam on time and/or poor TLT. The poor beam on
+time can be attributed to overall poor beam quality during the time the
+luminosity studies were performed. The poor TLT can be attributed to, in
+some cases, the poor beam on time, but also, the EDTM clock being set
+too high for a given scaler rate and thus would drown out physics
+events. Because a majority of the data was taken with the prescaled
+singles triggers set in both arms, the lost TLT could not be
+disentangled from the coupled EDTM events in both single triggers. Most
+of the remaining useful luminosity data was taken at positive polarity
+in the SHMS. While this data was incredibly useful for the kaon tracking
+studies, without extremely clean electron samples, it is very difficult
+to get even the Carbon-12 data consistently flat at unity. The
+kinematics selected were at high rates, meant to simulate the physics
+rate enviroment to understand the tracking, so as the rates increased
+with current, trying to isolate particular particle samples
+(e.g.~protons or \(\pi^+\)) grew increasingly challenging.
+
+\input{figures/texs/fig:3-4_hms_linear_regress.tex}
+\input{figures/texs/fig:3-4_shms_linear_regress.tex}
+
+Since the data covered a wide range of rates, and in order to give give
+confidence in the Carbon-12 yield results, the luminosity data was fit
+with a weighted linear regression using least squares and weighted by
+the uncertainty. The data is relatively flat, but it is obvious that as
+the rates increase there starts to be rate dependence seen in the SHMS.
+The limited usable luminosity data in SHMS, along with the flatter fit
+of the HMS, gave confidence in the Carbon-12 studies, but not enough to
+continue onto the LH2 studies directly.
+
+input\{figures/texs/fig:3-4\_el\_clean\_yield.tex\}
+
+It was then proposed by Peter Bosted to use the HMS EL\_CLEAN trigger of
+production data to establish the boiling factor correction. Throughout
+the running period, the currents would fluctuate depending on the
+capabilities of MCC, in particular current fluctuations within setting.
+Using these different currents for a particular setting, a small
+correction for target boiling can be extrapolated by finding the average
+value, where a variation is on the order of \textasciitilde0.3\% from
+run to run.
+
+\textless results????\textgreater{}
+
+\hypertarget{coincidence-blocking}{%
+\subsection{Coincidence Blocking}\label{coincidence-blocking}}
+
+There can be interference between non-coincidence and coincidence events
+which can lead to the coincidence time for a small fraction of events
+being recorded outside the timing window. The coincidence time cuts
+discussed in the previous section can be remove these coincidence
+blocking events and thus need to be corrected for. The cointime blocking
+efficiency is defined
+
+\begin{equation} 
+  \epsilon_{coinblock}=\frac{N_{block}}{N_{tot}}
+  \label{eq:coinblock} 
+\end{equation}
+
+\noindent where \(N_{block}\) is the number of early events in the
+measured cointime spectrum and \(N_{tot}\) is the total number of
+events, independent of cointime.
+
+\textless need to do this test???\textgreater{}
 
 \hypertarget{Section-5.5}{%
-\section{Particle Identification}\label{Section-5.5}}
+\section{Experimental Offsets}\label{Section-5.5}}
 
-\hypertarget{Section-5.6}{%
-\section{Efficiency Corrections}\label{Section-5.6}}
+During experimental running, the values of the assumed momenta and
+angles can deviate from their nominal values. Since the kinematic
+quantities of kaon electroproduction are explicitly and implicitly
+dependent on momentum and angle, these offsets need to be corrected for
+to obtain accurate and precise measurements for the analysis at the
+assumed kinematics. In order to find and correct such offsets, a known
+and well understood reaction is preformed at the same momentum and angle
+as experimental data. Elastic reactions fit such a profile, being a
+stable of particle physics for over 50 years. In particular,
+\(H(e,e'p)X\) and \(H(e, e'p)\) are used for such offset studies.
 
-\hypertarget{Section-5.7}{%
-\section{Experimental Offsets}\label{Section-5.7}}
+\hypertarget{elastic-singles-he-epx}{%
+\subsection{\texorpdfstring{Elastic Singles
+\(H(e, e'p)X\)}{Elastic Singles H(e, e\textquotesingle p)X}}\label{elastic-singles-he-epx}}
+
+Elastic singles are simplier and thus an excellent study for determining
+SHMS offsets of the momentum and angle. The invariant mass, W, is
+compared to the proton mass, including the effects of radiation and
+energy loss. Deviations from the proton mass can indicate the effects of
+the beam position not being centered vertically, which would correspond
+to a momentum offset. By adjusting the momentum and angle, W can be
+moved to better be in better agreement with the proton mass and
+therefore any adjustments made to the momentum or angle correspond to an
+offset that needs to be taken into account.
+
+\textless results???\textgreater{}
+
+\hypertarget{coincidence-heep}{%
+\subsection{\texorpdfstring{Coincidence
+\(H(e,e')p\)}{Coincidence H(e,e\textquotesingle)p}}\label{coincidence-heep}}
+
+Elastic coincidence reactions look at aspects of the missing mass
+reacton, such as \(E_M\), \(P_M\), and MM itself, in order to find
+deviations. \(H(e,e'p)\), for our experimental setup, is purely
+exclusive, thus \(E_M\) and all components of \(P_M\) should be zero.
+Since this is a coincidence reaction, all experimental spectrometer
+quantities are accessible, that is, \(E_e\), \(\vec{P_e}\),
+\(\vec{P_p}\), \(\theta_e\), \(\theta_p\), \(\phi_e\) and \(\phi_p\),
+which are beam energy, spectrometer central momentum for electron and
+proton, spectrometer central angle for electron and proton, and
+out-of-plane (OOP) spectrometer angles, respectively. \(P_M\) is defined
+in terms of it's parallel and perpendicular components as well as its
+OOP components. All together \(E_M\), the components of \(P_M\), MM and
+W are correlated to different spectrometer quantities and thus offsets
+can be extrapolated from them through their deviation from zero.
+
+\textless results???\textgreater{}
 
 \markedchapter{Monte Carlo Simulations}{Monte Carlo Simulations}\label{Chapter-6}
 
+Monte Carlo simulations have been a fundamental tool in contemporary
+science ever since computers gained the capacity to manage their
+computational tasks. Named after the gambling casino in Monaco by
+Nicholas Metropolis in 1987, but originally developed by John von
+Neumann and Stanislaw Ulam in the 1940s, this simulation technique uses
+the basic principles of equilibrium statistical mechanics by utilizing
+pseudorandom number generators to predicts the possible outcomes of an
+uncertain event cite\{pathriaStatisticalMechanics2011\}. This is done by
+choosing a configuration describing the probability distribution of
+given state and weighing the events in the state evenly. The basic
+algorithm used in Monte Carlo (MC) simulations is as follows
+
+\begin{enumerate}
+\item Generate a random initial state and apply a small random change.
+\item Determine the change in the next state compared to the initial one.
+\item Repeat steps 1 and 2 for each event in the system, where the event selected is chosen at random.
+\item Repeat steps 1-3 for each MC sweep (i.e. iteration) in order to let the system equilibriate and track the kinematic variables of interest.
+\end{enumerate}
+
+\noindent This is the method used in the MC simulations used for the
+KaonLT analysis (see next section) as well as the fast MC used for EIC
+structure function projections (see Chapter \ref{Chapter-9}).
+
 \hypertarget{Section-6.1}{%
-\section{Overview}\label{Section-6.1}}
+\section{Single Arm Monte Carlo Package}\label{Section-6.1}}
+
+The standard Hall C Monte Carlo for coincidence reactions is the Single
+Arm Monte Carlo package (SIMC) cite\{GitHubJeffersonLabSimc\}. Written
+in Fortran, this code was originally used for analysis of the SLAC
+experiment under the name SIMULATE
+cite\{arringtonInclusiveElectronScattering1998\}. The optics and
+aperture checking was then modified through the mid to late 1990s,
+replacing the SLAC spectrometer models with those of the HMS and SOS
+and, eventually through the 2000s to early 2010s, various other
+spectrometer models were introduced, including the SHMS
+cite\{12gevupgradepcdreditorialboardPreConceptualDesignReport2004\}
+cite\{gaskellSIMCPhysicsMonte\} cite\{arringtonABSIMC2001\}. Throughout
+these years, SIMC has grown to include particle decay, ionization energy
+loss, radiative effects, multiple scattering and simple rules for final
+state interactions, Coulomb corrections and much more. SIMC has also
+expanded in its avaliable reactions, including everything from elastic
+and quasielastic to, the reaction of interest, kaon electroproduction.
+
+Using the basics outlined in the previous subsection, SIMC generates
+events at the initial coordinates of the vertex and fills the kinematic
+phase space, covering 100\% of the acceptance and accounting for the
+interaction mechanisms outlined above. The vertex is determined by the
+given target size, position, raster size and beam spot size. The filled
+phase space covers 100\% of the acceptance, but specific geometric cuts
+may be applied in order to match the constraints of the spectrometer
+model or detector design, such as those outlined in Chapter
+\ref{Chapter-5-3-2}. Once these events are generated, they are sent
+through the spectrometer models which simulate the spectrometer's optics
+and aperatures as it is propagated through the hut. Each detector of the
+spectrometer tests the trajectory of the propagated event by checking it
+against its aperature. The trajectories that pass all the aperatures and
+cross the desired number of detectors in the hut are considered a valid
+trigger. These valid trajectories are fitted in the focal plane and,
+subsequently, propagated to the target, where average energy loss and
+fast raster corrections are applied. It is at this stage that each of
+the physics quantities are calculated.
+
+SIMC is just a Monte Carlo that can simulate optics and check
+trajectories against aperatures and thus cannot simulate detector
+physics (see Chapter \ref{Chapter-9}). This means that inefficiencies
+are not included in SIMC, but each event is weighted by a model cross
+section of the reaction that is corrected for the luminosity factor,
+radiative processes and a Jacobian that can transform between
+spectrometer and physics coordinates. A second Jacobian is used to
+transform between spherical and spectrometer coordinates.
 
 \hypertarget{Section-6.2}{%
 \section{Event Generation}\label{Section-6.2}}
 
+As will be explored in more detail in Chapter \ref{Chapter-7}, the
+scattering of electrons off of a hydrogren target in kaon
+electroproduction produces a cross section in terms of five-fold phase
+space. The virtual \(p(e,e'K^+)\Lambda\) production cross section can be
+expressed as
+
+\begin{equation} 
+  \frac{d^5\sigma}{dQ^2dWd\phi_ed\Omega^*_K}=\Gamma_{\nu}(Q^2,W)\cdot(\frac{d^2\sigma}{d\Omega^*_K})
+  \label{eq:sig_orderfive_virtual_physics} 
+\end{equation}
+
+\noindent where \(d\Omega^*_{K}=dsin\theta^*_Kd\phi_K\) is the kaon
+solid angle in the center of mass frame and \(\Gamma_{\nu}\) is the
+photon flux described by eqn ????. This cross section is adapted from
+the experimental cross section (see eqn. ???? of chapter
+\ref{Chapter-7}) for use in SIMC. This must be adapted from the
+experimental cross section of eqn. ??? because the generated quantities
+are generated in the lab frame. In order to do this, a Jacobian is used
+to transform from physics to lab frame, but instead of going from
+\(d\sigma/d^2\Omega^*_K\rightarrow d^2\sigma/d\Omega_K\), directly, it
+is easier to transform \(d^2\sigma/d\Omega^*_K\) to the invariant cross
+section \(d^2\sigma/dtd\phi\) first, then rotate the system into the
+proper lab frame. Using the definition of \(t\) from eqn. ????, the
+invariant cross section can be described by
+
+\begin{equation} 
+  \frac{d^2\sigma}{dt d\phi^*_{qK}}=\frac{d\sigma}{d\Omega^*}\frac{d cos\theta^*_{qK}}{dt}=\frac{1}{2p^*q^*}\frac{d\sigma}{d\Omega^*}
+  \label{eq:sig_ordertwo_tphi} 
+\end{equation}
+
+which can be related to the center of mass photoproduction cross section
+by the Jacobian
+
+\begin{equation} 
+  \frac{d^2\sigma}{d\Omega^*_K}=J(t,\phi^*_{qK}\rightarrow cos\theta_{qK},\phi_{qK})\frac{d^2\sigma}{dtd\phi}\cdot\frac{dt}{d cos\theta^*}
+  \label{eq:sig_ordertwo_virtual_physics} 
+\end{equation}
+
+\noindent and, thus, the full transformation can be described by
+
+\begin{equation} 
+  \frac{d^2\sigma}{d\Omega_K}=J(t,\phi^*_{qK}\rightarrow cos\theta_{qK},\phi_{qK})\frac{1}{2p^*q^*}\frac{d\sigma}{d\Omega^*}
+  \label{eq:sig_ordertwo_virtual_lab} 
+\end{equation}
+
+\noindent where \(\frac{dt}{d cos\theta^*}=2p^*q^*\) is the Jacobian
+factor cite\{gaskellLongitudinalElectroproductionCharged2001a\}.
+
 \hypertarget{Section-6.3}{%
 \section{Spectrometer Models}\label{Section-6.3}}
+
+The first stage after the angles and momenta are generated at the vertex
+is for each generated particle event to be transported through the
+magnetic fields in the spectrometers. These magnetic optics are modeled
+using COSY INFINITY which uses matrix elements for particle
+transportation through the spectrometer
+cite\{berzCodeCOSYINFINITY1991\}. The particle's position, direction and
+fractional momentum are transformed as
+
+\begin{equation} 
+  \left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{out}}=(\prod^N_iM_i)\cdot\left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{in}}
+  \label{eq:cosy_transform} 
+\end{equation}
+
+\noindent where \(z_{in}\) is the entrance of the magnet region,
+\(z_{out}\) is the exit location after the transform and \(M_i\) are
+\(N\) matrix transformations (up to \(N=5\)) that are used to model the
+particle transportation. These models are generated by using magnetic
+field maps that are, subsequently, optimized with real data.
 
 \hypertarget{Section-6.4}{%
 \section{Material Interactions}\label{Section-6.4}}
 
+In the experimental setting, particles can easily interact with the
+materials that make up the various aspects of the spectrometers. These
+interacts can lead to energy losses and/or multiple scattering which
+need to be realistically included in SIMC.
+
+\hypertarget{ionization-energy-loss}{%
+\subsection{Ionization Energy Loss}\label{ionization-energy-loss}}
+
+Ionization energy is the dominant energy loss mechanism for kaon
+material collisions. The ionization energy loss of such interactions can
+be formulated by using the Bethe-Bloch formula
+cite\{IonizationEnergyLoss\}. The general equation for the mean rate of
+energy loss (i.e.~stopping power) for charged particles is given by
+
+\begin{equation} 
+  \frac{dE}{dx}=Kz^2\frac{Z}{A}\frac{1}{\beta^2}[\frac{1}{2}ln(\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I^2})-\beta^2-\frac{\delta(\beta\gamma)}{2}]
+  \label{eq:stop_power} 
+\end{equation}
+
+\noindent where \(A\) is the atomic mass of the absorber,
+\(K=4\pi N_Ar^2_em_ec^2\), \(z\) and \(Z\) are the atomic number of the
+incident particle and absorber, respectively, \(T_{max}\) is the
+maxiumum transferable energy (dependent on the type of collision), \(I\)
+is the characteristic ionization constant material (dependent on
+\(\delta(\beta\gamma)\), the density effect correction) and \(x=\rho d\)
+is the mass thickness, where \(d\) is the length.
+
+In SIMC, it is assumed that that the absorber has a low thickness and
+the incident particle has a high momentum. This means when eqn.
+\ref{eq:stop_power} is smeared (to account for its inherent
+probabilistic nature), the energy loss distibution can be described with
+a Landau distribtion
+
+\begin{equation} 
+  E_{loss}=\lambda_{L}\xi+\frac{dE}{dx}
+  \label{eq:landau_disto} 
+\end{equation}
+
+\noindent where \(\xi\) is the constant
+
+\begin{equation} 
+  \xi\equiv\frac{2\pi N_Az^2e^4}{m_ec^2}
+  \label{eq:xi_landau_disto} 
+\end{equation}
+
+\noindent If equations \ref{eq:stop_power} and \ref{eq:landau_disto} are
+modified for the specifics of the kaon interactions (i.e.~that of a
+incoming kaon scattering off the electron of the material)
+
+\begin{equation} 
+  \frac{dE}{dx}=\frac{\xi}{1000}\frac{Z_{eff}d}{A_{eff}\beta^2}[ln(\frac{m_e}{I^2})+1.063+2ln(\gamma\beta)+ln(0.1536\frac{Z_{eff}d}{A_{eff}\beta^2})-\beta^2-\delta]
+  \label{eq:mod_stop_power} 
+\end{equation}
+
+\noindent where \(Z_{eff}\) and \(A_{eff}\) are the effective atomic
+charge and mass, respectively, of the material. As alluded to above, the
+most imporant parameter for modeling the energy loss is the density
+effect correction, \(\delta\), which is defined as
+
+\begin{equation} 
+  \delta=
+  \begin{cases}
+    0 & \text{if } p/M\leq 1 \\
+    \text{CO}+ln(\beta\gamma)+\left|\text{CO}/27\right|\cdot(3-log_{10}(\beta\gamma))^3 & \text{if } 1 < p/m < 10^3 \\
+    \text{CO}+ln(\beta\gamma) & \text{if } 10^3 < p/M\leq 10^{4.7} \\
+    \text{CO}+10.82 & \text{if } p/M > 10^{4.7}
+    \end{cases}
+  \label{eq:delta_density_corr} 
+\end{equation}
+
+\noindent where \(\text{CO}=ln(f_{plas})-ln(I)+0.5\) and describes the
+plasma frequency of the absorber
+(\(f_{plas}=28.816\cdot 10^-6\cdot\sqrt{\rho\cdot Z_{eff}/A_{eff}}\)).
+The characteristic ionization constant (\(I\)) is defined as 21.8 eV for
+LH2 and \(16\cdot Z^{0.9}_{eff}\) eV for other materials. The Landau
+distribution is of the form \(\lambda_L=-2\cdot ln(x_L)\), where \(x_L\)
+is a random number generated by a Gaussian distibution (lying between 0
+and 1).
+
+\hypertarget{mutiple-scattering}{%
+\subsection{Mutiple Scattering}\label{mutiple-scattering}}
+
+Coulomb multiple scattering, which are small deflections in particles
+traversing a medium, is another effect caused by interaction with the
+materials of the target and/or spectrometers. A Gaussian distribtion can
+statistically describe the accumulation of these many small deflections.
+This Gaussian has a width of
+
+\begin{equation} 
+  \theta_0=\frac{13.6 \text{MeV}}{\beta cp}\sqrt{\frac{d}{X_0}}[1+0.038\cdot ln(\frac{d}{X_0})]
+  \label{eq:gaus_scatter} 
+\end{equation}
+
+\noindent where \(p\) is the incident particle's momentum and \(d\) is
+the thickness of the transvered medium (in units of radiation length,
+\(1/X_0\)). The angles that define the direction of a particle
+transversing the medium are described by \(x_L\cdot\theta_0\). It is
+evident from eqn. \ref{eq:gaus_scatter} that as \(p\) decreases the
+effects of multiple scattering increases. The horizontal and vertical
+scattering directions are calculated independently in SIMC, as are the
+incident and scattered particles (i.e.~electron and produced hadron).
+
 \hypertarget{Section-6.5}{%
 \section{Kaon Decay}\label{Section-6.5}}
+
+\input{figures/texs/tab:4-5_kaon_decay.tex}
+
+Due to special relativity, the mean lifetime of the kaon
+(\(\tau_K=12\text{ns}\) in the rest frame) lasts long enough to be
+detected. But even at the few GeV/c momenta used in the experimental
+setup, there are a significant fraction of produced kaons that
+spontaneously decay on their journey through the hut. A breakdown of the
+\(K^+\) decay channels can be seen in table \ref{tab:4-5_kaon_decay}.
+
+A particle's decay occurs randomly, following a Poisson distribution. In
+terms of travel distance, denoted as \(d\), a kaon has a probability of
+reaching this distance according to
+
+\begin{equation} 
+  \frac{N(d)}{N_{created}}=e^{\frac{-m_Kd}{p\tau_K}}
+  \label{eq:kaon_decay} 
+\end{equation}
+
+\noindent which can be adapted for SIMC implimentation as the distance
+the kaon travels in the simulation
+
+\begin{equation} 
+  z_{decay}=-\tau_K\beta\gamma ln(1-x_U)
+  \label{eq:z_decay} 
+\end{equation}
+
+\noindent where \(x_U\) is a random number generated by a uniform
+distibution (lying between 0 and 1). \$z\_\{decay\} is implimented in
+SIMC for each simulted event as a random location where the kaon decays.
+Once a simulated kaon event reachs \(z_{decay}\), it decays according to
+the decay channels in table \ref{tab:4-5_kaon_decay}. Each decay channel
+has a corresponding branching fraction which describes the probability
+of the kaon decaying to that channel. In SIMC, the kaon is transformed,
+including randomly dividing its energy and momentum, into one of these
+charged daughter particles corresponding to the chosen branch.
+
+These decay products can still trigger valid trigger events, so proper
+cuts and kinematic reconstruction are required. A majority of the
+daughter particles are removed, but, a fraction of decayed kaon events,
+contribute to the yields and must be accounted for.
 
 \hypertarget{Section-6.6}{%
 \section{Radiative Corrections}\label{Section-6.6}}
 
-\hypertarget{Section-6.7}{%
-\section{Elastic Scattering}\label{Section-6.7}}
+As discussed in various other chapters (such as chapter
+\ref{Chapter-4-5-4}), Bremmstrahlung radiation is produced when a
+charged particle is suddenly accerated or decelerated. This consequence
+of energy conservation occurs at various points in the hut, when the
+traversing particle goes through electric fields, specifically, when
+they traverse through the fields of the atomic structure in the medium.
+The effects of Bremmstrahlung radiation can be seen directly in the data
+as either a widening of the missing mass and energy spectra (i.e.~poorer
+resolution) or a shift in central values. In the case of
+\(p(e,e'K^+)\Lambda\), the \(\Lambda\) peak was broadened in an
+asymmetrically and, as discussed in Chapter \ref{Chapter-5-3-4}, the
+radiative corrections are important for defining the missing mass cuts.
+
+SIMC uses a radiative correction algorithm derived from extending
+inclusive electrons scattered off a proton target to coincidence elastic
+reactions. In the case of meson electroproduction, this formalism is
+modified to assume that the proton is a fixed target with the final
+state meson being treated as an an off-shell proton that travels
+forwards and detected by one of the two spectrometers. To achieve
+comprehensive simulations of the radiative effects, the Bremmstrahlung
+radiation of the particle when it interacts with the fields along the
+material (so called external Bremmstrahlung) and radiation of the
+particle from the fields of the nucleus during the reaction (so called
+internal Bremmstrahlung) had to be modeled.
+
+External Bremmstrahlung occurs far from the interaction point and, thus,
+the total energy loss can be approximated to the sum of the photons
+radiated energies. Internal Bremmstrahlung occurs at the reaction so the
+photon radiated energies are close together and cannot simply be
+approximated as interfence between these photons needs to be carefully
+considered. Because of the significance of this interfence, internal
+Bremmstrahlung can be split into two catagories; hard and soft radiation
+(i.e.~high vs.~low photon energy). In the case of hard radiation,
+reabsorption can occur, which requires vertex corrections, and, for soft
+radiation, a real photon is emitted, which lowers the energy of the
+radiating particle.
+
+The corresponding diagrams for such radiative processes can contribute
+to the measured cross section. These are taken into consideration in
+SIMC by weighting the first order \(p(e,e'K^+)\Lambda\) cross section by
+a factor
+
+\begin{equation} 
+  R_{corr}=(1-\delta_{hard})\cdot\delta_{soft}\Phi^{ext}_e\Phi^{ext}_{e'}
+  \label{eq:weight_factor} 
+\end{equation}
+
+\noindent where \(\delta\) is the internal and external corrections and
+\(\Phi\) is the improved corrections to the external component. This
+weight factor takes into account the soft photon approximation, which
+consideres the emitted photon's energy as small relative to that of the
+traveling particle and, also, the extended peak approximation, which
+considers the collinearity of the photon and particle direction. The
+soft correction for \(p(e,e'K^+)\Lambda\) can be expressed as
+
+\begin{equation} 
+  \delta_{\text{soft}}=\delta_{\text{soft},e}\cdot\delta_{\text{soft},e'}\cdot\delta_{\text{soft},K}
+  \label{eq:soft_corr} 
+\end{equation}
+
+\begin{equation} 
+  \delta_{\text{soft},e/e'}=\frac{1}{\Gamma(1+bt_{e/e'})}\frac{bt_{e/e'}+\lambda_{e/e'}}{k^{bt_{e/e'}}_{e/e'}}(k_ek'_e)^{-\lambda_{e/e'}/2}\frac{1}{{E}^{1-\lambda_{e/e'}-bt_{e/e'}}_{e/e'}}
+  \label{eq:soft_corr_e} 
+\end{equation}
+
+\begin{equation} 
+  \delta_{\text{soft},K}=\lambda_K(M_pk_K)^{-\lambda_K/2}\frac{1}{E^{1-\lambda_K}_K}
+  \label{eq:soft_corr_k} 
+\end{equation}
+
+\noindent where \(bt_i\) is associated with the materials screening
+properties and \(\lambda_i\) is calculated as
+
+\begin{equation} 
+  \lambda_{e/e'}=\frac{\alpha}{\pi}[ln(\frac{4k^2_{e/e'}}{m^2_{e/e'}})-1+2ln(\frac{k_e}{k'_e})+ln(\frac{1-cos\theta_e}{2})]
+  \label{eq:lambda_e} 
+\end{equation}
+
+\begin{equation} 
+  \lambda_{K}=\frac{\alpha}{\pi}[ln(\frac{E_K}{E}+\left|p_K\right|E_K-\left|p_K\right|)-2]
+  \label{eq:lambda_k} 
+\end{equation}
+
+The hard correction in the limit \(Q^2>m^2\), where \(m^2\) is the mass
+of the radiating particle, can be expressed as
+
+\begin{equation} 
+  \delta_{\text{hard}}=\frac{2\alpha}{\pi}[(1-\frac{3}{4}ln(\frac{Q^2}{m^2}))+(\frac{5}{9}-\frac{1}{3}ln(\frac{Q^2}{m^2}))]
+  \label{eq:hard_corr} 
+\end{equation}
+
+The external corrections have the form
+
+\begin{equation} 
+  \Phi^{ext}_i=1-\frac{bt_i}{bt_i+\lambda_i}\frac{E_i}{\left|k_i\right|}
+  \label{eq:ext_corr} 
+\end{equation}
+
+The following distribution
+
+\begin{equation} 
+  G=\frac{gE^{g-1}}{E^g_{max}-E^g_{min}}
+  \label{eq:radiative_corr_distro} 
+\end{equation}
+
+\noindent is used to randomly apply the radiative correction to the
+incident and scattered particles in SIMC, where \(E_{min/max}\) are the
+range of the generated photon energy and \(g=(\lambda_i+bt_i)\).
 
 \markedchapter{Experimental Cross Section Overview}{Experimental Cross Section Overview}\label{Chapter-7}
 
 \hypertarget{Section-7.1}{%
-\section{Monte Carlo Equivalent Yield}\label{Section-7.1}}
+\section{Cross Section Definiton}\label{Section-7.1}}
 
 \hypertarget{Section-7.2}{%
-\section{Cross Section Determination}\label{Section-7.2}}
+\section{LT Separation Procedure}\label{Section-7.2}}
 
 \hypertarget{Section-7.3}{%
-\section{Model Cross Section}\label{Section-7.3}}
+\section{Monte Carlo Equivalent Yield}\label{Section-7.3}}
 
 \hypertarget{Section-7.4}{%
-\section{Model and Data Comparison}\label{Section-7.4}}
+\section{Cross Section Determination}\label{Section-7.4}}
 
 \hypertarget{Section-7.5}{%
-\section{Error Analysis}\label{Section-7.5}}
+\section{Model Cross Section}\label{Section-7.5}}
+
+\hypertarget{Section-7.6}{%
+\section{Model and Data Comparison}\label{Section-7.6}}
+
+\hypertarget{Section-7.7}{%
+\section{Error Analysis}\label{Section-7.7}}
 
 \markedchapter{KaonLT Results and Discussion}{KaonLT Results and Discussion}\label{Chapter-8}
 
 \hypertarget{Section-8.1}{%
-\section{Overview}\label{Section-8.1}}
+\section{Experimental Cross Sections}\label{Section-8.1}}
+
+\begin{equation} 
+  \frac{d^5\sigma}{d\Omega_e dE'_e d\Omega_K}=\Gamma_{\nu}\frac{d^2\sigma}{dt\cdot d\phi}\cdot J(t,\phi\rightarrow\Omega^*_K)
+  \label{eq:sig_orderfive_virtual_physics} 
+\end{equation}
 
 \hypertarget{Section-8.2}{%
-\section{Experimental Cross Sections}\label{Section-8.2}}
+\section{Unseparated Cross Sections}\label{Section-8.2}}
 
 \hypertarget{Section-8.3}{%
-\section{Unseparated Cross Sections}\label{Section-8.3}}
+\section{Separated Cross Sections}\label{Section-8.3}}
 
 \hypertarget{Section-8.4}{%
-\section{Separated Cross Sections}\label{Section-8.4}}
+\section{\texorpdfstring{Extraction of \(K^{+}\) Form
+Factor}{Extraction of K\^{}\{+\} Form Factor}}\label{Section-8.4}}
 
 \hypertarget{Section-8.5}{%
-\section{\texorpdfstring{Extraction of \(K^{+}\) Form
-Factor}{Extraction of K\^{}\{+\} Form Factor}}\label{Section-8.5}}
-
-\hypertarget{Section-8.6}{%
-\section{Discussion}\label{Section-8.6}}
+\section{Discussion}\label{Section-8.5}}
 
 \markedchapter{Future Measurements at EIC}{Future Measurements at EIC}\label{Chapter-9}
 
 \hypertarget{Section-9.1}{%
-\section{Overview}\label{Section-9.1}}
-
-\hypertarget{Section-9.2}{%
-\section{Meson Structure Function}\label{Section-9.2}}
+\section{Meson Structure Function}\label{Section-9.1}}
 
 Theory
 
-\hypertarget{Section-9.3}{%
-\section{Experimental Considerations}\label{Section-9.3}}
+\hypertarget{Section-9.2}{%
+\section{Experimental Considerations}\label{Section-9.2}}
 
-\hypertarget{Section-9.4}{%
-\section{Far Forward Detection and Simulations}\label{Section-9.4}}
+\hypertarget{Section-9.3}{%
+\section{Far Forward Detection and Simulations}\label{Section-9.3}}
 
 MC+GEANT
 
-\hypertarget{Section-9.5}{%
-\section{Structure Function Projections}\label{Section-9.5}}
+\hypertarget{Section-9.4}{%
+\section{Structure Function Projections}\label{Section-9.4}}
 
-\hypertarget{Section-9.6}{%
-\section{Discussion and Outlook}\label{Section-9.6}}
+\hypertarget{Section-9.5}{%
+\section{Discussion and Outlook}\label{Section-9.5}}
 
 \markedchapter{Conclusion}{Conclusion}\label{Chapter-10}
 
