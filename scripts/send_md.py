@@ -3,7 +3,7 @@
 #
 # Description:
 # ================================================================
-# Time-stamp: "2023-09-11 22:28:22 trottar"
+# Time-stamp: "2023-09-11 22:39:49 trottar"
 # ================================================================
 #
 # Author:  Richard L. Trotta III <trotta@cua.edu>
@@ -33,7 +33,7 @@ my_email_pass = os.environ.get('PY_EMAIL_PASS')
 
 # send our email message 'msg' to our boss
 def message(subject=f"{inp_f} @Thesis +", 
-            text=f"Last Updated: {formatted_date}", attachment=[f"{inp_f}.md",f"{inp_f}.pdf"]):
+            text=f"Last Updated: {formatted_date}", attachment=[f"../{inp_f}.md",f"../{inp_f}.pdf"]):
     
     # build message contents
     msg = MIMEMultipart()
@@ -58,7 +58,7 @@ def message(subject=f"{inp_f} @Thesis +",
             filename="{os.path.basename(attach)}"'
             # At last, Add the attach to our message object
             msg.attach(file)
-            print(f'''Attaching {attach} 
+            print(f'''Attaching {attach.replace("../","")} 
                                         {i+1}/{len(attachment)}''')            
         except Exception as e:
             print(f"Error reading {attach}: {e}")        

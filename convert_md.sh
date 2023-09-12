@@ -3,7 +3,7 @@
 #
 # Description:
 # ================================================================
-# Time-stamp: "2023-09-11 22:29:19 trottar"
+# Time-stamp: "2023-09-11 22:37:19 trottar"
 # ================================================================
 #
 # Author:  Richard L. Trotta III <trotta@cua.edu>
@@ -26,7 +26,9 @@ read -p "Do you want to push update to Evernote? (yes/no): " answer
 if [ "$answer" == "yes" ]; then
     # Add your script execution command here
     echo
+    cd "scripts/"
     python3.8 send_md.py $1
+    cd "../"
 elif [ "$answer" == "no" ]; then
     echo
 else
