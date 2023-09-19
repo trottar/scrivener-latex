@@ -1811,7 +1811,7 @@ Nicholas Metropolis in 1987, but originally developed by John von
 Neumann and Stanislaw Ulam in the 1940s, this simulation technique uses
 the basic principles of equilibrium statistical mechanics by utilizing
 pseudorandom number generators to predicts the possible outcomes of an
-uncertain event cite\{pathriaStatisticalMechanics2011\}. This is done by
+uncertain event \cite{pathria_statistical_2011}. This is done by
 choosing a configuration describing the probability distribution of
 given state and weighing the events in the state evenly. The basic
 algorithm used in Monte Carlo (MC) simulations is as follows
@@ -1831,21 +1831,20 @@ structure function projections (see Chapter \ref{Chapter-9}).
 \section{Single Arm Monte Carlo Package}\label{Section-6.1}}
 
 The standard Hall C Monte Carlo for coincidence reactions is the Single
-Arm Monte Carlo package (SIMC) cite\{GitHubJeffersonLabSimc\}. Written
-in Fortran, this code was originally used for analysis of the SLAC
-experiment under the name SIMULATE
-cite\{arringtonInclusiveElectronScattering1998\}. The optics and
-aperture checking was then modified through the mid to late 1990s,
-replacing the SLAC spectrometer models with those of the HMS and SOS
-and, eventually through the 2000s to early 2010s, various other
+Arm Monte Carlo package (SIMC) \cite{gaskell_github_2023}. Written in
+Fortran, this code was originally used for analysis of the SLAC
+experiment under the name SIMULATE \cite{arrington_inclusive_1998}. The
+optics and aperture checking was then modified through the mid to late
+1990s, replacing the SLAC spectrometer models with those of the HMS and
+SOS and, eventually through the 2000s to early 2010s, various other
 spectrometer models were introduced, including the SHMS
-cite\{12gevupgradepcdreditorialboardPreConceptualDesignReport2004\}
-cite\{gaskellSIMCPhysicsMonte\} cite\{arringtonABSIMC2001\}. Throughout
-these years, SIMC has grown to include particle decay, ionization energy
-loss, radiative effects, multiple scattering and simple rules for final
-state interactions, Coulomb corrections and much more. SIMC has also
-expanded in its avaliable reactions, including everything from elastic
-and quasielastic to, the reaction of interest, kaon electroproduction.
+\cite{12_gev_upgrade_pcdr_editorial_board_pre-conceptual_2004}
+\cite{gaskell_simc_2009} \cite{arrington_-b-simc_2001}. Throughout these
+years, SIMC has grown to include particle decay, ionization energy loss,
+radiative effects, multiple scattering and simple rules for final state
+interactions, Coulomb corrections and much more. SIMC has also expanded
+in its avaliable reactions, including everything from elastic and
+quasielastic to, the reaction of interest, kaon electroproduction.
 
 Using the basics outlined in the previous subsection, SIMC generates
 events at the initial coordinates of the vertex and fills the kinematic
@@ -1924,7 +1923,7 @@ by the Jacobian
 \end{equation}
 
 \noindent where \(\frac{dt}{d cos\theta^*}=2p^*q^*\) is the Jacobian
-factor cite\{gaskellLongitudinalElectroproductionCharged2001a\}.
+factor \cite{gaskell_longitudinal_2001}.
 
 \hypertarget{Section-6.3}{%
 \section{Spectrometer Models}\label{Section-6.3}}
@@ -1933,9 +1932,9 @@ The first stage after the angles and momenta are generated at the vertex
 is for each generated particle event to be transported through the
 magnetic fields in the spectrometers. These magnetic optics are modeled
 using COSY INFINITY which uses matrix elements for particle
-transportation through the spectrometer
-cite\{berzCodeCOSYINFINITY1991\}. The particle's position, direction and
-fractional momentum are transformed as
+transportation through the spectrometer \cite{berz_code_1991}. The
+particle's position, direction and fractional momentum are transformed
+as
 
 \begin{equation} 
   \left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{out}}=(\prod^N_iM_i)\cdot\left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{in}}
@@ -1962,8 +1961,9 @@ need to be realistically included in SIMC.
 Ionization energy is the dominant energy loss mechanism for kaon
 material collisions. The ionization energy loss of such interactions can
 be formulated by using the Bethe-Bloch formula
-cite\{IonizationEnergyLoss\}. The general equation for the mean rate of
-energy loss (i.e.~stopping power) for charged particles is given by
+\cite{gmp_collaboration_ionization_2015}. The general equation for the
+mean rate of energy loss (i.e.~stopping power) for charged particles is
+given by
 
 \begin{equation} 
   \frac{dE}{dx}=Kz^2\frac{Z}{A}\frac{1}{\beta^2}[\frac{1}{2}ln(\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I^2})-\beta^2-\frac{\delta(\beta\gamma)}{2}]
@@ -2257,10 +2257,12 @@ Factor}{Extraction of K\^{}\{+\} Form Factor}}\label{Section-8.4}}
 
 \markedchapter{Future Measurements at EIC}{Future Measurements at EIC}\label{Chapter-9}
 
+\input{figures/texs/fig:7-0_eic.tex}
+
 \hypertarget{Section-9.1}{%
 \section{Meson Structure Function}\label{Section-9.1}}
 
-Theory
+\textless Theory: Write when doing the theory section\textgreater{}
 
 \hypertarget{Section-9.2}{%
 \section{Experimental Considerations}\label{Section-9.2}}

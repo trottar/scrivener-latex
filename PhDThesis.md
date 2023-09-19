@@ -716,7 +716,7 @@ Elastic coincidence reactions look at aspects of the missing mass reacton, such 
 
 \markedchapter{Monte Carlo Simulations}{Monte Carlo Simulations}\label{Chapter-6} 
 
-Monte Carlo simulations have been a fundamental tool in contemporary science ever since computers gained the capacity to manage their computational tasks. Named after the gambling casino in Monaco by Nicholas Metropolis in 1987, but originally developed by John von Neumann and Stanislaw Ulam in the 1940s, this simulation technique uses the basic principles of equilibrium statistical mechanics by utilizing pseudorandom number generators to predicts the possible outcomes of an uncertain event cite{pathriaStatisticalMechanics2011}. This is done by choosing a configuration describing the probability distribution of given state and weighing the events in the state evenly. The basic algorithm used in Monte Carlo (MC) simulations is as follows
+Monte Carlo simulations have been a fundamental tool in contemporary science ever since computers gained the capacity to manage their computational tasks. Named after the gambling casino in Monaco by Nicholas Metropolis in 1987, but originally developed by John von Neumann and Stanislaw Ulam in the 1940s, this simulation technique uses the basic principles of equilibrium statistical mechanics by utilizing pseudorandom number generators to predicts the possible outcomes of an uncertain event \cite{pathria_statistical_2011}. This is done by choosing a configuration describing the probability distribution of given state and weighing the events in the state evenly. The basic algorithm used in Monte Carlo (MC) simulations is as follows
 
 \begin{enumerate}
 \item Generate a random initial state and apply a small random change.
@@ -729,7 +729,7 @@ Monte Carlo simulations have been a fundamental tool in contemporary science eve
 
 ## Single Arm Monte Carlo Package{#Section-6.1} 
 
-The standard Hall C Monte Carlo for coincidence reactions is the Single Arm Monte Carlo package (SIMC) cite{GitHubJeffersonLabSimc}. Written in Fortran, this code was originally used for analysis of the SLAC experiment under the name SIMULATE cite{arringtonInclusiveElectronScattering1998}. The optics and aperture checking was then modified through the mid to late 1990s, replacing the SLAC spectrometer models with those of the HMS and SOS and, eventually through the 2000s to early 2010s, various other spectrometer models were introduced, including the SHMS cite{12gevupgradepcdreditorialboardPreConceptualDesignReport2004} cite{gaskellSIMCPhysicsMonte} cite{arringtonABSIMC2001}. Throughout these years, SIMC has grown to include particle decay, ionization energy loss, radiative effects, multiple scattering and simple rules for final state interactions, Coulomb corrections and much more. SIMC has also expanded in its avaliable reactions, including everything from elastic and quasielastic to, the reaction of interest, kaon electroproduction.
+The standard Hall C Monte Carlo for coincidence reactions is the Single Arm Monte Carlo package (SIMC) \cite{gaskell_github_2023}. Written in Fortran, this code was originally used for analysis of the SLAC experiment under the name SIMULATE \cite{arrington_inclusive_1998}. The optics and aperture checking was then modified through the mid to late 1990s, replacing the SLAC spectrometer models with those of the HMS and SOS and, eventually through the 2000s to early 2010s, various other spectrometer models were introduced, including the SHMS \cite{12_gev_upgrade_pcdr_editorial_board_pre-conceptual_2004} \cite{gaskell_simc_2009} \cite{arrington_-b-simc_2001}. Throughout these years, SIMC has grown to include particle decay, ionization energy loss, radiative effects, multiple scattering and simple rules for final state interactions, Coulomb corrections and much more. SIMC has also expanded in its avaliable reactions, including everything from elastic and quasielastic to, the reaction of interest, kaon electroproduction.
 
 Using the basics outlined in the previous subsection, SIMC generates events at the initial coordinates of the vertex and fills the kinematic phase space, covering 100% of the acceptance and accounting for the interaction mechanisms outlined above. The vertex is determined by the given target size, position, raster size and beam spot size. The filled phase space covers 100% of the acceptance, but specific geometric cuts may be applied in order to match the constraints of the spectrometer model or detector design, such as those outlined in Chapter \ref{Chapter-5-3-2}. Once these events are generated, they are sent through the spectrometer models which simulate the spectrometer's optics and aperatures as it is propagated through the hut. Each detector of the spectrometer tests the trajectory of the propagated event by checking it against its aperature. The trajectories that pass all the aperatures and cross the desired number of detectors in the hut are considered a valid trigger. These valid trajectories are fitted in the focal plane and, subsequently, propagated to the target, where average energy loss and fast raster corrections are applied. It is at this stage that each of the physics quantities are calculated. 
 
@@ -765,11 +765,11 @@ which can be related to the center of mass photoproduction cross section by the 
   \label{eq:sig_ordertwo_virtual_lab} 
 \end{equation}
 
-\noindent where $\frac{dt}{d cos\theta^*}=2p^*q^*$ is the Jacobian factor cite{gaskellLongitudinalElectroproductionCharged2001a}.
+\noindent where $\frac{dt}{d cos\theta^*}=2p^*q^*$ is the Jacobian factor \cite{gaskell_longitudinal_2001}.
 
 ## Spectrometer Models{#Section-6.3} 
 
-The first stage after the angles and momenta are generated at the vertex is for each generated particle event to be transported through the magnetic fields in the spectrometers. These magnetic optics are modeled using COSY INFINITY which uses matrix elements for particle transportation through the spectrometer cite{berzCodeCOSYINFINITY1991}. The particle's position, direction and fractional momentum are transformed as
+The first stage after the angles and momenta are generated at the vertex is for each generated particle event to be transported through the magnetic fields in the spectrometers. These magnetic optics are modeled using COSY INFINITY which uses matrix elements for particle transportation through the spectrometer \cite{berz_code_1991}. The particle's position, direction and fractional momentum are transformed as
 
 \begin{equation} 
   \left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{out}}=(\prod^N_iM_i)\cdot\left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{in}}
@@ -784,7 +784,7 @@ In the experimental setting, particles can easily interact with the materials th
 
 ### Ionization Energy Loss
 
-Ionization energy is the dominant energy loss mechanism for kaon material collisions. The ionization energy loss of such interactions can be formulated by using the Bethe-Bloch formula cite{IonizationEnergyLoss}. The general equation for the mean rate of energy loss (i.e. stopping power) for charged particles is given by
+Ionization energy is the dominant energy loss mechanism for kaon material collisions. The ionization energy loss of such interactions can be formulated by using the Bethe-Bloch formula \cite{gmp_collaboration_ionization_2015}. The general equation for the mean rate of energy loss (i.e. stopping power) for charged particles is given by
 
 \begin{equation} 
   \frac{dE}{dx}=Kz^2\frac{Z}{A}\frac{1}{\beta^2}[\frac{1}{2}ln(\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I^2})-\beta^2-\frac{\delta(\beta\gamma)}{2}]
@@ -967,20 +967,27 @@ The following distribution
 
 \markedchapter{Future Measurements at EIC}{Future Measurements at EIC}\label{Chapter-9} 
 
+\input{figures/texs/fig:7-0_eic.tex}
+
+<summary of EIC>
 
 ## Meson Structure Function{#Section-9.1} 
 
-Theory
+<Theory: Write when doing the theory section>
 
-## Experimental Considerations{#Section-9.2} 
+## Far Forward Detection and Simulations{#Section-9.2} 
 
-## Far Forward Detection and Simulations{#Section-9.3} 
+<summary of far forward region>
+<MC+GEANT Summary>
 
-MC+GEANT
+## Structure Function Projections{#Section-9.3}
 
-## Structure Function Projections{#Section-9.4} 
+<projections from JPhysG>
 
-## Discussion and Outlook{#Section-9.5} 
+## Discussion and Outlook{#Section-9.4} 
+
+<Expand to kaon, update with splitting function>
+
 \markedchapter{Conclusion}{Conclusion}\label{Chapter-10} 
 
 
