@@ -16,6 +16,57 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% Chapter 1, section 6
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Mfigure}{Mass Aquisition of Quarks}
+  \centering
+  \includegraphics[width=0.75\linewidth]{dressquarkmass.pdf}
+  \caption{The dressed-quark mass function, M(p), versus momentum which shows the rapid aquisition of mass via the gluon cloud as a result of DCSB. The DSE results are the solid curves and the pseudodata points are produced from numerical simulations of lattice-regularized QCD \cite{roberts_hadron_2015}.}
+  \label{fig:1-1_dressquarkmass}
+\end{Mfigure}
+
+\begin{Mfigure}{Sullivan Process}
+  \centering
+  \includegraphics[width=0.75\linewidth]{sullivanprocess.pdf}
+  \caption{Diagram showing the Sullivan Process for acessing the pion's (a) elastic form factor and (b) parton distribution functions (PDFs) \cite{qin_off-shell_2018}.}
+  \label{fig:1-1_sullivanprocess}
+\end{Mfigure}
+
+\begin{Mfigure}{p(e,e'K+)lambda}
+  \centering
+  \includegraphics[width=0.75\linewidth]{reactionplane.pdf}
+  \caption{Diagram of reaction and scattering planes for $p(e,e'K^2)\Lambda$ reaction.}
+  \label{fig:1-1_reactionplane}
+\end{Mfigure}
+
+\begin{Mfigure}{mandelstam}
+  \centering
+  \includegraphics[width=0.75\linewidth]{mandelstam.pdf}
+  \caption{Diagram comparing the different Mandelstam channels.}
+  \label{fig:1-1_mandelstam}
+\end{Mfigure}
+
+\begin{Mtable}{Kinematics}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{E (GeV)} & \textbf{$Q^2$ ($GeV^2$)} & \textbf{W (GeV)} & \textbf{x} & \textbf{$\epsilon_{high}$/$\epsilon_{low}$} & \textbf{$\Delta\epsilon$} & \textbf{Study Type}\\
+    \hline
+    10.6/8.2 & 5.5 & 3.02 & 0.40 & 0.53/0.18 & 0.35 & Scaling \\
+    10.6/8.2 & 4.4 & 2.74 & 0.40 & 0.72/0.48 & 0.24 & Scaling \\
+    10.6/8.2 & 3.0 & 3.14 & 0.25 & 0.67/0.39 & 0.28 & Scaling \\
+    10.6/6.2 & 3.0 & 2.32 & 0.40 & 0.88/0.57 & 0.31 & Scaling+FF \\
+    10.6/6.2 & 2.115 & 2.95 & 0.21 & 0.79/0.25 & 0.54 & Scaling+FF \\
+    \hline
+    \end{tabular}
+  \caption{Summary of all kinematics for the KaonLT 2018-19 experiment.}
+  \label{tab:1-1_kinematics}
+\end{Mtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 % Chapter 2, section 1
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,9 +192,9 @@
     Vertical Angle Resolution & 1.0 mrad & 0.3 - 1.1 mrad \\
     Solid Angle Acceptance & 8.1 msr & >4 msr \\
     \hline
-    Maximum Event Rate & 2000 Hz?? & 10,000 Hz?? \\
-    e/h Discrimination & >1000:1 at 98\% efficiency?? & >1000:1 at 98\% efficiency?? \\
-    $\pi$/K Discrimination & 100:1 at 95\% efficiency?? & 100:1 at 95\% efficiency?? \\
+    Maximum Event Rate & 2000 Hz & 10,000 Hz \\
+    e/h Discrimination & >1000:1 at 98\% efficiency & >1000:1 at 98\% efficiency \\
+    $\pi$/K Discrimination & 100:1 at 95\% efficiency & 100:1 at 95\% efficiency \\
     \hline
   \end{tabular}
   \caption{Break down of the HMS and SHMS specifications and capablilities..}  
@@ -349,26 +400,58 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{Mfigure}{LT Analysis Procedure}
+  \centering
+  \includegraphics[width=0.85\linewidth]{lt_analysis_procedure.pdf}
+  \caption{LT analysis procedure.}
+  \label{fig:3-1_lt_analysis_procedure}
+\end{Mfigure}
+
+\begin{landscape}
 \begin{Mfigure}{Stage 1 of Analysis Procedure}
   \centering
-  \includegraphics[width=0.85\linewidth]{LT_Analysis_Workflow_1.pdf}
-  \caption{First step of the analysis workfow.}
+  \includegraphics[width=1.1\linewidth]{LT_Analysis_Workflow_1.pdf}
+  \caption{Preprocess the data by applying offsets and defining PID and CT cuts.}
   \label{fig:3-1_LT_Analysis_Workflow_1}
 \end{Mfigure}
+\end{landscape}
 
+\begin{landscape}
 \begin{Mfigure}{Stage 2 of Analysis Procedure}
   \centering
-  \includegraphics[width=0.85\linewidth]{LT_Analysis_Workflow_2.pdf}
-  \caption{Second step of the analysis workfow.} 
+  \includegraphics[width=1.1\linewidth]{LT_Analysis_Workflow_2.pdf}
+  \caption{Setup for analysis procedure by applying cuts, running SIMC, combining data per setting, and calculating the effective charge.} 
   \label{fig:3-1_LT_Analysis_Workflow_2}
 \end{Mfigure}
+\end{landscape}
 
+\begin{landscape}
 \begin{Mfigure}{Stage 3 of Analysis Procedure}
   \centering
-  \includegraphics[width=0.85\linewidth]{LT_Analysis_Workflow_3.pdf}
-  \caption{Final step of the analysis workfow.}
+  \includegraphics[width=1.1\linewidth]{LT_Analysis_Workflow_3.pdf}
+  \caption{Analyze data by limiting to kinematically accessible region and within proper acceptances, subtracting randoms and leak-though, and, finally, finding the yield and average kinematic values per bin..}
   \label{fig:3-1_LT_Analysis_Workflow_3}
 \end{Mfigure}
+\end{landscape}
+
+\begin{landscape}
+\begin{Mfigure}{Stage 4 of Analysis Procedure}
+  \centering
+  \includegraphics[width=1.1\linewidth]{LT_Analysis_Workflow_4.pdf}
+  \caption{Calculate the unseparated cross section and then perform the LT-Separation to obtain separated cross sections..}
+  \label{fig:3-1_LT_Analysis_Workflow_4}
+\end{Mfigure}
+\end{landscape}
+
+\begin{landscape}
+\begin{Mfigure}{Stage 5 of Analysis Procedure}
+  \centering
+  \includegraphics[width=1.1\linewidth]{LT_Analysis_Workflow_5.pdf}
+  \caption{Iterate on the model to optimize the data to SIMC comparison.}
+  \label{fig:3-1_LT_Analysis_Workflow_5}
+\end{Mfigure}
+\end{landscape}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -376,21 +459,33 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{Mfigure}{Cerenkov PID????}
+\begin{Mfigure}{HMS Cerenkov PID}
   \centering
   \includegraphics[width=0.85\linewidth]{hms_cer_pid.pdf}
-  \caption{Plot of HMS cerenkov histogram showing where an appropriate cut is applied.}
+  \caption{HMS cerenkov vs Missing Mass showing the $\Lambda$ peak at ~1.115 $\mathrm{GeV}$. There is a HMS cerenkov cut of >1.5 applied. This is an example from $Q^2=2.1$, $W=2.95$ low epsilon, center setting.}
   \label{fig:3-3_hms_cer_pid}
 \end{Mfigure}
 
-\begin{Mfigure}{Calorimeter PID????}
+\begin{Mfigure}{HMS Calorimeter PID}
   \centering
   \includegraphics[width=0.85\linewidth]{hms_cal_pid.pdf}
-  \caption{Plot of HMS calorimeter histogram showing where an appropriate cut is applied.}
+  \caption{HMS calorimeter vs Missing Mass showing the $\Lambda$ peak at ~1.115 $\mathrm{GeV}$. There is a HMS calorimeter cut of >0.7 applied. This is an example from $Q^2=2.1$, $W=2.95$ low epsilon, center setting.}
   \label{fig:3-3_hms_cal_pid}
 \end{Mfigure}
 
-% {"P_RF_Dist" : (P_RF_Dist > (0.75) ) & (P_RF_Dist < (1.75) )}, {"H_hod_goodstarttime" : (H_hod_goodstarttime == 1.0)}, {"P_hod_goodstarttime" : (P_hod_goodstarttime ==  1.0)}, {"P_hod_goodstarttime" : (P_hod_goodstarttime == 1.0)}, {"H_hod_goodstarttime" : (H_hod_goodstarttime == 1.0)}, {"H_gtr_dp" : ((H_gtr_dp > -8) & (H_gtr_dp < 8))},% {"P_gtr_dp" : ((P_gtr_dp > -10) & (P_gtr_dp < 20))}, {"P_gtr_beta" : ((abs(P_gtr_beta-1)) < 0.3)}, {"P_hgcer_npeSum" : (P_hgcer_npeSum < 1.5)}, {"P_aero_npeSum" : (P_aero_npeSum > 3)}, {"H_cal_etottracknorm" : (H_cal_etottracknorm > 0.7)}, {"P_cal_etottracknorm" : (P_cal_etottracknorm >= 0.0)}
+\begin{Mfigure}{SHMS Aerogel PID}
+  \centering
+  \includegraphics[width=0.85\linewidth]{shms_aero_pid.pdf}
+  \caption{SHMS aerogel vs Missing Mass showing the $\Lambda$ peak at ~1.115 $\mathrm{GeV}$. There is a SHMS aerogel cut of >3 applied for clean $K^+$-$p$ separation. This is an example from $Q^2=2.1$, $W=2.95$ low epsilon, center setting.}
+  \label{fig:3-3_shms_aero_pid}
+\end{Mfigure}
+
+\begin{Mfigure}{SHMS Calorimeter PID}
+  \centering
+  \includegraphics[width=0.85\linewidth]{shms_cal_pid.pdf}
+  \caption{SHMS calorimeter vs Missing Mass showing the $\Lambda$ peak at ~1.115 $\mathrm{GeV}$. There is a SHMS calorimeter cut of $\geq0.0$ applied. This is an example from $Q^2=2.1$, $W=2.95$ low epsilon, center setting.}
+  \label{fig:3-3_shms_cal_pid}
+\end{Mfigure}
 
 \begin{table}[ht]
   \centering
@@ -398,23 +493,21 @@
     \multicolumn{4}{c}{\large\textbf{Detector Cuts}} \\    
     \textbf{Detector/Particle} & \textbf{Gas Cerenkov [NPE]} & \textbf{Aerogel [NPE]} & \textbf{Calorimeter [$\mathbf{E_{cal}}$/E]} \\
     \hline
-    HMS electron & >0.6??? & -    & >0.7     \\
-    SHMS kaon    & <1.5    & >4.0 & $\ge$0.0 \\
+    HMS electron & >1.5 & -    & >0.7     \\
+    SHMS kaon    & <1.5    & >3.0 & $\ge$0.0 \\
     \multicolumn{4}{c}{\large\textbf{Acceptance Cuts}} \\
      & \textbf{$\mathbf{\delta}$ [\%]} & \textbf{$\mathbf{x'_{tar}}$} & \textbf{$\mathbf{y'_{tar}}$}  \\
     \hline
-    HMS electron & - & ????  & ???? \\
-    SHMS kaon    & - & ????  & ???? \\
+    HMS electron & $-8.0\geq\delta\geq8.0$ & $|x'_{tar}|\geq0.08$  & $|y'_{tar}|\geq0.045$ \\
+    SHMS kaon    & $-10.0\geq\delta\geq20.0$ & $|x'_{tar}|\geq0.06$  & $|y'_{tar}|\geq0.04$ \\
     \multicolumn{4}{c}{\large\textbf{Timing Cuts}} \\
      & \textbf{$\mathbf{\left|\beta-1\right|}$}  & \textbf{RF} & \textbf{Cointime} \\
     \hline
-    HMS electron & < 0.3 & ????          & ???? \\
-    SHMS kaon    & < 0.3 &  $\pm$0.5???? & ???? \\
+    $e-K^+$    & < 0.3 &  $0.75<RF<1.75$ & $|CT|<1.754$ \\
     \multicolumn{4}{c}{\large\textbf{MM Cuts}} \\
      & \textbf{$\mathbf{p(e, e'K^+)\Lambda}$}  &  & \\
     \hline
-    HMS electron & ???? & & \\
-    SHMS kaon    & ???? & & \\
+    $p(e,e'K^+)\Lambda$ & $1.10<MM<1.24$ & & \\
   \end{tabular}
   \caption{}
   \label{tab:3-3_cuts}
@@ -426,13 +519,6 @@
   \caption{Acrylic reflector rings applied to PMT 1 and 2 of the SHMS heavy gas cerenkov.}
   \label{fig:3-3_reflector_rings}
 \end{Mfigure}
-
-%\begin{Mfigure}{Reflector Cones}
-%  \centecone
-%  \includegraphics[width=0.85\linewidth]{reflector_cones.pdf}
-%  \caption{AluMet reflector cones applied to all four PMTs of the SHMS heavy gas cerenkov.}
-%  \label{fig:3-3_reflector_cones}
-%\end{Mfigure}
 
 \begin{figure}
   \centering
@@ -462,33 +548,157 @@
   \label{fig:3-3_hgcer_hole}
 \end{figure}
 
-\begin{Mfigure}{EDTM?????}
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{data_hgcer_hole_nocut.pdf}
+    \subcaption{Data without hole cut}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{data_hgcer_hole_cut.pdf}
+    \subcaption{Data with hole cut}
+  \end{minipage}
+  
+  \vspace{0.5cm}
+  
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{simc_hgcer_hole_nocut.pdf}
+    \subcaption{SIMC without hole cut}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{simc_hgcer_hole_cut.pdf}
+    \subcaption{SIMC with hole cut}
+  \end{minipage}
+  
+  \caption{Comparison of the SHMS heavy gas cerenkov hole cut for data and SIMC. This is an example from $Q^2=3.0$, $W=3.14$ low epsilon, center setting.}
+  \label{fig:3-3_hgcer_hole_cut}
+\end{figure}
+
+\begin{Mfigure}{Coin time vs Beta}
+  \centering
+  \includegraphics[width=0.85\linewidth]{cointime_beta.pdf}
+  \caption{$e-K^+$ Coin time vs beta. There is a coin time cut of $|CT|<1.754$ and beta cut of $|\beta-1|<0.3$ applied. This is an example from $Q^2=4.4$, $W=2.74$ high epsilon, center setting.}
+  \label{fig:3-3_cointime_beta}
+\end{Mfigure}
+
+\begin{Mfigure}{Coin time vs MM}
+  \centering
+  \includegraphics[width=0.85\linewidth]{cointime_MM.pdf}
+  \caption{$e-K^+$ Coin time vs Missing Mass. There is a coin time cut of $|CT|<1.754$. This is an example from $Q^2=4.4$, $W=2.74$ high epsilon, center setting.}
+  \label{fig:3-3_cointime_MM}
+\end{Mfigure}
+
+\begin{Mfigure}{MM spectrum}
+  \centering
+  \includegraphics[width=0.85\linewidth]{mm_spectrum.pdf}
+  \caption{Missing mass spectrum without subtraction for $Q^2=3.0$, $W=3.14$ low epsilon. This spectrum shows the pion leak-through in the lower MM range as well as the higher $K^+$ channels and SIDIS background.}
+  \label{fig:3-3_mm_spectrum}
+\end{Mfigure}
+
+\begin{Mfigure}{MM spectrum cut}
+  \centering
+  \includegraphics[width=0.85\linewidth]{mm_spectrum_cut.pdf}
+  \caption{Missing mass spectrum with $1.10<MM<1.24$ cut applied for $Q^2=3.0$, $W=3.14$ low epsilon.}
+  \label{fig:3-3_mm_spectrum_cut}
+\end{Mfigure}
+
+\begin{Mfigure}{Aerogel Efficiency}
+  \centering
+  \includegraphics[width=0.85\linewidth]{paero_eff.pdf}
+  \caption{Aerogel efficiency across the highest beam energy of $10.6\mathrm{GeV}$.}
+  \label{fig:3-3_paero_eff}
+\end{Mfigure}
+
+\begin{Mfigure}{Electron Tracking Efficiency}
+  \centering
+  \includegraphics[width=0.85\linewidth]{e_track.pdf}
+  \caption{Electron tracking efficiency across the highest beam energy of $10.6\mathrm{GeV}$.}
+  \label{fig:3-3_e_track}
+\end{Mfigure}
+
+\begin{Mfigure}{Pion Tracking Efficiency}
+  \centering
+  \includegraphics[width=0.85\linewidth]{k_track.pdf}
+  \caption{Pion tracking efficiency across the highest beam energy of $10.6\mathrm{GeV}$. The pion tracking was used because of the low statistics for kaon. They have similar ToF so there is little difference in the final tracking efficiencies between the particles.}
+  \label{fig:3-3_k_track}
+\end{Mfigure}
+
+\begin{Mfigure}{EDTM}
   \centering
   \includegraphics[width=0.85\linewidth]{edtm_runnum.pdf}
   \caption{Total Live Times of all production data.}
   \label{fig:3-4_edtm_runnum}
 \end{Mfigure}
 
-\begin{Mfigure}{Scaler, no track, and track luminosity yield?????}
+\begin{Mfigure}{Scaler, no track, and track luminosity yield}
   \centering
   \includegraphics[width=0.85\linewidth]{carbon_lumi_yield.pdf}
   \caption{The HMS Carbon-12 scaler (left), no track (middle) and track (right) yields for runs taken at $P_{HMS}$=-3.09, $\theta_{HMS}$=35.010.}
   \label{fig:3-4_carbon_lumi_yield}
 \end{Mfigure}
 
-\begin{Mfigure}{HMS Linear Regression?????}
+\begin{Mfigure}{HMS Linear Regression}
   \centering
   \includegraphics[width=0.85\linewidth]{hms_linear_regress.pdf}
   \caption{All HMS Carbon-12 fit with a weighted linear regression using least squares.}
   \label{fig:3-4_hms_linear_regress}
 \end{Mfigure}
 
-\begin{Mfigure}{SHMS Linear Regression?????}
+\begin{Mfigure}{SHMS Linear Regression}
   \centering
   \includegraphics[width=0.85\linewidth]{shms_linear_regress.pdf}
   \caption{All SHMS Carbon-12 fit with a weighted linear regression using least squares.}
   \label{fig:3-4_shms_linear_regress}
 \end{Mfigure}
+
+\begin{Mfigure}{HMS Linear Regression LH2}
+  \centering
+  \includegraphics[width=0.85\linewidth]{hms_linear_regress_lh2.pdf}
+  \caption{All HMS LH2 fit with a weighted linear regression using least squares. With this fit there is a slope of $~8\pm2\%$ which is consistent with other predictions of boiling.}
+  \label{fig:3-4_hms_linear_regress_lh2}
+\end{Mfigure}
+
+\begin{Mfigure}{Boiling Correction}
+  \centering
+  \includegraphics[width=0.85\linewidth]{boil_eff.pdf}
+  \caption{Boiling correction for the highest beam energy setting, $10.6 \mathrm{GeV}$.}
+  \label{fig:3-4_boil_eff}
+\end{Mfigure}
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{heep_w.pdf}
+    %\subcaption{Data without hole cut}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{heep_em.pdf}
+    %\subcaption{Data with hole cut}
+  \end{minipage}
+  
+  \vspace{0.5cm}
+  
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{heep_pmx.pdf}
+    %\subcaption{SIMC without hole cut}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{heep_pmy.pdf}
+    %\subcaption{SIMC with hole cut}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{heep_pmz.pdf}
+    %\subcaption{Data with hole cut}
+  \end{minipage}  
+  
+  \caption{Example kinematic plots comparing HeeP data to SIMC for a beam energy of $4.9 \mathrm{GeV}$.}
+  \label{fig:3-4_heep}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -513,3 +723,284 @@
   \caption{Most probable decay channels of $K^+$ and their respective branching fractions. There are many decay channels for the kaon but these make up >99.98\% of the kaon decay's phase space.}
   \label{tab:4-5_kaon_decay}
 \end{Mtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Chapter 5, section 1
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{polar_hi.pdf}
+    \subcaption{High $\epsilon$}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{polar_lo.pdf}
+    \subcaption{Low $\epsilon$}
+  \end{minipage}
+  
+  \caption{Polar plots of high and low $\epsilon$ for $Q^2=4.4$ and $W=2.74$. The radius is in terms of $-t$.}
+  \label{fig:7-1_polar}
+\end{figure}
+
+\begin{Mfigure}{Ratios}
+  \centering
+  \includegraphics[width=0.85\linewidth]{ratios.pdf}
+  \caption{Comparison of data to SIMC yield ratios for $Q^2=3.0$, $W=3.14$ for the lowest $t$-bin ($-t=0.215$).}
+  \label{fig:7-1_ratios}
+\end{Mfigure}
+
+\begin{Mfigure}{Unsep xsect data}
+  \centering
+  \includegraphics[width=0.85\linewidth]{unsep_data.pdf}
+  \caption{Unseparated cross section for $Q^2=3.0$, $W=3.14$ for the lowest $t$-bin ($-t=0.215$). The fit is the unseparated cross section of eqn. \ref{eq:unsep_xsect} which simultaneously fits L, T, LT, and TT.}
+  \label{fig:7-1_unsep_data}
+\end{Mfigure}
+
+\begin{Mtable}{Parameter Table}
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Parameter} & \textbf{Initial} & \textbf{Final} \\
+    \hline    
+    p1 &  0.88669e+03 &   5.83357e+02 \\
+    p2 & -0.41000e+03 &  -4.10000e+02 \\
+    p3 & -0.25327e+02 &  -2.53270e+01 \\
+    p4 &  0.11100e+02 &   1.27321e+01 \\
+    p5 &  2.50000e+01 &   1.28000e+01 \\
+    p6 &  0.53000e+00 &   9.15840e-01 \\
+    p7 &  0.00000e+00 &  -2.42685e-01 \\
+    p8 &  0.00000e+00 &   4.93250e-01 \\
+    p9 &  0.00000e+00 &   6.09811e-02 \\
+    p10 & 0.00000e+00 &  -1.06917e+01 \\
+    \hline
+    \end{tabular}
+  \caption{Result of iterated fit parameters from eqns \ref{eq:model_sig_l}-\ref{eq:model_sig_tt}. Convergence was achieved in 3 iterations.}
+  \label{tab:7-1_sig_params}
+\end{Mtable}
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{stat_error_highe.pdf}
+    \subcaption{High $\epsilon$}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{stat_error_lowe.pdf}
+    \subcaption{Low $\epsilon$}
+  \end{minipage}
+  
+  \caption{Run by run systematic uncertainties for $Q^2=3.0$ and $W=2.32$ at high and low $\epsilon$.}
+  \label{fig:7-1_stat_error_data}
+\end{figure}
+
+\begin{Mtable}{Systematics}
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Source} & \textbf{pt-to-pt (\%)} & \textbf{t-correlated (\%)} & \textbf{scale (\%)} \\
+    \hline    
+    Acceptance            & 0.4  & 0.4  & 1.0 \\
+    PID                   & 1.0  & 0.4  & 0.5 \\
+    Coincidence Blocking  &      & 0.2  &     \\
+    Tracking Efficiency   & 0.1  & 0.1  & 1.5 \\
+    Charge                &      & 0.2  & 0.5 \\
+    Target Thickness      &      & 0.2  & 0.8 \\
+    Kinematics            & 0.4  & 1.0  &     \\
+    Kaon Absorption       &      & 0.5  & 0.5 \\
+    Kaon Decay            &      & 1.0  & 3.0 \\
+    Radiative Corrections & 0.1  & 0.4  & 2.0 \\
+    Monte Carlo Model     & 0.2  & 1.0  & 0.5 \\
+    \hline    
+    \textbf{Total}        & 1.6  & 2.0  & 4.2 \\
+    \hline
+    \end{tabular}
+  \caption{Modified version of the PAC 34 proposed systematic uncertainties. Thse systematic uncertainties were  estimated based on prior Hall C experiments. One addition to the table is the inclusion of a PID pt-to-pt systematic to take into account the hole in the SHMS HGCer.}
+  \label{tab:7-1_pac_error}
+\end{Mtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Chapter 7, section 0
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{Mfigure}{Diamond Cuts}
+  \centering
+  \includegraphics[width=0.85\linewidth]{diamond.pdf}
+  \caption{Diamond cuts are the result of phase-space matching between high and low $\epsilon$ that show the kinematically accessible region. This is an example from $Q^2=3.0$, $W=3.23$. The red diamond is low and the blue is the high, corrsponding to $\epsilon=0.5736$ and $\epsilon=0.5736$, respectively.}
+  \label{fig:7-1_diamond}
+\end{Mfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Chapter 9, section 0
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{Mtable}{Kaon Statistics Table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{E (GeV)} & \textbf{$Q^2$ ($GeV^2$)} & \textbf{W (GeV)} & \textbf{$\epsilon$} & \textbf{Total $K^+\Lambda$ Statistics Goal}\\
+    \hline
+    10.6 & 5.5 & 3.02 & High & ~61\% \\
+    8.2 & 5.5 & 3.02 & Low & ~191\% \\
+    10.6 & 4.4 & 2.74 & High & ~66\% \\
+    8.2 & 4.4 & 2.74 & Low & ~66\% \\
+    10.6 & 3.0 & 3.14 & High & ~64\% \\
+    8.2 & 3.0 & 3.14 & Low & ~140\% \\
+    10.6 & 3.0 & 2.32 & High & 65\%\textbf{*}\tnote{a} \\
+    6.2 & 3.0 & 2.32 & Low & ~102\% \\
+    10.6 & 2.115 & 2.95 & High & ~42\% \\
+    6.2 & 2.115 & 2.95 & Low & ~45\% \\
+    \hline
+  \end{tabular}
+    \begin{tablenotes}
+    \item[a] \textbf{*}Only right setting. Center and left were >95\%
+    \end{tablenotes}  
+  \caption{Summary of $K^+\Lambda$ statistics goal for all settings in the KaonLT 2018-19 experiment.}
+  \label{tab:9-1_stat_table}
+\end{Mtable}
+
+\begin{Mfigure}{EIC}
+  \centering
+  \includegraphics[width=0.85\linewidth]{eic.pdf}
+  \caption{Planned layout for Electron Ion Collider (EIC) at Brookhaven National Lab \cite{khalek_science_2021}.}
+  \label{fig:7-0_eic}
+\end{Mfigure}
+
+\begin{table}[]
+\tiny
+\begin{tabular}{p{4.5cm} p{4cm} p{6.9cm}}   %JRA: could probably make center column narrower, widen others
+                                            % CA: I rearranged it as suggested, it saved a couple of lines
+                                            % and I tried to keep some symmetry in the last column
+\hline
+\hline
+\textbf{Science Question}  & \textbf{Key Measurement{[}1{]}}    & \textbf{Key Requirements{[}2{]}}   \\ \hline
+\multirow{3}{\linewidth}{What are the quark and gluon energy contributions to the pion mass?}                                                   & \multirow{3}{\linewidth}{Pion structure function data over a range of $x$ and $Q^2$.}                      & \multirow{3}{\linewidth}{\begin{tabular}[c]{p{6.7cm}}$\bullet$ Need to uniquely determine e + p $\rightarrow$ e’ + X + n (low -t)\\$\bullet$ CM energy range $\sim$10-100 GeV\\ $\bullet$ Charged- and neutral currents desirable\end{tabular}} \\
+ &  & \\
+ &  & \\ \hline
+\multirow{2}{\linewidth}{Is the pion full or empty of gluons as viewed at large $Q^2$?}                                                            & \multirow{2}{\linewidth}{Pion structure function data at large $Q^2$.}                                       & \multirow{2}{\linewidth}{\begin{tabular}[c]{p{4,3cm}}$\bullet$ CM energy $\sim$100 GeV\\$\bullet$ Inclusive and open-charm detection\end{tabular}}  \\
+&  & \\ \hline
+\multirow{3}{\linewidth}{What are the quark and gluon energy contributions to the kaon mass?}                                                   & \multirow{3}{\linewidth}{Kaon structure function data over a range of $x$ and $Q^2$.}                      & \multirow{3}{\linewidth}{\begin{tabular}[c]{p{5cm}}$\bullet$ Need to uniquely determine $\Lambda$, $\Sigma^0$:  e + p  $\rightarrow$ e’ + X + $\Lambda /\Sigma^0$ (low -t)\\$\bullet$ CM energy range $\sim$10-100 GeV\end{tabular}}                                                                            \\
+ &  & \\
+ &  & \\ \hline
+\multirow{2}{\linewidth}{Are there more or less gluons in kaons than in pions as viewed at large Q$^2$?}                                           & \multirow{2}{\linewidth}{Kaon structure function data at large $Q^2$.}                                        & \multirow{2}{\linewidth}{\begin{tabular}[c]{p{5cm}}$\bullet$ CM energy $\sim$100 GeV\\$\bullet$ Inclusive and open-charm detection\end{tabular}}                                                               \\
+ &  & \\ \hline
+\multirow{4}{\linewidth}{Can we get quantitative guidance on the emergent pion mass mechanism?}                                                    & \multirow{4}{\linewidth}{\makecell[l]{Pion form factor data \\for $Q^2$ = 10-40 (GeV/c)$^2$.}}                & \multirow{4}{\linewidth}{\begin{tabular}[c]{p{6cm}}$\bullet$ Need to uniquely determine exclusive process e + p  $\rightarrow$ e’ + p + n (low -t)\\$\bullet$ e-p and e-d at similar energies\\$\bullet$ CM energy $\sim$10-75 GeV\end{tabular}}                                          \\
+ &  & \\
+ &  & \\
+ &  & \\ \hline
+\multirow{4}{\linewidth}{What is the size and range of interference between emergent-mass and the Higgs-mass mechanism?}                        & \multirow{4}{\linewidth}{\makecell[l]{Kaon form factor data \\for $Q^2$ = 10-20 (GeV/c)$^2$.}}               & \multirow{4}{\linewidth}{\begin{tabular}[c]{p{6cm}}$\bullet$ Need to uniquely determine exclusive process e + p  $\rightarrow$ e’ + K + $\Lambda$ (low -t)\\$\bullet$  L/T separation at CM energy $\sim$10-20 GeV\\$\bullet$  e-p  $\Lambda /\Sigma^0$ ratios at CM energy $\sim$10-50 GeV\end{tabular}}            \\
+ &  & \\
+ &  & \\
+ &  & \\ \hline
+\multirow{3}{\linewidth}{What is the difference between the impacts of emergent- and Higgs-mass mechanisms on light-quark behavior?}            & \multirow{3}{\linewidth}{Behavior of (valence) up quarks in pion and kaon at large $x$}                     & \multirow{3}{\linewidth}{\begin{tabular}[c]{p{6cm}}$\bullet$  CM energy $\sim$20 GeV (lowest CM energy to access large-x region)\\$\bullet$  Higher CM energy for range in $Q^2$ desirable\end{tabular}} \\
+ &  & \\
+ &  & \\ \hline
+\multirow{3}{\linewidth}{What is the relationship between dynamically chiral symmetry breaking and confinement?}                     & \multirow{3}{\linewidth}{Transverse-momentum dependent Fragmentation Functions of quarks into pions and kaons} 
+                                    & \multirow{3}{\linewidth}{\begin{tabular}[c]{p{5cm}}$\bullet$ Collider kinematics desirable (as compared to fixed-target kinematics)\\$\bullet$  CM energy range $\sim$20-140 GeV\end{tabular}}\\                   
+& & \\
+& & \\ 
+%\hline
+\specialrule{.1em}{.05em}{.05em}
+\multicolumn{3}{l}{\textbf{More speculative observables}}                                                      \\ 
+\hline
+%\specialrule{.1em}{.05em}{.05em}
+\multirow{4}{\linewidth}{What is the trace anomaly contribution to the pion mass?}                                                              & \multirow{4}{\linewidth}{Elastic J/$\psi$ production at low W off the pion.}                                  & \multirow{4}{\linewidth}{\begin{tabular}[c]{p{6cm}}$\bullet$ Need to uniquely determine exclusive process e + p  $\rightarrow$ e’ + p + J/$\Psi$ + n (low -t)\\$\bullet$  High luminosity (10$^{34+}$)\\$\bullet$  CM energy $\sim$70 GeV\end{tabular}}                                               \\
+& & \\
+& & \\
+& & \\ \hline
+\multirow{4}{\linewidth}{Can we obtain tomographic snapshots of the pion in the transverse plane? What is the pressure distribution in a pion?} & \multirow{4}{\linewidth}{Measurement of DVCS off pion target as defined with Sullivan process}                 & \multirow{4}{\linewidth}{\begin{tabular}[c]{p{6cm}}$\bullet$ Need to uniquely determine exclusive process e + p  $\rightarrow$ e’ + p + g + n (low -t)\\$\bullet$  High luminosity (10$^{34+}$)\\$\bullet$  CM energy $\sim$10-100 GeV\end{tabular}}                                             \\
+& & \\
+& & \\
+& & \\ \hline
+\multirow{5}{\linewidth}{Are transverse momentum distributions universal in pions and protons?}                                                 & \multirow{5}{\linewidth}{Hadron multiplicities in SIDIS off a pion target as defined with Sullivan process}    & \multirow{5}{\linewidth}{\begin{tabular}[c]{p{6.3cm}}$\bullet$ Need to uniquely determine scattered off pion: e + p $\rightarrow$ e + h + X + n (low -t)\\$\bullet$  High luminosity (10$^{34}$)\\$\bullet$ e-p and e-d at similar energies desirable\\$\bullet$  CM energy $\sim$10-100 GeV\end{tabular}} \\
+& & \\
+& & \\
+& & \\
+& & \\ 
+\hline
+\hline
+\end{tabular}%
+%}
+%\end{tabularx}
+\caption{Science questions related to pion and kaon structure and understanding of the EHM possible accessible at an EIC \cite{khalek_science_2021}.}
+\label{tab:EIC_science_questions_table}
+\end{table}
+
+\begin{Mfigure}{Cross Section Ratio}
+  \centering
+  \includegraphics[width=0.85\linewidth]{cross_section_ratio.pdf}
+  \caption{Ratios of the uncertainty of the differential cross section from the global fit including EIC projected data to the uncertainty of that without the EIC for various $Q^2$, where (\emph{left panel}) $x=0.001$, (\emph{middle panel}) $x=0.01$, and (\emph{right panel}) $x=0.1$.  For all calculations, $x_L=0.85$.}
+  \label{fig:cross_section_ratio}
+\end{Mfigure}
+
+\begin{Mfigure}{F2pi}
+  \centering
+  \includegraphics[width=0.85\linewidth]{F2pi.pdf}
+  \caption{Ratio of the uncertainty of the pion structure function from the global fit with and without including EIC projected data for various $Q^2$ values.}
+  \label{fig:F2pi}
+\end{Mfigure}
+
+\begin{Mfigure}{MC_fpi_logxpi_10on135}
+  \centering
+  \includegraphics[width=0.85\linewidth]{MC_fpi_logxpi_10on135.pdf}
+  \caption{Monte Carlo projections for the pion structure function vs $x$ at a beam energy of 10$\times$135. In this projection, the data was binned in $x$ and $Q^2$, with bin sizes of 0.001 and 10\,$\mathrm{GeV}^2$, respectively. The Monte Carlo projections for $Q^2$ values of 60, 120, 240, 480\,GeV$^2/c$ are represented by dark blue points. For a luminosity of 100\,$\mathrm{fb}^{-1}$, the statistical uncertainties are represented by light blue bands.}
+  \label{fig:MC_fpi_logxpi_10on135}
+\end{Mfigure}
+
+\begin{Mfigure}{JAM_impact_lesspoints}
+  \centering
+  \includegraphics[width=0.85\linewidth]{JAM_impact_lesspoints.pdf}
+  \caption{\emph{Left:} Comparison of uncertainties on the pion's valence, sea quark, and gluon PDFs before (yellow bands) and after (red bands) inclusion of EIC data.
+    \emph{Right:} Ratio of uncertainties with EIC data to without, $\delta^{\rm EIC}/\delta$, for the valence (green line), sea quark (blue), and gluon (red) PDFs. A 1.2\% experimental systematic uncertainty was assumed (no model systematic uncertainty).}
+  \label{fig:JAM_impact_lesspoints}
+\end{Mfigure}
+
+\begin{Mfigure}{reco-Meson-FF-setup}
+  \centering
+  \includegraphics[width=0.85\linewidth]{reco-Meson-FF-setup.pdf}
+  \caption{Diagram of the Far-Forward beam line and detector setup.}
+  \label{fig:reco-Meson-FF-setup}
+\end{Mfigure}
+
+\begin{Mfigure}{TDIS_kin_scat_plot}
+  \centering
+  \includegraphics[width=0.85\linewidth]{TDIS_kin_scat_plot.pdf}
+  \caption{A comparison of the scattered electron (left) and leading neutron (right) kinematics for energy settings of $10\times135$ (bottom) and $5\times41$ (top) with momentum, P, and angle, $\theta$, defined in the lab frame. }
+  \label{fig:TDIS_kin_scat_plot}
+\end{Mfigure}
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{b0_all_IP6.pdf}
+  \end{minipage}
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{zdc_all_IP6.pdf}
+  \end{minipage}
+  
+  \caption{Top plots: B0 occupancy of the simulated leading neutron at energy settings $5\times41$ (left) and $10\times100$ (right). Bottom plots: ZDC acceptance of the simulated leading neutron at energy settings $5\times41$ (left) and $10\times100$ (right).}
+  \label{fig:b0_zdc_all}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{delta_t_t_Q2_5on41_IP6.pdf}
+  \end{minipage}  
+  \begin{minipage}[b]{0.48\linewidth}
+    \includegraphics[width=\linewidth]{delta_t_t_Q2_10on100_IP6.pdf}
+  \end{minipage}
+  
+  \caption{The deviation of generated $-t$ from the detected ($t_{truth}$) value, $\Delta{t}=t-t_{truth}$, for a range of energies $5\times41$ and $10\times100$. $Q^2$ is binned in 7, 15, 30, 60 $\mathrm{GeV}^2$ of bin width $\pm5\mathrm{GeV}^2$}
+  \label{fig:delta_t_t_Q2_IP6}
+\end{figure}

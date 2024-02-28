@@ -19,14 +19,21 @@ oneside, % Uncomment this for digital (see styles)
 
 % Some latex symbols (e.g. degree)
 \usepackage{gensymb}
+\usepackage{amssymb}
 
 % Fonts
 \usepackage[english]{babel}
 \usepackage{fontspec}
 \usepackage{parskip}
 
+% Allow landscape orientation
+\usepackage{pdflscape}
+
 % Double space package
 \usepackage{setspace}
+
+% Footnotes for table
+\usepackage{threeparttable}
 
 % Indent first paragraph in each section
 \usepackage{indentfirst}
@@ -84,6 +91,11 @@ oneside, % Uncomment this for digital (see styles)
 \usepackage[titletoc,title]{appendix} %For Appendix
 %\raggedbottom
 %\setlength{\parskip}{1em plus .1em minus 1.em}
+
+% Packages specifically for EIC table
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{booktabs}
 
 % Used to make timeline
 \usepackage{tikz}
@@ -170,8 +182,8 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
 	\mainmatter        
         \input{temp} %% This line is required to properly autogenerate tex files.
 
-        \appendix
-        \input{appendix/appendix_A}
+        %\appendix
+        %\input{appendix/appendix_A}
         
 	\input{helpers/bib} %Include bibliography       
         
