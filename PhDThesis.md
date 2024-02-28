@@ -190,7 +190,6 @@ Using the Born exchange model to describe meson electroproduction is helpful for
 
 ## Experimental Overview {#Section-1.4}
 
-
 The experiment examined the $Q^2$ dependence of the cross-section at various $x$ values while maintaining small $-t$ values relative to $Q^2$. Table \ref{tab:1-1_kinematics} shows the achieved data points and their corresponding physics study\footnote{It should be noted that the $Q^2=0.5$ setting is not listed, as this point was outside of this thesis' analyzed data.}. Leveraging the higher energies available at a 12 GeV JLab, the experiment extended the accessible range in $Q^2$ for W values above the resonance region, surpassing what could be achieved at the 6 GeV JLab. To mitigate amplification in systematic uncertainty, careful selection of $\epsilon$ settings was undertaken, aiming to span $\Delta\epsilon\gtrsim 0.20$ whenever feasible. Furthermore, to achieve comprehensive separation of the L, T, LT, and TT terms across a wide $-t$ range, data acquisition was conducted both to the left and right of $\mathbf{q}$, with $\theta_{Kq}$ varying by $\pm 3\degree$. 
 
 \input{figures/texs/tab:1-1_kinematics.tex}
@@ -1287,20 +1286,61 @@ The PAC proposal systematics were used as a baseline until more detailed systema
 \markedchapter{KaonLT Results and Discussion}{KaonLT Results and Discussion}\label{Chapter-6} 
 
 
-## Experimental Cross Sections{#Section-6.1} 
+The following sections summarize the current state of the results from the KaonLT experiment. The unseparated cross sections are fit using equation eqn. \ref{eq:unsep_xsect}and their errors are purely statistical. The separated cross sections were extracted through the simultaneous fit of high and low $\epsilon$ and their errors are calculated through quadrature of the statistical and point-to-point systematics. The point-to-point systematic error was a constant 1.6% from the modified PAC proposal systematics of table \ref{tab:7-1_pac_error}. 
 
-\begin{equation} 
-  \frac{d^5\sigma}{d\Omega_e dE'_e d\Omega_K}=\Gamma_{\nu}\frac{d^2\sigma}{dt\cdot d\phi}\cdot J(t,\phi\rightarrow\Omega^*_K)
-  \label{eq:sig_orderfive_virtual_physics} 
-\end{equation}
+Although the statistics differ, a common theme among the results was an agreement of $\sigma_L$ with an exponential fit of the form $C\cdot e^{-b\cdot|t|}$. This exponential falloff behavior is a key sign of the kaon pole. Hence, performing FF extractions beyond the projected settings of $Q^2=2.115$/$W=2.95$ and $Q^2=3.0$/$W=2.32$ may be possible. The setting of $Q^2=3.0$/$W=3.14$ shows the cleanest fit of the unseparated cross-section with the data and is one of the clearest examples of an exponential fall-off in $\sigma_L$. 
 
-## Unseparated Cross Sections{#Section-6.2} 
+There is also a distinct difference in $\sigma_L$ compared to $\sigma_T$ in the lowest $t$-bins, suggesting scaling. Interestingly, this difference appears much more dramatic for all settings of $W>3.0$. As these models are further optimized and systematics are fully understood, the feasibility of achieving the physics goals of KaonLT looks promising. 
 
-## Separated Cross Sections{#Section-6.3} 
+## $Q^2=2.115$, $W=2.95$
 
-## Extraction of $K^{+}$ Form Factor{#Section-6.4} 
+\input{figures/texs/fig:Q2p1W2p95_tphi.tex}
+\input{figures/texs/fig:Q2p1W2p95_unsep_xsect.tex}
+\input{figures/texs/tab:Q2p1W2p95_unsep_sigtab.tex}
+\input{figures/texs/fig:Q2p1W2p95_unsep_eps.tex}
+\input{figures/texs/fig:Q2p1W2p95_unsep_t.tex}
 
-## Discussion{#Section-6.5} 
+\FloatBarrier
+
+## $Q^2=3.0$, $W=2.32$
+
+\input{figures/texs/fig:Q3p0W2p32_tphi.tex}
+\input{figures/texs/fig:Q3p0W2p32_unsep_xsect.tex}
+\input{figures/texs/tab:Q3p0W2p32_unsep_sigtab.tex}
+\input{figures/texs/fig:Q3p0W2p32_unsep_eps.tex}
+\input{figures/texs/fig:Q3p0W2p32_unsep_t.tex}
+
+\FloatBarrier
+
+## $Q^2=3.0$, $W=3.14$
+
+\input{figures/texs/fig:Q3p0W3p14_tphi.tex}
+\input{figures/texs/fig:Q3p0W3p14_unsep_xsect.tex}
+\input{figures/texs/tab:Q3p0W3p14_unsep_sigtab.tex}
+\input{figures/texs/fig:Q3p0W3p14_unsep_eps.tex}
+\input{figures/texs/fig:Q3p0W3p14_unsep_t.tex}
+
+\FloatBarrier
+
+## $Q^2=4.4$, $W=2.74$
+
+\input{figures/texs/fig:Q4p4W2p74_tphi.tex}
+\input{figures/texs/fig:Q4p4W2p74_unsep_xsect.tex}
+\input{figures/texs/tab:Q4p4W2p74_unsep_sigtab.tex}
+\input{figures/texs/fig:Q4p4W2p74_unsep_eps.tex}
+\input{figures/texs/fig:Q4p4W2p74_unsep_t.tex}
+
+\FloatBarrier
+
+## $Q^2=5.5$, $W=3.02$
+
+\input{figures/texs/fig:Q5p5W3p02_tphi.tex}
+\input{figures/texs/fig:Q5p5W3p02_unsep_xsect.tex}
+\input{figures/texs/tab:Q5p5W3p02_unsep_sigtab.tex}
+\input{figures/texs/fig:Q5p5W3p02_unsep_eps.tex}
+\input{figures/texs/fig:Q5p5W3p02_unsep_t.tex}
+
+\FloatBarrier
 
 <!---
 	Chapter 7

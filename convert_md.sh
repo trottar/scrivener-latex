@@ -3,7 +3,7 @@
 #
 # Description:
 # ================================================================
-# Time-stamp: "2023-09-11 22:37:19 trottar"
+# Time-stamp: "2024-02-28 04:56:07 trottar"
 # ================================================================
 #
 # Author:  Richard L. Trotta III <trotta@cua.edu>
@@ -11,10 +11,15 @@
 # Copyright (c) trottar
 #
 
+# Remove *.tex files because they cause issues if last it failed recently
+mv $1.md ../ ; rm -f $1* ; rm -f figures/texs/* ; mv ../$1.md .
+
 eval "aspell -c $1.md"
 python3 scrivener_md_compile.py -ob $1.md | tee log/scrivener_md_pdf.log
 
 mv *.log log/
+
+evince $1.pdf
 
 echo
 echo
@@ -35,4 +40,3 @@ else
     echo "Invalid input. Please enter 'yes' or 'no'."
 fi
 
-evince $1.pdf
