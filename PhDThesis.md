@@ -4,6 +4,7 @@ Author: R.L. Trotta
 <!---
 	Chapter 1
 --->
+
 \markedchapter{Introduction}{Introduction}\label{Chapter-1}
 
 > \centering \emph{"To a man devoid of blinders, there is no finer sight than that of intelligence at grips with a reality that transcends it."}  
@@ -11,40 +12,40 @@ Author: R.L. Trotta
 
  \hfill
 
-The inception of QCD can be traced back to the early 1970s \cite{gross_50_2023}, and the preceding decades had fomented countless questions on the nature of the quantum realm. Starting with the discovery of the neutron in 1932 and coming to a front with the Quark Model, a fervent quest began to comprehend the fundamental nature of these fundamental particles. In this intellectual crucible, Murray Gell-Mann and Harald Fritzsch laid the foundation for QCD, introducing a novel paradigm that transcended the established quark model. 
+The inception of QCD can be traced back to the early 1970s [\cite{gross_50_2023}], and the preceding decades had fomented countless questions on the nature of the quantum realm. Starting with the discovery of the neutron in 1932 and coming to a front with the Quark Model, a fervent quest began to comprehend the fundamental nature of these fundamental particles. In this intellectual crucible, Murray Gell-Mann and Harald Fritzsch laid the foundation for QCD, introducing a novel paradigm that transcended the established quark model. 
 
 In 1973, Gell-Mann and Fritzsch's seminal work heralded the emergence of QCD as a theoretical framework to understand the dynamics of quarks and gluons, the building blocks of hadronic matter. The formalism they proposed was rooted in the concept of color charge, a property distinct from the familiar electric charge, illustrating the intricate interplay of three colors—red, green, and blue—in the strong force interactions. This profound departure from the prevailing quantum field theories marked a shift in comprehending the strong nuclear force, laying the groundwork for a comprehensive understanding of the behavior of quarks and gluons within hadrons.
 
 A pivotal moment in the QCD narrative unfolded in 1977 when David Politzer, Frank Wilczek, and David Gross independently discovered asymptotic freedom—an extraordinary property of the strong force. Asymptotic freedom revealed that quarks and gluons, under extreme conditions of high energy, behave as nearly free particles, exhibiting weak interactions and allowing for perturbative calculations. This groundbreaking revelation dismantled the conventional wisdom that had considered quarks as perpetually confined entities within hadrons, opening a new frontier for theoretical exploration and experimental verification.
 
-## Theoretical Overview {#Section-1.2}
+\markedsection{Theoretical Overview}{Theoretical Overview}\label{Chapter-1-1}
 
-At its core, QCD is an elaborate framework built upon the color-field confinement and Dynamical Chiral Symmetry Breaking (DCSB) \cite{horn_pion_2016}\cite{roberts_hadron_2015}\cite{roberts_three_2016}. There is a consistency in QCD among a wide range of energies (0 < E < 8 TeV), which makes it the only true field theory and not an effective one. This means it can be wholly described non-perturbatively a priori.
+At its core, QCD is an elaborate framework built upon the color-field confinement and Dynamical Chiral Symmetry Breaking (DCSB) [\cite{horn_pion_2016}][\cite{roberts_hadron_2015}][\cite{roberts_three_2016}]. There is a consistency in QCD among a wide range of energies (0 < E < 8 TeV), which makes it the only true field theory and not an effective one. This means it can be wholly described non-perturbatively $\emph{a priori}$.
 
 Color charge, distinct from the familiar electric charge, gave rise to a trinity of colors—red, green, and blue—defining the quantum chromodynamic landscape. The theoretical underpinning of this color charge relies on the elegant machinery of non-abelian gauge symmetry, specifically SU(3) group symmetry. This mathematical framework enables the description of gluons as force carriers, mediating the interactions between quarks with their color-changing attributes. The intricate dance of color charges and gluons forms the crux of QCD, providing a theoretical edifice that successfully explains the behavior of quarks within hadrons.
 
 Confinement, a phenomenon unique to the strong force, underscores the complexity of QCD. Quarks and gluons, when isolated, are never found as free particles in nature. Instead, they are perpetually confined within hadrons, such as protons and neutrons, and can never be observed in isolation. Confinement is a hypothesis consistent with empirical data and does not fall out of the mathematics of non-abelian gauge symmetry.
 
-These intricacies in the theoretical framework of QCD extend beyond the confinement of quarks and gluons within hadrons. Perturbative QCD (pQCD) comes to the fore in high-energy regimes where the interactions between quarks and gluons can be treated as weak. This transition from non-perturbative to perturbative regimes, known as asymptotic freedom, is a defining feature of QCD and provides a crucial link between theoretical formulations and experimental observations (more on this in the following sections).
+These intricacies in the theoretical framework of QCD extend beyond the confinement of quarks and gluons within hadrons. Perturbative QCD (pQCD) comes to the forefront in high-energy regimes where the interactions between quarks and gluons can be treated as weak. This transition from non-perturbative to perturbative regimes, known as asymptotic freedom, is a defining feature of QCD and provides a crucial link between theoretical formulations and experimental observations.
 
 ### Emergent Hadron Mass
 
-In high-energy particle physics, such as those experiments performed at the Large Hadron Collider (LHC), the perturbative regime of QCD is primarily used to understand these reactions. At this energy scale, particle mass is understood to be generated by the spontaneous breaking of symmetry via the Higgs mechanism. However, if one steps back to the non-perturbative regime,  there seems to be another mass generator, Emergent Hadron Mass (EHM) \cite{cheng_baryon_2024}.
+In high-energy particle physics, such as those experiments performed at the Large Hadron Collider (LHC), the perturbative regime of QCD is primarily used to understand these reactions. At this energy scale, particle mass is understood to be generated by the spontaneous breaking of symmetry via the Higgs mechanism. However, if one steps back to the non-perturbative regime,  there seems to be another mass generator, Emergent Hadron Mass (EHM) [\cite{cheng_baryon_2024}].
 
 The essence of EHM lies in the fascinating dynamics of quark-gluon interactions within the quantum chromodynamic milieu. As quarks move within the confines of hadrons, their interactions with gluons generate a complex and dynamic environment. These interactions contribute to the effective mass of the composite hadron. In particular through another spontaneously broken symmetry. DCSB emerges as a pivotal player in the narrative of EHM. 
 
- Within QCD, chiral symmetry is a fundamental symmetry that relates different states of quarks (e.g., pions and kaons) through transformations that preserve chirality. In the chiral limit\footnote{The Higgs mechanism contributions are ignored; thus, in pQCD, no distinction is made between positive and negative helicity during strong interactions. } such states of quarks, where the lightest mesons (pions and kaons) can now be viewed in the schema of pseudoscalar mesons, act as Nambu-Goldstone (NG) bosons \cite{munczek_dynamical_1995}\cite{aguilar_pion_2019}. However, this symmetry must be broken because of a litany of results not seen in nature. For instance, such a symmetry would require the pion to have a symmetric scalar meson partner of equal mass. Thus, the strong force interactions between quarks and gluons in the quantum vacuum lead to the spontaneous breaking of chiral symmetry. This breaking results in the generation of constituent quark masses, contributing significantly to the overall mass of hadrons.
+ Within QCD, chiral symmetry is a fundamental symmetry that relates different states of quarks (e.g., pions and kaons) through transformations that preserve chirality. In the chiral limit\footnote{The Higgs mechanism contributions are ignored; thus, in pQCD, no distinction is made between positive and negative helicity during strong interactions. } such states of quarks, where the lightest mesons (pions and kaons) can now be viewed in the schema of pseudoscalar mesons, act as Nambu-Goldstone (NG) bosons [\cite{munczek_dynamical_1995}][\cite{aguilar_pion_2019}]. However, this symmetry must be broken because of a litany of results not seen in nature. For instance, such a symmetry would require the pion to have a symmetric scalar meson partner of equal mass. Thus, the strong force interactions between quarks and gluons in the quantum vacuum lead to the spontaneous breaking of chiral symmetry. This breaking results in the generation of constituent quark masses, contributing significantly to the overall mass of hadrons.
 
 \input{figures/texs/fig:1-1_dressquarkmass.tex}	
 
-The consequences of DCSB are profound as it not only explains the large effective mass of the quarks described in QCD Lagrangian but also causes the pion’s peculiarly small mass. A component of the dressed-quark propagator, $S(p)$, is the quark-mass function, $M(p)$, which is a fundamental representation of DCSB
+The consequences of DCSB are profound as it not only explains the large effective mass of the quarks described in the QCD Lagrangian but also causes the pion’s peculiarly small mass. A component of the dressed-quark propagator, $S(p)$, is the quark-mass function, $M(p)$, which is a fundamental representation of DCSB
 
 \begin{equation} 
 	S(p)=[i\gamma\cdot pA(p^2)+B(p^2)]^{-1}=\frac{Z(p^2)}{[i\gamma\cdot p+M(p^2)]}
   \label{eq:dressed_q_prop} 
 \end{equation}
 
-\noindent The interaction energy between quarks in these light mesons cancels out their masses exactly, which results in the NG boson behavior of the pion. This can be seen in figure \ref{fig:1-1_dressquarkmass}, whereas momentum decreases, the current-quark of pQCD evolves into a constituent quark. This physically happens through a low-momentum gluon cloud, which shrouds the current quark, resulting in its constituent counterpart. 
+\noindent The interaction energy between quarks in these light mesons cancels out their masses exactly, which results in the NG boson behavior of the pion. This can be seen in figure \ref{fig:1-1_dressquarkmass}, where as momentum decreases, the current-quark of pQCD evolves into a constituent quark. This physically happens through a low-momentum gluon cloud, which shrouds the current quark, resulting in its constituent counterpart. 
 
 It is essential to emphasize the differences between the spontaneous symmetry breaking of the Higgs mechanism and DCSB. DCSB is a non-perturbative feature of QCD, which, in essence, generates mass from nothing. The keyword in DCSB is dynamical, as the properties of DCSB are inherent through the quantization of classical fields for massless quarks and gluons. Quantum mechanics holds distributions of charge, mass, and number of particles as fixed characteristics. This changes when it becomes a relativistic theory where measurements are now dependent on the wavelength of the probe used. Confinement only becomes necessary at a particular mass scale due to the renormalization of divergences. The emergence of this mass scale is believed to be connected to DCSB and, thus, EHM.
 
@@ -54,13 +55,13 @@ The consequences of EHM extend beyond theoretical abstractions, finding resonanc
 
 Validation with experimental data is required to confirm the theoretical framework outlined above. In recent years, the applicability and efficacy of the Sullivan process have shown to be a powerful tool in elucidating empirical evidence of meson structure. This process involves probing the meson cloud of the proton to study the structure of pions and kaons. Crucial to the Sullivan Process is the judicious choice of kinematics, wherein the energy and momentum of the incident electrons are tailored to optimize the sensitivity to specific aspects of the hadron structure. By carefully tuning these parameters, one can enhance the precision and selectivity of measurements, providing a nuanced view of the internal constituents of hadrons.
 
-The theoretical underpinnings of the Sullivan Process rest on the foundations of QCD factorization theorems, which facilitate the separation of short-distance perturbative interactions from the non-perturbative aspects encapsulated in parton distribution functions (PDFs). In a semi-inclusive reaction ($ep\rightarrow e’(N\mathrm{ or }Y)X$), the forward nucleon (N) or hyperon (Y) encodes features corresponding to the $q-\bar{q}$ pairs (i.e., the meson cloud of the nucleon) \cite{arrington_revealing_2021}. The key to exploiting this encoded information is to fine-tune the kinematics such that at low $|t|$, the cross-section of the forward nucleon exhibits characteristics consistent with meson pole dominance. The meson pole dominance implies that the scattering behavior observed in the given kinematics is primarily governed by the exchange of mesons, leading to resonant enhancements in the scattering cross-sections. In the case of elastic scattering, the meson form factor can be extracted, while for Deep Inelastic Scattering (DIS), parton distributions can be accessed (more on this in future sections). This provides a reliable procedure for accessing a meson target in the space-like $t$ region; the requirement is that the ground-state meson pole dominates and the correlation’s structure evolves smoothly and slowly with virtuality. Experimental validation involves taking data over a range in $t$, specifically low $|t|$, and comparing it with the phenomenological and theoretical expectations.
+The theoretical underpinnings of the Sullivan Process rest on the foundations of QCD factorization theorems, which facilitate the separation of short-distance perturbative interactions from the non-perturbative aspects encapsulated in parton distribution functions (PDFs). In a semi-inclusive reaction ($ep\rightarrow e’(N\mathrm{ or }Y)X$), the forward nucleon (N) or hyperon (Y) encodes features corresponding to the $q\bar{q}$ pairs (i.e., the meson cloud of the nucleon) [\cite{arrington_revealing_2021}]. The key to exploiting this encoded information is to fine-tune the kinematics such that at low $|t|$, the cross-section of the forward nucleon exhibits characteristics consistent with meson pole dominance. The meson pole dominance implies that the scattering behavior observed in the given kinematics is primarily governed by the exchange of mesons, leading to resonant enhancements in the scattering cross-sections. In the case of elastic scattering, the meson form factor can be extracted, while for Deep Inelastic Scattering (DIS), parton distributions can be accessed. This provides a reliable procedure for accessing a meson target in the space-like $t$ region; the requirement is that the ground-state meson pole dominates and the correlation’s structure evolves smoothly and slowly with virtuality. Experimental validation involves taking data over a range in $t$, specifically low $|t|$, and comparing it with the phenomenological and theoretical expectations.
 
 \input{figures/texs/fig:1-1_sullivanprocess.tex}
 
-A concern of using the Sullivan process is the off-shell considerations that arise from using a virtual (off-shell) particle as a target. This concern has been well-understood for elementary particles such as photons and quarks for decades. Still, it is novel in composite particles such as pions or kaons \cite{qin_off-shell_2018}. At their core, off-shell considerations delve into the quantum mechanical realm of virtual particles, extending beyond the confines of their on-shell counterparts. As particles participate in scattering processes, the quantum uncertainty principle allows for a certain degree of deviation from their on-shell masses and energies. This departure from on-shell conditions introduces a layer of complexity, demanding a meticulous examination of the off-shell effects to disentangle their influence from the fundamental interactions under scrutiny. Beyond the low $|t|$ requirements, experiments must also suppress the non-resonant background contributions. In the case of form factor extraction, this can be done by LT-separation, and for parton distribution access, it can be done through forward tagging such as Tagged DIS (more on these cases in future sections). Examples of these processes can be seen in figure \ref{fig:1-1_sullivanprocess}. Recent theoretical calculations place the low $|t|$ region as $-t< 0.6 \mathrm{GeV}^2$ and $-t< 0.9 \mathrm{GeV}^2$ for the pion and kaon pole, respectively.
+A concern of using the Sullivan process is the off-shell considerations that arise from using a virtual (off-shell) particle as a target. This concern has been well-understood for elementary particles such as photons and quarks for decades. Still, it is novel in composite particles such as pions or kaons [\cite{qin_off-shell_2018}]. At their core, off-shell considerations delve into the quantum mechanical realm of virtual particles, extending beyond the confines of their on-shell counterparts. As particles participate in scattering processes, the quantum uncertainty principle allows for a certain degree of deviation from their on-shell masses and energies. This departure from on-shell conditions introduces a layer of complexity, demanding a meticulous examination of the off-shell effects to disentangle their influence from the fundamental interactions under scrutiny. Beyond the low $|t|$ requirements, experiments must also suppress the non-resonant background contributions. In the case of form factor extraction, this can be done by LT-separation, and for parton distribution access, it can be done through forward tagging such as Tagged DIS (see chapter \ref{Chapter-7}). Examples of these processes can be seen in figure \ref{fig:1-1_sullivanprocess}. Recent theoretical calculations place the low $|t|$ region as $-t< 0.6 \mathrm{GeV}^2$ and $-t< 0.9 \mathrm{GeV}^2$ for the pion and kaon pole, respectively.
 
-## Empirical Validation {#Section-1.2}
+\markedsection{Empirical Validation}{Empirical Validation}\label{Chapter-1-2}
 
 ### Meson Form Factors
 
@@ -80,15 +81,15 @@ The relation between hard and soft pion FF, $F_{\pi}$, can be expressed as
   \label{eq:pi_ff_hard} 
 \end{equation}
 
-\noindent where $\alpha_s$ is the strong coupling and $s_0$ is the effective threshold for higher states production. These values for the hard and soft $F_{\pi}$ are from the lowest order perturbative contribution to the spectral density function, $\rho_{\pi\pi}(s_1,s_2,Q^2)=2\pi\cdot f_{\pi}^2\cdot F_{\pi}$, which, in terms of $q\bar{q}$ condensates, describes the continuum above three pion threshold \cite{horn_pion_2006}. Equations \ref{eq:pi_ff_soft} and \ref{eq:pi_ff_hard} show a distinction between the hard and soft regimes, specifically, the non-leading behavior of the $Q^2$ term in the soft $F_{\pi}$ of equation ref{eq:pi_ff_soft}. This shows the significant contribution of soft physics in $F_{\pi}$ and may dominate over the perturbative contributions at moderate energies.
+\noindent where $\alpha_s$ is the strong coupling and $s_0$ is the effective threshold for higher states production. These values for the hard and soft $F_{\pi}$ are from the lowest order perturbative contribution to the spectral density function, $\rho_{\pi\pi}(s_1,s_2,Q^2)=2\pi\cdot f_{\pi}^2\cdot F_{\pi}$, which, in terms of $q\bar{q}$ condensates, describes the continuum above three pion threshold [\cite{horn_pion_2006}]. Equations \ref{eq:pi_ff_soft} and \ref{eq:pi_ff_hard} show a distinction between the hard and soft regimes, specifically, the non-leading behavior of the $Q^2$ term in the soft $F_{\pi}$ of equation \ref{eq:pi_ff_soft}. This shows the significant contribution of soft physics in $F_{\pi}$ and may dominate over the perturbative contributions at moderate energies.
 
-In this specific experiment, the kaon FF is of particular interest as it allows the study of the reaction mechanism underlying strangeness production. However, the study of kaons presents experimental challenges due to its smaller cross section, requiring greater luminosity, and the tricky Particle Identification (PID) of the kaon due to its short lifetime and large backgrounds (see future chapters on such discussions) \cite{bosted_studies_2008}. 
+In this specific experiment, the kaon FF is of particular interest as it allows the study of the reaction mechanism underlying strangeness production. However, the study of kaons presents experimental challenges due to its smaller cross section, requiring greater luminosity, and the tricky Particle Identification (PID) of the kaon due to its short lifetime and large backgrounds[\cite{bosted_studies_2008}]. 
 
 ### Electroproduction
 
 \input{figures/texs/fig:1-1_reactionplane.tex}
 
-As outlined in the previous sections, FFs are obtained through the Sullivan process. Experimentally, this is achieved via electroproduction. At its core, electroproduction involves the interaction of electrons with nucleons, creating new hadrons. An electron beam incidents off a proton target, resulting in three outgoing particles: a scattered electron, the outgoing meson (produced via the Sullivan process), and the forward nucleon. Specifically for this experiment, the reaction $p(e, e’K^+)\Lambda(\Sigma^0)$ occurs as shown in figure \ref{fig:1-1_reactionplane}. The incoming and scattered electron defines the scattering plane with momenta of $\mathbf{k}$ and $\mathbf{k’}$, respectively, and scattering angle $\theta_e$. The incoming electron mediates a virtual photon with momentum $\mathbf{q}$. The incoming and outgoing electron energies ($\omega=E_e-E’_e$) and the virtual photon momentum define the four-momentum exchange $q^2=\omega^2-|\mathbf{q}|$. The $K^+$ and $\Lambda(\Sigma^0)$ define the reaction plane with momenta of $\mathbf{p_{K}}$ and $\mathbf{p_{\Lambda(\Sigma^0)}}$, respectively. The $K^+$ momentum is at an angle $\theta_{Kq}$ relative to $\mathbf{q}$, and the two planes are at an angle, $\phi_{Kq}$ to one another.
+As outlined in the previous sections, FFs are obtained through the Sullivan process. Experimentally, this is achieved via electroproduction. At its core, electroproduction involves the interaction of electrons with nucleons, creating new hadrons. An electron beam incidents off a proton target, resulting in three outgoing particles: a scattered electron, the outgoing meson (produced via the Sullivan process), and the forward nucleon. Specifically for this experiment, the reaction $p(e, e’K^+)\Lambda(\Sigma^0)$ occurs as shown in figure \ref{fig:1-1_reactionplane}. The incoming and scattered electron defines the scattering plane with momenta of $\mathbf{k}$ and $\mathbf{k’}$, respectively, and scattering angle $\theta_e$. The incoming electron mediates a virtual photon with momentum $\mathbf{q}$. The incoming and outgoing electron energies ($\omega=E_e-E’_e$) and the virtual photon momentum define the four-momentum exchange $q^2=\omega^2-|\mathbf{q}|$. The $K^+$ and $\Lambda(\Sigma^0)$ define the reaction plane with momenta of $\mathbf{p_{K}}$ and $\mathbf{p}_{\boldsymbol{\Lambda(\Sigma^{0})}}$, respectively. The $K^+$ momentum is at an angle $\theta_{Kq}$ relative to $\mathbf{q}$, and the two planes are at an angle, $\phi_{Kq}$ to one another.
 
 The Lorentz invariant quantities $Q^2$, $W$, and $t$ completely describe the reaction’s kinematics. These quantities are defined as
 
@@ -107,7 +108,7 @@ The Lorentz invariant quantities $Q^2$, $W$, and $t$ completely describe the rea
   \label{eq:t_val} 
 \end{equation}
 
-\noindent where $M$ is the mass of the target (i.e., proton mass). Inherent to the short lifetimes of these hyperons, the $\Lambda(\Sigma^0)$ particle is not detected. This “missing mass” is easily reconstructed using the conservation of energy and momentum, $M_{X}^2=(E_e-E’_e-E_K)^2-|\mathbf{q}-\mathbf{p_{K}}|^2$. Reflecting on the equation \ref{eq:t_val}, it is evident that $|-t|$ is minimized when the kaon is produced in parallel kinematics (i.e., entirely in the direction of $\mathbf{q}$) \cite{pannunzio_carmignotto_exploring_2017}.
+\noindent where $M$ is the mass of the target (i.e., proton mass). Inherent to the short lifetimes of these hyperons, the $\Lambda(\Sigma^0)$ particle is not detected. This “missing mass” is easily reconstructed using the conservation of energy and momentum, $M_{X}^2=(E_e-E’_e-E_K)^2-|\mathbf{q}-\mathbf{p_{K}}|^2$. Reflecting on the equation \ref{eq:t_val}, it is evident that $|-t|$ is minimized when the kaon is produced in parallel kinematics (i.e., entirely in the direction of $\mathbf{q}$) [\cite{pannunzio_carmignotto_exploring_2017}].
 
 ### Kaon Electroproduction Cross Section
 
@@ -162,7 +163,7 @@ This separation requires two energy configurations corresponding to two $\epsilo
   \label{eq:sep_t} 
 \end{equation}
 
-## Meson Electroproduction Models{#Section-1.3}
+\markedsection{Meson Electroproduction Models}{Meson Electroproduction Models}\label{Chapter-1-3}
 
 As discussed in previous sections, the struck meson in the electroproduction reaction is off-shell; thus, the data must be extrapolated to the physical pole as it is impossible to measure it directly. Such an extrapolation requires insight into the t-dependence of the experimental cross section which has inherent uncertainties that propagate to the FF extraction. There is also an added difficulty due to competing Mandelstam channels (see figure \ref{fig:1-1_mandelstam}) produced by hard, non-resonant contributions. 
 
@@ -179,7 +180,7 @@ Using the first-order Born approximation, terms of the contributing covariant Bo
 
 ### Regge Models
 
-Using the Born exchange model to describe meson electroproduction is helpful for a quick example of the procedure, but a more verbose and detailed description is required. One such model, the Vanderhaegen, Guidal, and Laget (VGL) Regge model, is an apt starting point. The VGL model builds off Regge theory in the context of pion and kaon photoproduction \cite{eden_regge_1971}\cite{vanderhaeghen_regge_1998}. In Regge theory, the pole-like Feynman propagator of the Born term, $1/(t-m^2)$, is replaced with Regge propagators for particles with the same internal quantum numbers. The gauge invariant $\pi$ and $\rho$ Regge trajectory exchange model provides a good description of pion and kaon photoproduction at higher energies and lower $-t$ (e.g., $-t<2 (\mathrm{GeV}^2)$). This model was extended for the VGL model. Since studies in the resonance region well constrain the coupling constants at the vertices, this model has no free parameters. Therefore, to expand this model to be sufficient for electroproduction, a monopole form factor must be included
+Using the Born exchange model to describe meson electroproduction is helpful for a quick example of the procedure, but a more verbose and detailed description is required. One such model, the Vanderhaegen, Guidal, and Laget (VGL) Regge model, is an apt starting point. The VGL model builds off Regge theory in the context of pion and kaon photoproduction [\cite{eden_regge_1971}][\cite{vanderhaeghen_regge_1998}]. In Regge theory, the pole-like Feynman propagator of the Born term, $1/(t-m^2)$, is replaced with Regge propagators for particles with the same internal quantum numbers. The gauge invariant $\pi$ and $\rho$ Regge trajectory exchange model provides a good description of pion and kaon photoproduction at higher energies and lower $-t$ (e.g., $-t<2 (\mathrm{GeV}^2)$). This model was extended for the VGL model. Since studies in the resonance region well constrain the coupling constants at the vertices, this model has no free parameters. Therefore, to expand this model to be sufficient for electroproduction, a monopole form factor must be included
 
 \begin{equation}
 	F_{K}^{\mathrm{monopole}}(Q^2)=(1+\frac{Q^2}{\Lambda_{K}^2})^{-1}
@@ -188,7 +189,7 @@ Using the Born exchange model to describe meson electroproduction is helpful for
 
 \noindent where $\Lambda_{K}$ is the only free parameter (a cutoff parameter). By evaluating the model for different values of $\Lambda_{K}$ and finding the best value by minimizing the differences between the model and $\sigma_L$, it is possible to extract $F_{K}$ from $\sigma_L$.
 
-## Experimental Overview {#Section-1.4}
+\markedsection{Experimental Overview}{Experimental Overview}\label{Chapter-1-4}
 
 The experiment examined the $Q^2$ dependence of the cross-section at various $x$ values while maintaining small $-t$ values relative to $Q^2$. Table \ref{tab:1-1_kinematics} shows the achieved data points and their corresponding physics study\footnote{It should be noted that the $Q^2=0.5$ setting is not listed, as this point was outside of this thesis' analyzed data.}. Leveraging the higher energies available at a 12 GeV JLab, the experiment extended the accessible range in $Q^2$ for W values above the resonance region, surpassing what could be achieved at the 6 GeV JLab. To mitigate amplification in systematic uncertainty, careful selection of $\epsilon$ settings was undertaken, aiming to span $\Delta\epsilon\gtrsim 0.20$ whenever feasible. Furthermore, to achieve comprehensive separation of the L, T, LT, and TT terms across a wide $-t$ range, data acquisition was conducted both to the left and right of $\mathbf{q}$, with $\theta_{Kq}$ varying by $\pm 3\degree$. 
 
@@ -225,24 +226,23 @@ $Q^2$ scans at fixed $x$ values of $0.25$ and $0.40$ delved into the regime betw
     \end{tikzpicture}
 \end{minipage}
 
-Above is a rough timeline of the accelerators and colliders that lead to the eventual construction of the Continuous Wave Electron Accelerator Facility (CEBAF) \cite{cahn_experimental_1989}. In the early 1990s, the Continuous Wave Electron Accelerator Facility (CEBAF) was completed and subsequently named Thomas Jefferson National Accelerator Facility (Jlab), operated by SURA/PAE Applied Technologies for the U.S. Department of Energy. In the 2000s, an upgrade to the CEBAF’s 6 GeV accelerator was approved and commissioning experiments began in the Spring of 2018. The KaonLT (E12-09-011) experiment was performed in Hall C at Jlab, running from September to December of 2018, with three weeks off for the SIDIS experiments (E12-09-002 and E12-09-017), and continuing from March to April of 2019. 
+Above is a rough timeline of the accelerators and colliders that lead to the eventual construction of the Continuous Wave Electron Accelerator Facility (CEBAF) [\cite{cahn_experimental_1989}]. In the early 1990s, the Continuous Wave Electron Accelerator Facility (CEBAF) was completed and subsequently named Thomas Jefferson National Accelerator Facility (Jlab), operated by SURA/PAE Applied Technologies for the U.S. Department of Energy. In the 2000s, an upgrade to the CEBAF’s 6 GeV accelerator was approved and commissioning experiments began in the Spring of 2018. The KaonLT (E12-09-011) experiment was performed in Hall C at Jlab, running from September to December of 2018, with three weeks off for the SIDIS experiments (E12-09-002 and E12-09-017), and continuing from March to April of 2019. 
 
 
-## Accelerator{#Section-2.1} 
+\markedsection{Accelerator}{Accelerator}\label{Chapter-2-1}
 
-
-Since 1995, the CEBAF at Jlab has been cornerstone to medium energy nuclear research. CEBAF uses a high intensity continuous wave (CW) beam to deliver electrons to four experimental halls (Halls A, B, C, and D). In reality, this CW beam is not truly continuous, rather contains an intrinsic microstructure of ~2 ps short beam pulses that occur at a fundamental frequency ($f_0$) of 1497 MHz \cite{reece_continuous_2016}. This is a result of the Radio-Frequency (RF) power used in the SRF resonant cavities which allows for four sequential electron bunches that are subsequently sent to the four halls. 
+Since 1995, the CEBAF at Jlab has been cornerstone to medium energy nuclear research. CEBAF uses a high intensity continuous wave (CW) beam to deliver electrons to four experimental halls (Halls A, B, C, and D). In reality, this CW beam is not truly continuous, rather contains an intrinsic microstructure of ~2 ps short beam pulses that occur at a fundamental frequency ($f_0$) of 1497 MHz [\cite{reece_continuous_2016}]. This is a result of the Radio-Frequency (RF) power used in the SRF resonant cavities which allows for four sequential electron bunches that are subsequently sent to the four halls. 
 
 \input{figures/texs/fig:2-1_cebaf12gev.tex}
 
-Each electron bunch is sent into the injector beamline, where they are accelerated anywhere between 67 to 123 MeV, depending on the desired beam energy \cite{pilat_12_2012}. From here, they are sent to the north linac where they are accelerated further by 1.1 GeV. The beam is then steered by the east arc into the south linac where they gain an additional 1.1 GeV. Finally, the beam is steered back to the north linac by the west arc where it can repeat this cycle. The beam can be recirculated up to a total of five times, where each recirculation is known as a pass. These passes correspond to the following beam energies: 1-pass (2.2 GeV), 2-pass (4.4 GeV), 3-pass (6.6 GeV), 4-pass (8.8 GeV), 5-pass (12.1 GeV).
+Each electron bunch is sent into the injector beamline, where they are accelerated anywhere between 67 to 123 MeV, depending on the desired beam energy [\cite{pilat_12_2012}]. From here, they are sent to the north linac where they are accelerated further by 1.1 GeV. The beam is then steered by the east arc into the south linac where they gain an additional 1.1 GeV. Finally, the beam is steered back to the north linac by the west arc where it can repeat this cycle. The beam can be recirculated up to a total of five times, where each recirculation is known as a pass. These passes correspond to the following beam energies: 1-pass (2.2 GeV), 2-pass (4.4 GeV), 3-pass (6.6 GeV), 4-pass (8.8 GeV), 5-pass (12.1 GeV).
 
-Once the desired beam energy is obtained, it can be diverted to the halls by using separators which are located at the end of the south linac. In the 6 GeV era, a photo-cathode electron gun used three lasers pulsing at 500 MHz (i.e. $f_0$/3) which were eventually separated and directed to each respective hall \cite{kazimi_operational_2019}. After the 12 GeV upgrade, which includes the addition of Hall D, there had to be a new beam pattern constructed in order to allow simultaneous beam in all four halls. This new pattern included modifications to the injector system and the RF separator extraction system. The injector system added a fourth laser as well as a new 250 MHz pulse rate while the RF extraction system had less straightforward changes as a pass-dependent fix was implemented. For lower passes and when only Halls A, B, C are at the highest passes, the laser pulses remained at 500 MHz. In the situation where all four halls are running at the highest pass (i.e. 5-pass), they are operating at 250 MHz. To allow this a new separator called the “5th pass separator”, was added which operates at 750 MHz. This “5th pass separator” (see figure \ref{fig:2-1_cebaf12gev}) sends the separated beam around the 10th west arc to Hall D.
+Once the desired beam energy is obtained, it can be diverted to the halls by using separators which are located at the end of the south linac. In the 6 GeV era, a photo-cathode electron gun used three lasers pulsing at 500 MHz (i.e. $f_0$/3) which were eventually separated and directed to each respective hall [\cite{kazimi_operational_2019}]. After the 12 GeV upgrade, which includes the addition of Hall D, there had to be a new beam pattern constructed in order to allow simultaneous beam in all four halls. This new pattern included modifications to the injector system and the RF separator extraction system. The injector system added a fourth laser as well as a new 250 MHz pulse rate while the RF extraction system had less straightforward changes as a pass-dependent fix was implemented. For lower passes and when only Halls A, B, C are at the highest passes, the laser pulses remained at 500 MHz. In the situation where all four halls are running at the highest pass (i.e. 5-pass), they are operating at 250 MHz. To allow this a new separator called the “5th pass separator”, was added which operates at 750 MHz. This “5th pass separator” (see figure \ref{fig:2-1_cebaf12gev}) sends the separated beam around the 10th west arc to Hall D.
 
-## Hall C Beam Line{#Section-2.2} 
+\markedsection{Hall C Beam Line}{Hall C Beam Line}\label{Chapter-2-2}
 
 
-Halls C accepts the beam through a long pipe that starts at the Beam Switch Yard (BSY) and ends at the transport line \cite{sta_jeerson_2019}. In order to reach the hall, the beam is bent in the Hall C arc (see figure \ref{fig:2-2_hallc_arc}) using a series of eight dipole magnets. From there, it enters the Hall C alcove where it passes the Compton and $\text{M\o{}ller}$ polarimeters to check the polarity of the beam. At this point, the beam has entered the hall where it will travel to the scattering chamber and, any beam not incidented off the target, will end its journey in the beam dump.
+Halls C accepts the beam through a long pipe that starts at the Beam Switch Yard (BSY) and ends at the transport line [\cite{sta_jeerson_2019}]. In order to reach the hall, the beam is bent in the Hall C arc (see figure \ref{fig:2-2_hallc_arc}) using a series of eight dipole magnets. From there, it enters the Hall C alcove where it passes the Compton and $\text{M\o{}ller}$ polarimeters to check the polarity of the beam. At this point, the beam has entered the hall where it will travel to the scattering chamber and, any beam not incidented off the target, will end its journey in the beam dump.
 
 \input{figures/texs/fig:2-2_hallc_arc.tex}
 
@@ -252,7 +252,7 @@ Along this path, there are several beam diagnostic components that track and mon
 
 ### Beam Energy Measurement
 
-The beam energy is determined by measuring the deflection of the electron beam when it traverses through a known magnetic field in the hall arc (see figure \ref{fig:2-2_hallc_arc}). In essence, the beam energy is found by using the hall arc as a spectrometer \cite{yan_beam_1993}. Using the basic description of a magnetic force acting on an electron 
+The beam energy is determined by measuring the deflection of the electron beam when it traverses through a known magnetic field in the hall arc (see figure \ref{fig:2-2_hallc_arc}). In essence, the beam energy is found by using the hall arc as a spectrometer [\cite{yan_beam_1993}]. Using the basic description of a magnetic force acting on an electron 
 
 \begin{equation} 
   |\vec{F_{B}}|=e|\vec{v_e}\times\vec{B}|=ev_{e}B_{\perp}=\frac{\gamma m_{e}v^2_e}{r_c}
@@ -266,7 +266,7 @@ where $e$ is the elementary charge , $v_e$ is the electron velocity, $B_{\perp}$
   \label{eq:electron_momentum} 
 \end{equation} 
 
-where $\theta_{arc}$ is the arc bend angle and $dl$ is the infintesimal arc length.  Previous survey determined that the $\theta_{arc}$ was 34.3$\degree$ and $\int B dl$ is found by mapping the magnetic fields of the arc dipoles at their corresponding currents. The beam position and profile are measured superharps (see the following sections) located at the entrance, middle, and exit of the hall arc \cite{yan_superharp_1995}. Together there is an achievable precision of $\frac{\delta p}{p}\approx 5\times 10^{-4}$.
+where $\theta_{arc}$ is the arc bend angle and $dl$ is the infintesimal arc length.  Previous survey determined that the $\theta_{arc}$ was 34.3$\degree$ and $\int B dl$ is found by mapping the magnetic fields of the arc dipoles at their corresponding currents. The beam position and profile are measured superharps (see the following sections) located at the entrance, middle, and exit of the hall arc [\cite{yan_superharp_1995}]. Together there is an achievable precision of $\frac{\delta p}{p}\approx 5\times 10^{-4}$.
 
 ### Beam Position Monitors (BPMs)
 
@@ -294,32 +294,32 @@ Hall C has three types of rasters available: $\text{M\o{}ller}$, fast, and slow.
 
 ### Beam Current Monitors (BCMs)
 
-Beam current is measured using BCMs, which, in Hall C, take two primary forms: Unser monitor or RF cavity. An Unser monitor, also known as a Parametric Current Transformer (PCT), is a toroidial transformer that is designed to be non-destructive and acts as the absolute reference frame \cite{unser_parametric_1992}. The circular magnetic field of the toroid magnetizes strips of permeable matrial as the beam passes through it, this sends a current, proportional to the beam current, to a compensating coil thus canceling out the field of the beam. RF cavities, on the other-hand, are cylindrical, stainless steal cavities that work off the basic ideas of a waveguide. When the beam passes through them at their resonant frequency (i.e. $f_0$), they are excited and an antenna inside couples this power to a heliax cable to eventually be processed.
+Beam current is measured using BCMs, which, in Hall C, take two primary forms: Unser monitor or RF cavity. An Unser monitor, also known as a Parametric Current Transformer (PCT), is a toroidial transformer that is designed to be non-destructive and acts as the absolute reference frame [\cite{unser_parametric_1992}]. The circular magnetic field of the toroid magnetizes strips of permeable matrial as the beam passes through it, this sends a current, proportional to the beam current, to a compensating coil thus canceling out the field of the beam. RF cavities, on the other-hand, are cylindrical, stainless steal cavities that work off the basic ideas of a waveguide. When the beam passes through them at their resonant frequency (i.e. $f_0$), they are excited and an antenna inside couples this power to a heliax cable to eventually be processed.
 
 An Unser monitor and two RF cavities (BCM1 and BCM2) wrapped in thermal blankets, for temperature stabilization, make up the primary current monitoring system and are located upstream from the target. There is also an additional three RF cavities (BCM4A, BCM4B, and BCM4C) enclosed in a thermally stabilized box that are aviable if the beamline configuration allows. These are located further upstream than the Unser or BCM1, just inside the hall entrance. Finally, there is one last BCM (BCM17) located upstream from the Compton polarimeter on the 3C17 girder. In addition to these BCMs, that are part of the Hall C current measurement system, there is another BCM immediately upstrem of the target which is used to monitor beam loss and is primarily there for machine protection.
 
 \input{figures/texs/fig:2-2_bcm_unser.tex}
 
-The signal for the Unser monitor drifts significantly over the course of a few minutes, so it cannot be used as a continuous current monitor. Still, being the absolute reference frame means that the Unser can be used to calibrate the cavities which are used for continous current monitoring. In order to correct for this drift, a “Unser wire calibration” is performed, wherein, a wire, with a known current, is run through the Unser and is used to measure the gain of the electronic chain (see figure \ref{fig:2-2_bcm_unser}). This gain is then calibrated, which corrects for the drift in the absolute frame. The combination of the Unser monitor with BCM1 and BCM2 allows a beam current with an absolute accuracy of about 1 \cite{denard_high_2001}.
+The signal for the Unser monitor drifts significantly over the course of a few minutes, so it cannot be used as a continuous current monitor. Still, being the absolute reference frame means that the Unser can be used to calibrate the cavities which are used for continous current monitoring. In order to correct for this drift, a “Unser wire calibration” is performed, wherein, a wire, with a known current, is run through the Unser and is used to measure the gain of the electronic chain (see figure \ref{fig:2-2_bcm_unser}). This gain is then calibrated, which corrects for the drift in the absolute frame. The combination of the Unser monitor with BCM1 and BCM2 allows a beam current with an absolute accuracy of about 1 [\cite{denard_high_2001}].
 
-## Target{#Section-2.3} 
+\markedsection{Target}{Target}\label{Chapter-2-3}
 
 <!---
 
 ***** UNKNOWN VALUES, REMOVING UNTIL I FIND THEM
 
-At the end of the beamline, the electron beam has finally reached the target chamber. The target chamber was designed to isolate the beam line vacuum from the rotating spectrometers. The chamber houses a loop of cryogenic targets (see figure \ref{fig:2-3_target_loop}), such as liquid hydrogen, as well as a variety of solid targets on the ladder, such as Aluminum. Targets used during the E12-09-011 experiment can be seen in table \ref{tab:2-3_target_loop}. Additional targets, used for other experiments, were on the ladder, see Ref. \cite{sta_jeerson_2019} for more details.
+At the end of the beamline, the electron beam has finally reached the target chamber. The target chamber was designed to isolate the beam line vacuum from the rotating spectrometers. The chamber houses a loop of cryogenic targets (see figure \ref{fig:2-3_target_loop}), such as liquid hydrogen, as well as a variety of solid targets on the ladder, such as Aluminum. Targets used during the E12-09-011 experiment can be seen in table \ref{tab:2-3_target_loop}. Additional targets, used for other experiments, were on the ladder, see Ref. [\cite{sta_jeerson_2019}] for more details.
 
 \input{figures/texs/fig:2-3_target_loop.tex}
 
 \input{figures/texs/tab:2-3_target_loop.tex}
 --->
 
-At the end of the beamline, the electron beam has finally reached the target chamber. The target chamber was designed to isolate the beam line vacuum from the rotating spectrometers. The chamber houses a loop of cryogenic targets (see figure \ref{fig:2-3_target_loop}), such as liquid hydrogen, as well as a variety of solid targets on the ladder, such as Aluminum. Additional targets, used for other experiments, were on the ladder, see Ref. \cite{sta_jeerson_2019} for more details.
+At the end of the beamline, the electron beam has finally reached the target chamber. The target chamber was designed to isolate the beam line vacuum from the rotating spectrometers. The chamber houses a loop of cryogenic targets (see figure \ref{fig:2-3_target_loop}), such as liquid hydrogen, as well as a variety of solid targets on the ladder, such as Aluminum. Additional targets, used for other experiments, were on the ladder, see Ref. [\cite{sta_jeerson_2019}] for more details.
 
 \input{figures/texs/fig:2-3_target_loop.tex}
 
-This experiment required a proton target so the primary one used was liquid hydrogen ($LH_2$). The $LH_2$ was contained in loop 2, while the liquid Deuterium ($LD_2$) was in loop 3 and loop 3 was empty, only containing $^{2}\mathrm{He}$ gas to keep vacuum pressure. $LH_2$ is kept at a temperature of 19 $\pm 0.1$ K(~25 psia) and density of 0.07231 g/$cm^3$ \cite{smith_g_hall_2016}. There needs to be special care taken with all cryogenic targets as they have a strict freezing and boiling points, therefore the temperatures need to be closely monitored by the target operators to avoid disaster. For $LH_2$, the freezing and boiling point, respectively, are 13.8 K and 22.1 K.
+This experiment required a proton target so the primary one used was liquid hydrogen ($LH_2$). The $LH_2$ was contained in loop 2, while the liquid Deuterium ($LD_2$) was in loop 3 and loop 3 was empty, only containing $^{2}\mathrm{He}$ gas to keep vacuum pressure. $LH_2$ is kept at a temperature of 19 $\pm 0.1$ K(~25 psia) and density of 0.07231 g/$cm^3$ [\cite{smith_g_hall_2016}]. There needs to be special care taken with all cryogenic targets as they have a strict freezing and boiling points, therefore the temperatures need to be closely monitored by the target operators to avoid disaster. For $LH_2$, the freezing and boiling point, respectively, are 13.8 K and 22.1 K.
 
 The $LH_2$ target may have been the main target used but it was not the only one used. The 10 cm Aluminum Dummy target was also used extensively. This solid target consists of aluminum foils mounted in separate frame that correspond to the cryogenic entrance and exit windows. This setup is purposeful as the 10 cm Aluminum Dummy target is used for “dummy subtractions” which are the removal of background events in the data associated with the aluminum frames that house the cryogenic targets.
 
@@ -327,8 +327,7 @@ The the Carbon 1.5% target was also used. Because these targets are made of carb
 
 Beyond these two targets used for data, there are also the Carbon Hole, Optics-1 targets which are used for beam centering and spectrometer optics, respectively. The Carbon Hole is a thin carbon foil that has been cut so that there is a central 2 mm diameter hole. Similar to figure \ref{fig:2-2_raster}, the rastered beam can be used to adjust the beam to a more central position. With a Carbon Hole target, a rastered XY plot will now have a hole showing the beam’s central position. Shift workers communicate adjustments to MCC so that it can be steered to its proper position. The Optics-1 target is made of carbon foils located at 5 cm in front the entrance and 5 cm behind the exit cryogenic target windows. These are used for spectrometer optics optimization studies, which will be discussed in a following section.
 
-## Spectrometers{#Section-2.4} 
-
+\markedsection{Spectrometers}{Spectrometers}\label{Chapter-2-4}
 
 The distinctive feature of Hall C lies in its possession of two high luminosity ($10^{39}\text{cm}^{-2}\text{s}^{-1}$) magnetic spectrometers, namely the High Momentum Spectrometer (HMS) and the Super High Momentum Spectrometer (SHMS). These cutting-edge instruments empower physicists to conduct unparalleled precision in cross-section experiments. Each spectrometer rests on rotatable support structures that can move along rails, all while keeping the optical elements and detectors aligned relative to the target. 
 
@@ -364,11 +363,11 @@ The collimator is a rectangular block (90% W, 6% Ni and 4% Cu) consisting of an 
 
 Like the HMS, the quadrupoles and dipole are superconducting magnets that are used to optimize the magnetic field strength and configuration to achieve precise and accurate particle tracking within the spectrometer. At angles below ~12$\degree$, fringe fields from the SHMS HB, Q1, and Q2 magnets can deflect the beam which may result in it missing the beam dump. The Horizontal Bender (HB) is used to steer the scattered particles by an additional 3$\degree$ away from the beamline in order to prevent this.
 
-## Detectors{#Section-2.5} 
+\markedsection{Detectors}{Detectors}\label{Chapter-2-5}
+
 \label{sec:chap_3_detectors}
 
-
-The HMS and SHMS consist of a very similar set of particle detectors that are aligned in almost exactly the same order. This was a purposeful choice based off the success of previous Hall C electroproduction experiments (see Ref. \cite{horn_determination_2006}, \cite{blok_charged_2008}) that used the HMS and the Short Orbit Spectrometer (SOS), which the SHMS replaced. The basic design consists of a pair of drift chambers (DC) for track reconstruction, two pairs of hodoscopes for triggering and time-of-flight (TOF) measurements, and a combination of Cerenkov detectors and calorimeters for particle identification (PID). 
+The HMS and SHMS consist of a very similar set of particle detectors that are aligned in almost exactly the same order. This was a purposeful choice based off the success of previous Hall C electroproduction experiments (see Ref. [\cite{horn_determination_2006}], [\cite{blok_charged_2008}]) that used the HMS and the Short Orbit Spectrometer (SOS), which the SHMS replaced. The basic design consists of a pair of drift chambers (DC) for track reconstruction, two pairs of hodoscopes for triggering and time-of-flight (TOF) measurements, and a combination of Cerenkov detectors and calorimeters for particle identification (PID). 
 
 \input{figures/texs/fig:2-4_hms_detectors.tex}
 
@@ -380,7 +379,7 @@ The SHMS detector stack can be seen in figure \ref{fig:2-4_shms_detectors}. As a
 
 ### Drift Chambers
 
-Drift chambers measure the horizontal and vertical angles and positions of the scattered particles. The charge of the particles induces ionization in the gas of the chamber (50:50 argon/ethane) which produces free electrons that are caught by sense wires. The HMS drift chambers were upgraded in 2017 to match the design of the SHMS, which itself is based off the previous chambers used in the Hall C program \cite{pandey_status_2017} \cite{tang_hall_2017} \cite{christy_hall_2016}. The basic design consists of two cathode windows, eight cathode planes, six anode (wire) planes, two aluminum frames, and a middle plane with card carriers and readout electronics (see figure \ref{fig:2-4_dc_view}). 
+Drift chambers measure the horizontal and vertical angles and positions of the scattered particles. The charge of the particles induces ionization in the gas of the chamber (50:50 argon/ethane) which produces free electrons that are caught by sense wires. The HMS drift chambers were upgraded in 2017 to match the design of the SHMS, which itself is based off the previous chambers used in the Hall C program [\cite{pandey_status_2017}] [\cite{tang_hall_2017}] [\cite{christy_hall_2016}]. The basic design consists of two cathode windows, eight cathode planes, six anode (wire) planes, two aluminum frames, and a middle plane with card carriers and readout electronics (see figure \ref{fig:2-4_dc_view}). 
 
 There are six planes of wires in all the drift chamber pairs (see figure \ref{fig:2-4_dc_view}). The wires are set such that a 180$\degree$ rotation of the unprimed wire planes (e.g. U) about the z-axis result in the primed wire planes (e.g. U’), but slightly shifted to resolve the left-right ambiguity in the case of multi-hits. The x/x’ and y/y’ planes determine the dispersive (vertical) and non-dispersive (horizontal) track positions, respectively. To improve tracking resolution, the u/u’ and v/v’ planes are set $\pm60\degree$ relative to x/x’.
 
@@ -418,13 +417,13 @@ and thus because certain index of refractions will produce light at certain part
 
 \input{figures/texs/fig:2-4_shms_hgc.tex}
 
-The HGC used in each spectrometer is a large cylindrical tank filled with a gas (i.e. the medium). The Cerenkov light is then reflected to PMTs using mirrors. The HMS Cerenkov is 1.5 meters long and uses two spherical mirrors that focus the light to two PMTs \cite{c_cothran_threshold_1995}. The gas of the HMS Cerenkov can be adjusted to discriminate between either $e$/$\pi$ ($C_4F_{10}$ or $N_2$) or $\pi$/$p$ (Freon-12). The SHMS Cerenkov is 1.3 meters long and uses four spherical mirrors that focus the light to four PMTs \cite{li_heavy_2012}. The gas of the SHMS Cerenkov can be adjusted to discriminate between either $e$/$\pi$ or $\pi$/$K$. The gases used ($C_4F_{10}$ or $C_4F_8O$) are set for different particle separation by adjusting the pressure of the gas.
+The HGC used in each spectrometer is a large cylindrical tank filled with a gas (i.e. the medium). The Cerenkov light is then reflected to PMTs using mirrors. The HMS Cerenkov is 1.5 meters long and uses two spherical mirrors that focus the light to two PMTs [\cite{c_cothran_threshold_1995}]. The gas of the HMS Cerenkov can be adjusted to discriminate between either $e$/$\pi$ ($C_4F_{10}$ or $N_2$) or $\pi$/$p$ (Freon-12). The SHMS Cerenkov is 1.3 meters long and uses four spherical mirrors that focus the light to four PMTs [\cite{li_heavy_2012}]. The gas of the SHMS Cerenkov can be adjusted to discriminate between either $e$/$\pi$ or $\pi$/$K$. The gases used ($C_4F_{10}$ or $C_4F_8O$) are set for different particle separation by adjusting the pressure of the gas.
 
 #### SHMS Aerogel Cerenkov Detector
 
 \input{figures/texs/fig:2-4_shms_aero.tex}
 
-The aerogel Cerenkov detector used by the SHMS has two main components: a tray to hold the aerogel material and a light diffusion box with PMTs, which are both covered with a diffuse reflector material \cite{horn_aerogel_2017}. In order to separate kaons at such a high momentum (2.6 to 7.2 GeV/c), a refractive index between gases and liquids is required. Aerogel is one of the few materials with such a property. Aerogel is an extremely low density, near translucent material. It is composed of a gel-like structure in which the liquid component has been replaced with gas, resulting in a solid material that is mostly composed of air. The Cerenkov effect is used in just the same way as the HGC, only instead of mirrors, a diffuse reflector material is used to reflect the Cerenkov light to the PMTs. 
+The aerogel Cerenkov detector used by the SHMS has two main components: a tray to hold the aerogel material and a light diffusion box with PMTs, which are both covered with a diffuse reflector material [\cite{horn_aerogel_2017}]. In order to separate kaons at such a high momentum (2.6 to 7.2 GeV/c), a refractive index between gases and liquids is required. Aerogel is one of the few materials with such a property. Aerogel is an extremely low density, near translucent material. It is composed of a gel-like structure in which the liquid component has been replaced with gas, resulting in a solid material that is mostly composed of air. The Cerenkov effect is used in just the same way as the HGC, only instead of mirrors, a diffuse reflector material is used to reflect the Cerenkov light to the PMTs. 
 
 \input{figures/texs/tab:2-4_aero_threshold.tex}
 
@@ -440,16 +439,16 @@ Both spectrometers use calorimeters with similar designs. The main difference is
 
 \input{figures/texs/fig:2-4_shms_cal.tex}
 
-The HMS and SHMS calorimeters are made of several stacked layers of thick lead blocks to ensure that nearly all the scattered particle’s incident radiation is captured \cite{mkrtchyan_lead-glass_2013}. This block stack is tilted by a a few degrees (5$\degree$ for the HMS and 2$\degree$ for the SHMS) relative to the central ray of the spectrometer so that the losses due to particles passing through the gaps between blocks can be minimized. The HMS uses 52 TF-1 lead glass 10 cm thick blocks for the shower. It has a radiation length of ~14.6. The SHMS uses 28 TF-1 lead glass 10 cm thick blocks for the pre-shower and 224 F-101 lead glass 50 cm thick blocks for the shower. The pre-shower has a radiation length of 3.6 and the shower has a radiation length of 18.
+The HMS and SHMS calorimeters are made of several stacked layers of thick lead blocks to ensure that nearly all the scattered particle’s incident radiation is captured [\cite{mkrtchyan_lead-glass_2013}]. This block stack is tilted by a a few degrees (5$\degree$ for the HMS and 2$\degree$ for the SHMS) relative to the central ray of the spectrometer so that the losses due to particles passing through the gaps between blocks can be minimized. The HMS uses 52 TF-1 lead glass 10 cm thick blocks for the shower. It has a radiation length of ~14.6. The SHMS uses 28 TF-1 lead glass 10 cm thick blocks for the pre-shower and 224 F-101 lead glass 50 cm thick blocks for the shower. The pre-shower has a radiation length of 3.6 and the shower has a radiation length of 18.
 
 
 
 
 
-## Trigger Logic and Data Acquisition{#Section-2.6} 
+\markedsection{Trigger Logic and Data Acquisition}{Trigger Logic and Data Acquisition}\label{Chapter-2-6}
 
 
-The hardware trigger system is one of the main components of the data acquisition. It is used to filter real events from likely backgrounds by reducing the high rates and electronic deadtime while keeping the trigger efficiency high. Each detector’s discriminated signal, whether that be from PMTs or drift chambers, are digitized with high speed ADCs or time-to-digital converters (TDCs). FADC250 with 16 channel ADC modules, running with a 4 ns period, are used to digitize the discriminated signals from the calorimeters, Cerenkov detectors and hodoscopes. CAEN V1190A TDCs with 128 channels each are used to digitized discriminated signals with 100 ps of resolution, which are used by hodoscopes and drift chambers. The discriminated signals are alos processed by the scalers, which are essentially counters, that keep track of the accumulated number of events. These are daisy-chained scalers where the output of one scaler is connected to the input of the next scaler, forming a linear chain. Once the analog signals are digitized and saved in the scalers, Read-Out Controllers (ROCs) buffer the data, storing it temporarily before transferring it to the data acquisition system (DAQ). Most of the ADC/TDCs are read out by ROCs located in the Hall C Counting House Electronics Room. The exceptions being, the HMS/SHMS drift chamber TDCs and SHMS shower ADCs are read out by ROCs in their own respective detector huts (see figure \ref{fig:2-5_shms_trigger}). The Trigger Interface (TI) module then communicates the digitized detector signals and scaler information from the ROCs to the trigger logic for analysis and comparison against the predefined trigger conditions \cite{pooser_private_2018} \cite{yero_hall_2019}. 
+The hardware trigger system is one of the main components of the data acquisition. It is used to filter real events from likely backgrounds by reducing the high rates and electronic deadtime while keeping the trigger efficiency high. Each detector’s discriminated signal, whether that be from PMTs or drift chambers, are digitized with high speed ADCs or time-to-digital converters (TDCs). FADC250 with 16 channel ADC modules, running with a 4 ns period, are used to digitize the discriminated signals from the calorimeters, Cerenkov detectors and hodoscopes. CAEN V1190A TDCs with 128 channels each are used to digitized discriminated signals with 100 ps of resolution, which are used by hodoscopes and drift chambers. The discriminated signals are alos processed by the scalers, which are essentially counters, that keep track of the accumulated number of events. These are daisy-chained scalers where the output of one scaler is connected to the input of the next scaler, forming a linear chain. Once the analog signals are digitized and saved in the scalers, Read-Out Controllers (ROCs) buffer the data, storing it temporarily before transferring it to the data acquisition system (DAQ). Most of the ADC/TDCs are read out by ROCs located in the Hall C Counting House Electronics Room. The exceptions being, the HMS/SHMS drift chamber TDCs and SHMS shower ADCs are read out by ROCs in their own respective detector huts (see figure \ref{fig:2-5_shms_trigger}). The Trigger Interface (TI) module then communicates the digitized detector signals and scaler information from the ROCs to the trigger logic for analysis and comparison against the predefined trigger conditions [\cite{pooser_private_2018}] [\cite{yero_hall_2019}]. 
 
 \input{figures/texs/fig:2-5_shms_trigger.tex}
 
@@ -479,7 +478,7 @@ The first spectrometer single-arm pre-trigger (i.e. HMS or SHMS TRG) that arrive
 
 \input{figures/texs/tab:2-5_ref_sub.tex}
 
-There is an ~25 ns intrinsic noise associated with the internal clock of the ADC/TDC modules that needs to be reduced in order to achieve the ~0.1 ns design resolution \cite{yero_quick_2023}. This is done by subtracting the reference time,  a copy of $\textbf{OR}$’ed pre-trigger logic signals (e.g. hEL_REAL $\textbf{OR}$ hHODO 3/4), from every channel in every ADC/TDC module on an event-by-event basis. The $\textbf{OR}$’ed pre-triggers are used to assure that there is a reference time associated with every event.
+There is an ~25 ns intrinsic noise associated with the internal clock of the ADC/TDC modules that needs to be reduced in order to achieve the ~0.1 ns design resolution [\cite{yero_quick_2023}]. This is done by subtracting the reference time,  a copy of $\textbf{OR}$’ed pre-trigger logic signals (e.g. hEL_REAL $\textbf{OR}$ hHODO 3/4), from every channel in every ADC/TDC module on an event-by-event basis. The $\textbf{OR}$’ed pre-triggers are used to assure that there is a reference time associated with every event.
 
 ### Data Acquisition
 
@@ -497,7 +496,7 @@ The DAQ can experience inefficiencies in its hardware and software which lead to
 
 The rate of the generated signals are compared with the rate of the detected signals after passing through the system. By comparing these rates, the EDTM can estimate the fraction of deadtime introduced by the system, which allows the deadtime to be continuously monitored. At the trigger logic level, the EDTM is treated as a real trigger, therefore a frequency big enough to gather sufficient statistics, but small enough to minimize the probability of blocking physics triggers should be used (on the order of ~1-5% of the trigger rates).
 
-The EDTM pulse is inserted into the HMS/SHMS/COIN pre-trigger logic before the TM, creating a pseudo-trigger. Because of this, the EDTM is always associated with all six input triggers (i.e. those in \ref{tab:2-5_pretriggers}), but only one EDTM pseudo-trigger is copied, along with a corresponding scalers, are created (which is later used for deadtime calculations) \cite{murphy_private_2022} \cite{murphy_graphical_2022}. The HMS/SHMS/COIN pre-trigger along with the EDTM pseudo-trigger go through the TM where it is subsequently L1ACCP. 
+The EDTM pulse is inserted into the HMS/SHMS/COIN pre-trigger logic before the TM, creating a pseudo-trigger. Because of this, the EDTM is always associated with all six input triggers (i.e. those in \ref{tab:2-5_pretriggers}), but only one EDTM pseudo-trigger is copied, along with a corresponding scalers, are created (which is later used for deadtime calculations) [\cite{murphy_private_2022}] [\cite{murphy_graphical_2022}]. The HMS/SHMS/COIN pre-trigger along with the EDTM pseudo-trigger go through the TM where it is subsequently L1ACCP. 
 
 
 
@@ -509,22 +508,22 @@ The EDTM pulse is inserted into the HMS/SHMS/COIN pre-trigger logic before the T
 
 
 
-The data acquired by CODA is analyzed by using CERN’s software framework called $\textbf{ROOT}$. The current C++ framework of ROOT was started in 1995 as an updated system to replace the old Fortran77 version \cite{brun_history_2011}. Since then, ROOT has become the standard analysis software in medium to high-energy nuclear physics.
+The data acquired by CODA is analyzed by using CERN’s software framework called $\textbf{ROOT}$. The current C++ framework of ROOT was started in 1995 as an updated system to replace the old Fortran77 version [\cite{brun_history_2011}]. Since then, ROOT has become the standard analysis software in medium to high-energy nuclear physics.
 
-The ROOT framework comprises a set of libraries and tools that facilitate the handling and analyzing large datasets. These libraries cover various mathematical and analysis purposes, such as $\textbf{MathCore}$, which provides the primary mathematical functions, and $\textbf{Minuit}$, a numerical minimization software. Using a built-in C++ interpreter, either $\textbf{CLING}$ or $\textbf{ACLiC}$ (specifically, for compiling macros in a ROOT session), data can be quickly analyzed  \cite{root_team_root_2023}.
+The ROOT framework comprises a set of libraries and tools that facilitate the handling and analyzing large datasets. These libraries cover various mathematical and analysis purposes, such as $\textbf{MathCore}$, which provides the primary mathematical functions, and $\textbf{Minuit}$, a numerical minimization software. Using a built-in C++ interpreter, either $\textbf{CLING}$ or $\textbf{ACLiC}$ (specifically, for compiling macros in a ROOT session), data can be quickly analyzed  [\cite{root_team_root_2023}].
 
-Hall C has adapted this ROOT framework into a hall-specific one called $\textbf{hcana}$. It was developed to replace the old Hall C analyzer, $\textbf{ENGINE}$ (written in Fortran), and is an extension of the Hall A analyzer, $\textbf{PODD}$ \cite{jones_hall_2022} \cite{brash_github_2014}. hcana is compiled using scons and subsequently ready for use in analysis. It is used just the same as ROOT, but with its own built-in classes and objects that are Hall C specific.
+Hall C has adapted this ROOT framework into a hall-specific one called $\textbf{hcana}$. It was developed to replace the old Hall C analyzer, $\textbf{ENGINE}$ (written in Fortran), and is an extension of the Hall A analyzer, $\textbf{PODD}$ [\cite{jones_hall_2022}] [\cite{brash_github_2014}]. hcana is compiled using scons and subsequently ready for use in analysis. It is used just the same as ROOT, but with its own built-in classes and objects that are Hall C specific.
 
 
-## Python Analysis Framework{#Section-3.1} 
+\markedsection{Python Analysis Framework}{Python Analysis Framework}\label{Chapter-3-1}
 
 \input{figures/texs/fig:3-1_lt_analysis_procedure.tex}
 
-The general LT analysis procedure can be found in figure \ref{fig:3-1_lt_analysis_procedure}. In the KaonLT experiment, hallc_replay_lt was the first stage of the analysis procedure. As outlined in figure \ref{fig:3-1_LT_Analysis_Workflow_1}, the kinematic offsets were applied to the data and then analyzed through hallc_replay_lt. This analysis also calculated most of the efficiencies and systematic uncertainties\footnote{Specifically, the hallc\_replay\_lt framework calculated the hodoscope, HMS Cerenkov, SHMS aerogel, and tracking efficiencies and systematic uncertainties.} (additional details regarding this matter will be provided in the subsequent sections). This stage of the analysis was conducted in the $\textbf{hallc\_replay\_lt}$ directory, which contains all the parameters and definition files required for the hallc_replay_lt analysis \cite{kay_github_2018-1}. The output ROOT files of the hallc_replay_lt analysis are then processed by scripts using the custom $\textbf{ltsep}$ Python package where the PID/cointime cuts are defined. 
+The general LT analysis procedure can be found in figure \ref{fig:3-1_lt_analysis_procedure}. In the KaonLT experiment, hallc_replay_lt was the first stage of the analysis procedure. As outlined in figure \ref{fig:3-1_LT_Analysis_Workflow_1}, the kinematic offsets were applied to the data and then analyzed through hallc_replay_lt. This analysis also calculated most of the efficiencies and systematic uncertainties\footnote{Specifically, the hallc\_replay\_lt framework calculated the hodoscope, HMS Cerenkov, SHMS aerogel, and tracking efficiencies and systematic uncertainties.} (additional details regarding this matter will be provided in the subsequent sections). This stage of the analysis was conducted in the $\textbf{hallc\_replay\_lt}$ directory, which contains all the parameters and definition files required for the hallc_replay_lt analysis [\cite{kay_github_2018-1}]. The output ROOT files of the hallc_replay_lt analysis are then processed by scripts using the custom $\textbf{ltsep}$ Python package where the PID/cointime cuts are defined. 
 
 \input{figures/texs/fig:3-1_LT_Analysis_Workflow_1.tex}
 
-The ltsep Python package was created to allow flexibility and modularity to the more rigid hcana framework \cite{trotta_github_2020}. With its extensive library of publicly available packages, Python is a highly intuitive and dynamic programming language that excels in data analysis. Although it takes a hit in speed and performance compared to its C++ counterpart, the tools available in Python outweigh these shortcomings. For these reasons, it was decided that, beyond the initial step, the analysis framework would revolve around Python\footnote{Python3.4 was used because it is the standard version of Python used for ROOT 6.18.04 in the Jlab farm}. 
+The ltsep Python package was created to allow flexibility and modularity to the more rigid hcana framework [\cite{trotta_github_2020}]. With its extensive library of publicly available packages, Python is a highly intuitive and dynamic programming language that excels in data analysis. Although it takes a hit in speed and performance compared to its C++ counterpart, the tools available in Python outweigh these shortcomings. For these reasons, it was decided that, beyond the initial step, the analysis framework would revolve around Python\footnote{Python3.4 was used because it is the standard version of Python used for ROOT 6.18.04 in the Jlab farm}. 
 
 \input{figures/texs/fig:3-1_LT_Analysis_Workflow_2.tex}
 
@@ -532,18 +531,18 @@ The ltsep Python package was created to allow flexibility and modularity to the 
 
 *** Removing mention of appendix until its finished
 
-The ltsep Python package allows for dynamic cuts, automatic file/directory pathing, and running specific ROOT file creation\footnote{This functionality is only for versions ltsep 3.3+.}. It primarily relies on the $\textbf{PyROOT}$ and $\textbf{uproot}$ packages for handling ROOT files, trees and branches. However, various other packages such as $\textbf{numpy}$ and $\textbf{pandas}$ are utilized as well \cite{pivarski_Python_2021} \cite{root_team_how_2023} \cite{numpy_developers_numpy_2023} \cite{numfocus_inc_pandas_2023}. For more information on the ltsep Python package, see Appendix \ref{appendix_A}.
+The ltsep Python package allows for dynamic cuts, automatic file/directory pathing, and running specific ROOT file creation\footnote{This functionality is only for versions ltsep 3.3+.}. It primarily relies on the $\textbf{PyROOT}$ and $\textbf{uproot}$ packages for handling ROOT files, trees and branches. However, various other packages such as $\textbf{numpy}$ and $\textbf{pandas}$ are utilized as well [\cite{pivarski_Python_2021}] [\cite{root_team_how_2023}] [\cite{numpy_developers_numpy_2023}] [\cite{numfocus_inc_pandas_2023}]. For more information on the ltsep Python package, see Appendix \ref{appendix_A}.
 --->
 
-The ltsep Python package allows for dynamic cuts, automatic file/directory pathing, and running specific ROOT file creation\footnote{This functionality is only for versions ltsep 3.3+.}. It primarily relies on the $\textbf{PyROOT}$ and $\textbf{uproot}$ packages for handling ROOT files, trees and branches. However, various other packages such as $\textbf{numpy}$ and $\textbf{pandas}$ are utilized as well \cite{pivarski_Python_2021} \cite{root_team_how_2023} \cite{numpy_developers_numpy_2023} \cite{numfocus_inc_pandas_2023}.
+The ltsep Python package allows for dynamic cuts, automatic file/directory pathing, and running specific ROOT file creation\footnote{This functionality is only for versions ltsep 3.3+.}. It primarily relies on the $\textbf{PyROOT}$ and $\textbf{uproot}$ packages for handling ROOT files, trees and branches. However, various other packages such as $\textbf{numpy}$ and $\textbf{pandas}$ are utilized as well [\cite{pivarski_Python_2021}] [\cite{root_team_how_2023}] [\cite{numpy_developers_numpy_2023}] [\cite{numfocus_inc_pandas_2023}].
 
 \input{figures/texs/fig:3-1_LT_Analysis_Workflow_3.tex}
 
-Using this custom Python package, scripts were developed for the next stage of the analysis, which included calculating the remaining efficiencies and systematic uncertainties, as well as defining PID and cointime cuts (again see figure \ref{fig:3-1_LT_Analysis_Workflow_1}). This analysis stage was conducted in the $\textbf{UTIL\_KAONLT}$ directory, which contains scripts used during the online analysis \cite{kay_github_2018}.
+Using this custom Python package, scripts were developed for the next stage of the analysis, which included calculating the remaining efficiencies and systematic uncertainties, as well as defining PID and cointime cuts (again see figure \ref{fig:3-1_LT_Analysis_Workflow_1}). This analysis stage was conducted in the $\textbf{UTIL\_KAONLT}$ directory, which contains scripts used during the online analysis [\cite{kay_github_2018}].
 
 \input{figures/texs/fig:3-1_LT_Analysis_Workflow_4.tex}
 
-The remainder of the analysis is performed in $\textbf{LT\_analysis}$ directory \cite{trotta_github_2022}. The data was prepped for binning once the PID and coin time cuts were established and the efficiencies and systematic uncertainties were compiled (see figure \ref{fig:3-1_LT_Analysis_Workflow_2}). This involves applying the PID and cointime cuts to the data and merging all runs for a particular setting (e.g., combining all runs for $Q^2=5.5$, high epsilon, left setting) into one ROOT file. In conjunction, SIMC is run for the specific $Q^2$. The last stage of this step is calculating the effective charge, and uncertainty is calculated per run (see subsequent sections for more on the effective charge). The setup in this step is brought together and read in by the final scripts before binning the data (see figure \ref{fig:3-1_LT_Analysis_Workflow_3}). The first stage does four main things. It first applies diamond cuts and then the HGCer geometric cut (see the following sections) to ensure the data is in the kinematically accessible region and the acceptance is adequately represented. Then, it subtracts the random background and any prominent $\pi$-channel leak-throughs that slip through the cuts.  Next, it bins the data in t and $\phi$. Finally, it calculates the yields and uncertainty per bin and the average kinematic values per bin (i.e., $Q^2$, $W$, and $t$). 
+The remainder of the analysis is performed in $\textbf{LT\_analysis}$ directory [\cite{trotta_github_2022}]. The data was prepped for binning once the PID and coin time cuts were established and the efficiencies and systematic uncertainties were compiled (see figure \ref{fig:3-1_LT_Analysis_Workflow_2}). This involves applying the PID and cointime cuts to the data and merging all runs for a particular setting (e.g., combining all runs for $Q^2=5.5$, high epsilon, left setting) into one ROOT file. In conjunction, SIMC is run for the specific $Q^2$. The last stage of this step is calculating the effective charge, and uncertainty is calculated per run (see subsequent sections for more on the effective charge). The setup in this step is brought together and read in by the final scripts before binning the data (see figure \ref{fig:3-1_LT_Analysis_Workflow_3}). The first stage does four main things. It first applies diamond cuts and then the HGCer geometric cut (see the following sections) to ensure the data is in the kinematically accessible region and the acceptance is adequately represented. Then, it subtracts the random background and any prominent $\pi$-channel leak-throughs that slip through the cuts.  Next, it bins the data in t and $\phi$. Finally, it calculates the yields and uncertainty per bin and the average kinematic values per bin (i.e., $Q^2$, $W$, and $t$). 
 
 \input{figures/texs/fig:3-1_LT_Analysis_Workflow_5.tex}
 
@@ -552,16 +551,15 @@ Following the generation of binned data, subsequent data processing steps are un
 Following the derivation of separated cross sections, it is imperative to acknowledge that these results do not represent the final output, as iterative refinement is necessary to achieve optimal agreement with the experimental data. This iterative process is facilitated by a sequence of scripts, as illustrated in Figure \ref{fig:3-1_LT_Analysis_Workflow_4}. Initially, the newly generated separated cross sections are subjected to a fitting procedure along the $t$ variable, yielding a set of refined parameters. Subsequently, this refined parameter set is utilized to repeat the previous steps iteratively, aiming to enhance the model's fidelity and ensure a robust description of the experimental data. 
 
 
-## Event Reconstruction{#Section-3.2} 
-
+\markedsection{Event Reconstruction}{Event Reconstruction}\label{Chapter-3-2}
 
 To calculate the cross-section, angles, and momenta of the kaon and scattered electron at the interaction vertex (i.e., at the target) must be found. The hcana analysis framework uses a set of matrices to reconstruct the particles’ track backward through the spectrometer to the target. This track reconstruction aims to connect these individual detector hits, via the DCs and hodoscopes, into continuous trajectories (i.e., tracks) that correspond to the paths of charged particles by analyzing the measured hits and inferring the most likely paths that particles took through the detector. 
 
 ### Track Reconstruction
 
-The track is defined by the position ($x_{fp}$, $y_{fp}$) and direction ($x’_{fp}=dx/dz$, $y’_{fp}=dy/dz$) of the particle in the spectrometer’s focal plane. A potential track must be a hit (i.e., a signal from a DC wire), and it must fire at least five out of six of the DC planes \cite{usman_shms_2022}.
+The track is defined by the position ($x_{fp}$, $y_{fp}$) and direction ($x’_{fp}=dx/dz$, $y’_{fp}=dy/dz$) of the particle in the spectrometer’s focal plane. A potential track must be a hit (i.e., a signal from a DC wire), and it must fire at least five out of six of the DC planes [\cite{usman_shms_2022}].
 
-Track reconstruction matrices are utilized by track-finding algorithms, which use pattern recognition techniques and statistical analysis to identify the track associated with the trigger or golden track \cite{jones_track_2020}. There are three track finding algorithms implemented in hcana.
+Track reconstruction matrices are utilized by track-finding algorithms, which use pattern recognition techniques and statistical analysis to identify the track associated with the trigger or golden track [\cite{jones_track_2020}]. There are three track finding algorithms implemented in hcana.
 
 \begin{itemize}
   \item $\chi^2$ minimization
@@ -604,7 +602,7 @@ Once the tracks are established, the spectrometer’s optics can transport the t
 
 \noindent where $\textbf{M}$ is the optical matrix used to transport to the target, $x_{tar}$ is the out-of-plane position in the spectrometer, $x’_{tar}$ is the out-of-plane scattering angle at the target, $y_{tar}$ is the in of plane position in the spectrometer, $y’_{tar}$ is the in of plane scattering angle relative to the spectrometer central angle, and $\delta$ is fractional momentum deviation of the detected particle concerning the central momentum of the SHMS ($\delta=100*[P_{K}-P_{SHMS}]/P_{SHMS}$).
 
-## Particle Identification{#Section-3.3} 
+\markedsection{Particle Identification}{Particle Identification}\label{Chapter-3-3}
 
 \input{figures/texs/tab:3-3_cuts.tex}
 
@@ -671,7 +669,7 @@ There were three regions of concern:
 
 After subtracting the pion leak-through, the lower missing mass (MM) region had minimal background and was a trivial cut. However, the higher MM cut was complicated by competing higher channels, SIDIS background, and other high-energy pion leak-throughs. To simplify the higher MM cut, the SIMC MM spectrum was used as a reference for the $\Lambda$ tail. It was then determined that a lower bound of 1.10 GeV and an upper bound of 1.24 GeV would suffice as MM cuts. To avoid losing important physics from the tail, the $K^+\Sigma^0$ peak was included since it overlaps with the $\Lambda$ tail.
 
-## Efficiency Corrections{#Section-3.4} 
+\markedsection{Efficiency Corrections}{Efficiency Corrections}\label{Chapter-3-4}
 
 The efficiencies are one of the most critical aspects of an L-T separation because of a $1/\Delta\epsilon$ amplification in the systematic uncertainties (see Chapter \ref{Chapter-5}). Since the kaon electroproduction cross section is proportional to the number of $p(e, e' K^+)\Lambda$ events, efficiencies directly contribute to the overall systematics. The number of events is related to the cross section through the normalized yield (see Chapter \ref{Chapter-5}), which is normalized by the effective charge. The normalized yield is defined as
 
@@ -759,7 +757,7 @@ The heavy gas detectors of the HMS and SHMS and the SHMS aerogel calculate their
 
 \input{figures/texs/fig:3-3_paero_eff.tex}
 
-Equations \ref{eq:cal_eff} and \ref{eq:cer_eff} have essential caveats for the HMS. It was found that there was a huge $\pi$-contamination in most Kaon-LT data \cite{usman_kaonlt_2023}\cite{usman_hms_2023}\cite{usman_hms_2023-1}. Extensive studies have been done using Heep Singles data. It was concluded that there would not be a run-by-run efficiency correction since the calorimeter shouldn't have any rate dependence. It was decided that the efficiency would be calculated from data significantly below the HMS Cerenkov threshold and used for all physics settings. The HMS Cerenkov used a constant efficiency of $97.30\pm 0.06%$ while the HMS calorimeter used a constant efficiency of $99.61\pm0.05%$.
+Equations \ref{eq:cal_eff} and \ref{eq:cer_eff} have essential caveats for the HMS. It was found that there was a huge $\pi$-contamination in most Kaon-LT data [\cite{usman_kaonlt_2023}][\cite{usman_hms_2023}][\cite{usman_hms_2023-1}]. Extensive studies have been done using Heep Singles data. It was concluded that there would not be a run-by-run efficiency correction since the calorimeter shouldn't have any rate dependence. It was decided that the efficiency would be calculated from data significantly below the HMS Cerenkov threshold and used for all physics settings. The HMS Cerenkov used a constant efficiency of $97.30\pm 0.06%$ while the HMS calorimeter used a constant efficiency of $99.61\pm0.05%$.
 
 A balance must be reached between cuts tight enough to produce a clean sample without affecting the detector’s efficiency. The efficiency of the SHMS aerogel was excellent ($\gtrsim95%$). As discussed in the previous section, the SHMS HGCer hole had to be dealt with as a unique circumstance. The region inside the hole saw a very low efficiency ($\lesssim20%$), while the region outside saw an efficiency consistent with the other Cerenkovs. Since the hole was cut, this low efficiency was not an issue. However, the region bordering the hole that was included saw a lower efficiency than the outside. Luckily, because the HGCer is not a threshold cut, the efficiency is unnecessary in the total efficiency calculation.
 
@@ -786,7 +784,7 @@ Overall, there was very good kaon and electron tracking. The electron tracking w
 
 ### Computer and Electronic Livetimes, $\epsilon_{TLT}$
 
-As discussed in the previous chapter, the EDTM keeps track of electronic and computer livetimes—the ratio of L1ACCP EDTM pseudo-trigger and the EDTM scaler that determine the total dead time. Since the EDTM scaler is saved before the pseudo-trigger reaches the TM, the L1ACCP EDTM pseudo-trigger is prescaled while the EDTM scaler is not \cite{murphy_edtm_2022}. This necessitates a correction due to the simultaneous EDTM pulse across all triggers, recording only one event per pulse. So when the prescale conditions are satisfied, the earliest trigger consistently captures the EDTM event, limiting the recording of EDTM events. Only EDTM events that are "rejected" by earlier trigger prescale conditions can be recorded by later triggers. Such an issue can be avoided during physics production because the COIN trigger is never prescaled, and subsequently, all events are accepted by the DAQ. This results in a reasonably straightforward equation for the Total Live Time (TLT) for production
+As discussed in the previous chapter, the EDTM keeps track of electronic and computer livetimes—the ratio of L1ACCP EDTM pseudo-trigger and the EDTM scaler that determine the total dead time. Since the EDTM scaler is saved before the pseudo-trigger reaches the TM, the L1ACCP EDTM pseudo-trigger is prescaled while the EDTM scaler is not [\cite{murphy_edtm_2022}]. This necessitates a correction due to the simultaneous EDTM pulse across all triggers, recording only one event per pulse. So when the prescale conditions are satisfied, the earliest trigger consistently captures the EDTM event, limiting the recording of EDTM events. Only EDTM events that are "rejected" by earlier trigger prescale conditions can be recorded by later triggers. Such an issue can be avoided during physics production because the COIN trigger is never prescaled, and subsequently, all events are accepted by the DAQ. This results in a reasonably straightforward equation for the Total Live Time (TLT) for production
 
 \begin{equation} 
   \epsilon_{prodTLT}=\frac{EDTM_{accept}}{EDTM_{sent}}
@@ -804,13 +802,13 @@ This may seem like the end of things. Still, a correction factor must be applied
   \label{eq:tlt_prescale} 
 \end{equation}
 
-\noindent where # refers to the pTRIG# and $C_{\#}$ is the correction factor based on the trigger and prescaling scheme (see ref. \cite{murphy_edtm_2022} for a breakdown of the correction factors). 
+\noindent where # refers to the pTRIG# and $C_{\#}$ is the correction factor based on the trigger and prescaling scheme (see ref. [\cite{murphy_edtm_2022}] for a breakdown of the correction factors). 
 
 ### Boiling Correction, $\epsilon_{boil}$
 
 As discussed in Chapter \ref{Chapter-2}, the raster protects the target by distributing the beam's power more uniformly. Still, there can be localized boiling, or density reductions, of the target that can cause the data yield to drop by a few percent. Luminosity, or target boiling, studies can be performed to understand better and apply a correction factor to compensate for such a yield lost. This is done by gathering data at fixed kinematics and various beam currents for the cryotarget (i.e., LH2) and Carbon-12. 
 
-Carbon-12 is used because of its high boiling point (4098 K), which far exceeds any heat the beam can create \cite{thomas_jefferson_national_accelerator_facility_-_office_of_science_education_its_2023}. This Carbon-12 data, therefore, is used as a reference point. By looking at the relative yield, the yield of all currents normalized by the lowest current, the trend of the yields versus current is clear. For Carbon-12, this comparable yield should be approximately one for all currents, so any deviation indicates issues to be resolved. This makes the Carbon-12 data an excellent reference for obtaining a boiling factor correction and provides beneficial insights into the rate and current dependence on efficiencies. 
+Carbon-12 is used because of its high boiling point (4098 K), which far exceeds any heat the beam can create [\cite{thomas_jefferson_national_accelerator_facility_-_office_of_science_education_its_2023}]. This Carbon-12 data, therefore, is used as a reference point. By looking at the relative yield, the yield of all currents normalized by the lowest current, the trend of the yields versus current is clear. For Carbon-12, this comparable yield should be approximately one for all currents, so any deviation indicates issues to be resolved. This makes the Carbon-12 data an excellent reference for obtaining a boiling factor correction and provides beneficial insights into the rate and current dependence on efficiencies. 
 
 The procedure begins with looking at the Carbon-12 scaler yields. The scaler yields use a modified version of eqn. \ref{eq:norm_yield},
 
@@ -850,11 +848,11 @@ Since the data covered a wide range of rates, and to give confidence in the Carb
 
 \input{figures/texs/fig:3-4_hms_linear_regress_lh2.tex}
 
-Since the HMS has such a clean sample of electrons, there is a significant amount of more data, and the boiling correction should be consistent between both spectrometers; it was determined that focusing on just the HMS would be the path forward. The LH2 luminosity data with the weighted linear regression fit can be found in figure \ref{fig:3-4_hms_linear_regress_lh2}. Taking the carbon and LH2 data together, it was found that carbon had a slope of $+0.169\pm4.3%$ while LH2 had a slope of $-7.900\pm 1.829%$. These slopes were consistent with other experiments, such as the Deuteron Electro-Disintegration experiment (E12-10-003) that ran earlier in 2018 and outlined in Carlos Yero’s thesis \cite{yero_cross_2020}. The boiling correction was above ~93% for all currents and even across the highest beam energy it maintained a steady value (see figure \ref{fig:3-4_boil_eff}). 
+Since the HMS has such a clean sample of electrons, there is a significant amount of more data, and the boiling correction should be consistent between both spectrometers; it was determined that focusing on just the HMS would be the path forward. The LH2 luminosity data with the weighted linear regression fit can be found in figure \ref{fig:3-4_hms_linear_regress_lh2}. Taking the carbon and LH2 data together, it was found that carbon had a slope of $+0.169\pm4.3%$ while LH2 had a slope of $-7.900\pm 1.829%$. These slopes were consistent with other experiments, such as the Deuteron Electro-Disintegration experiment (E12-10-003) that ran earlier in 2018 and outlined in Carlos Yero’s thesis [\cite{yero_cross_2020}]. The boiling correction was above ~93% for all currents and even across the highest beam energy it maintained a steady value (see figure \ref{fig:3-4_boil_eff}). 
 
 \input{figures/texs/fig:3-4_boil_eff.tex}
 
-## Experimental Offsets{#Section-3.5} 
+\markedsection{Experimental Offsets}{Experimental Offsets}\label{Chapter-3-5}
 
 During experimental running, the values of the assumed momenta and angles can deviate from their nominal values. Since the kinematic quantities of kaon electroproduction are explicitly and implicitly dependent on momentum and angle, these offsets need to be corrected to obtain accurate and precise measurements for the analysis of the assumed kinematics. A known and well-understood reaction is performed at the same momentum and angle as experimental data to find and correct such offsets. Elastic reactions fit such a profile, being a stable of particle physics for over 50 years. In particular, such offset studies are used for $H(e,e'p)X$ and $H(e, e'p)$.
 
@@ -873,7 +871,7 @@ Elastic coincidence reactions look at aspects of the missing mass reaction, such
 --->
 \markedchapter{Monte Carlo Simulations}{Monte Carlo Simulations}\label{Chapter-4} 
 
-Monte Carlo simulations have been a fundamental tool in contemporary science ever since computers gained the capacity to manage their computational tasks. Named after the gambling casino in Monaco by Nicholas Metropolis in 1987, but originally developed by John von Neumann and Stanislaw Ulam in the 1940s, this simulation technique uses the basic principles of equilibrium statistical mechanics by utilizing pseudorandom number generators to predicts the possible outcomes of an uncertain event \cite{pathria_statistical_2011}. This is done by choosing a configuration describing the probability distribution of given state and weighing the events in the state evenly. The basic algorithm used in Monte Carlo (MC) simulations is as follows
+Monte Carlo simulations have been a fundamental tool in contemporary science ever since computers gained the capacity to manage their computational tasks. Named after the gambling casino in Monaco by Nicholas Metropolis in 1987, but originally developed by John von Neumann and Stanislaw Ulam in the 1940s, this simulation technique uses the basic principles of equilibrium statistical mechanics by utilizing pseudorandom number generators to predicts the possible outcomes of an uncertain event [\cite{pathria_statistical_2011}]. This is done by choosing a configuration describing the probability distribution of given state and weighing the events in the state evenly. The basic algorithm used in Monte Carlo (MC) simulations is as follows
 
 \begin{enumerate}
 \item Generate a random initial state and apply a small random change.
@@ -884,15 +882,15 @@ Monte Carlo simulations have been a fundamental tool in contemporary science eve
 
 \noindent This is the method used in the MC simulations used for the KaonLT analysis (see next section) as well as the fast MC used for EIC structure function projections (see Chapter \ref{Chapter-7}).
 
-## Single Arm Monte Carlo Package{#Section-4.1} 
+\markedsection{Single Arm Monte Carlo Package}{Single Arm Monte Carlo Package}\label{Chapter-3-6}
 
-The standard Hall C Monte Carlo for coincidence reactions is the Single Arm Monte Carlo package (SIMC) \cite{gaskell_github_2023}. Written in Fortran, this code was originally used for analysis of the SLAC experiment under the name SIMULATE \cite{arrington_inclusive_1998}. The optics and aperture checking was then modified through the mid to late 1990s, replacing the SLAC spectrometer models with those of the HMS and SOS and, eventually through the 2000s to early 2010s, various other spectrometer models were introduced, including the SHMS \cite{12_gev_upgrade_pcdr_editorial_board_pre-conceptual_2004} \cite{gaskell_simc_2009} \cite{arrington_-b-simc_2001}. Throughout these years, SIMC has grown to include particle decay, ionization energy loss, radiative effects, multiple scattering and simple rules for final state interactions, Coulomb corrections and much more. SIMC has also expanded in its avaliable reactions, including everything from elastic and quasielastic to, the reaction of interest, kaon electroproduction.
+The standard Hall C Monte Carlo for coincidence reactions is the Single Arm Monte Carlo package (SIMC) [\cite{gaskell_github_2023}]. Written in Fortran, this code was originally used for analysis of the SLAC experiment under the name SIMULATE [\cite{arrington_inclusive_1998}]. The optics and aperture checking was then modified through the mid to late 1990s, replacing the SLAC spectrometer models with those of the HMS and SOS and, eventually through the 2000s to early 2010s, various other spectrometer models were introduced, including the SHMS [\cite{12_gev_upgrade_pcdr_editorial_board_pre-conceptual_2004}] [\cite{gaskell_simc_2009}] [\cite{arrington_-b-simc_2001}]. Throughout these years, SIMC has grown to include particle decay, ionization energy loss, radiative effects, multiple scattering and simple rules for final state interactions, Coulomb corrections and much more. SIMC has also expanded in its avaliable reactions, including everything from elastic and quasielastic to, the reaction of interest, kaon electroproduction.
 
 Using the basics outlined in the previous subsection, SIMC generates events at the initial coordinates of the vertex and fills the kinematic phase space, covering 100% of the acceptance and accounting for the interaction mechanisms outlined above. The vertex is determined by the given target size, position, raster size and beam spot size. The filled phase space covers 100% of the acceptance, but specific geometric cuts may be applied in order to match the constraints of the spectrometer model or detector design, such as those outlined in Chapter \ref{Chapter-3-3-2}. Once these events are generated, they are sent through the spectrometer models which simulate the spectrometer's optics and aperatures as it is propagated through the hut. Each detector of the spectrometer tests the trajectory of the propagated event by checking it against its aperature. The trajectories that pass all the aperatures and cross the desired number of detectors in the hut are considered a valid trigger. These valid trajectories are fitted in the focal plane and, subsequently, propagated to the target, where average energy loss and fast raster corrections are applied. It is at this stage that each of the physics quantities are calculated. 
 
 SIMC is just a Monte Carlo that can simulate optics and check trajectories against aperatures and thus cannot simulate detector physics. This means that inefficiencies are not included in SIMC, but each event is weighted by a model cross section of the reaction that is corrected for the luminosity factor, radiative processes and a Jacobian that can transform between spectrometer and physics coordinates. A second Jacobian is used to transform between spherical and spectrometer coordinates.
 
-## Event Generation{#Section-4.2}
+\markedsection{Event Generation}{Event Generation}\label{Chapter-4-1}
 
 As was be explored in Chapter \ref{Chapter-1}, the scattering of electrons off of a hydrogren target in kaon electroproduction produces a cross section in terms of five-fold phase space. The virtual $p(e,e'K^+)\Lambda$ production cross section can be expressed as
 
@@ -922,11 +920,11 @@ which can be related to the center of mass photoproduction cross section by the 
   \label{eq:sig_ordertwo_virtual_lab} 
 \end{equation}
 
-\noindent where $\frac{dt}{d cos\theta^*}=2p^*q^*$ is the Jacobian factor \cite{gaskell_longitudinal_2001}.
+\noindent where $\frac{dt}{d cos\theta^*}=2p^*q^*$ is the Jacobian factor [\cite{gaskell_longitudinal_2001}].
 
-## Spectrometer Models{#Section-4.3} 
+\markedsection{Spectrometer Models}{Spectrometer Models}\label{Chapter-4-2}
 
-The first stage after the angles and momenta are generated at the vertex is for each generated particle event to be transported through the magnetic fields in the spectrometers. These magnetic optics are modeled using COSY INFINITY which uses matrix elements for particle transportation through the spectrometer \cite{berz_code_1991}. The particle's position, direction and fractional momentum are transformed as
+The first stage after the angles and momenta are generated at the vertex is for each generated particle event to be transported through the magnetic fields in the spectrometers. These magnetic optics are modeled using COSY INFINITY which uses matrix elements for particle transportation through the spectrometer [\cite{berz_code_1991}]. The particle's position, direction and fractional momentum are transformed as
 
 \begin{equation} 
   \left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{out}}=(\prod^N_iM_i)\cdot\left|x,y,z,dx/dz,dy/dz,\delta\right|_{z=z_{in}}
@@ -935,13 +933,13 @@ The first stage after the angles and momenta are generated at the vertex is for 
 
 \noindent where $z_{in}$ is the entrance of the magnet region, $z_{out}$ is the exit location after the transform and $M_i$ are $N$ matrix transformations (up to $N=5$) that are used to model the particle transportation. These models are generated by using magnetic field maps that are, subsequently, optimized with real data.
 
-## Material Interactions{#Section-4.4} 
+\markedsection{Material Interactions}{Material Interactions}\label{Chapter-4-3}
 
 In the experimental setting, particles can easily interact with the materials that make up the various aspects of the spectrometers. These interacts can lead to energy losses and/or multiple scattering which need to be realistically included in SIMC.
 
 ### Ionization Energy Loss
 
-Ionization energy is the dominant energy loss mechanism for kaon material collisions. The ionization energy loss of such interactions can be formulated by using the Bethe-Bloch formula \cite{gmp_collaboration_ionization_2015}. The general equation for the mean rate of energy loss (i.e. stopping power) for charged particles is given by
+Ionization energy is the dominant energy loss mechanism for kaon material collisions. The ionization energy loss of such interactions can be formulated by using the Bethe-Bloch formula [\cite{gmp_collaboration_ionization_2015}]. The general equation for the mean rate of energy loss (i.e. stopping power) for charged particles is given by
 
 \begin{equation} 
   \frac{dE}{dx}=Kz^2\frac{Z}{A}\frac{1}{\beta^2}[\frac{1}{2}ln(\frac{2m_ec^2\beta^2\gamma^2T_{max}}{I^2})-\beta^2-\frac{\delta(\beta\gamma)}{2}]
@@ -997,7 +995,7 @@ Coulomb multiple scattering, which are small deflections in particles traversing
 
 \noindent where $p$ is the incident particle's momentum and $d$ is the thickness of the transvered medium (in units of radiation length, $1/X_0$). The angles that define the direction of a particle transversing the medium are described by $x_L\cdot\theta_0$. It is evident from eqn. \ref{eq:gaus_scatter} that as $p$ decreases the effects of multiple scattering increases. The horizontal and vertical scattering directions are calculated independently in SIMC, as are the incident and scattered particles (i.e. electron and produced hadron). 
 
-## Kaon Decay{#Section-4.5}
+\markedsection{Kaon Decay}{Kaon Decay}\label{Chapter-4-4}
 
 \input{figures/texs/tab:4-5_kaon_decay.tex}
 
@@ -1021,7 +1019,7 @@ A particle's decay occurs randomly, following a Poisson distribution. In terms o
 
 These decay products can still trigger valid trigger events, so proper cuts and kinematic reconstruction are required. A majority of the daughter particles are removed, but, a fraction of decayed kaon events, contribute to the yields and must be accounted for.
 
-## Radiative Corrections{#Section-4.6}
+\markedsection{Radiative Corrections}{Radiative Corrections}\label{Chapter-4-5}
 
 As discussed in various other chapters (such as chapter \ref{Chapter-2-5-4}), Bremmstrahlung radiation is produced when a charged particle is suddenly accerated or decelerated. This consequence of energy conservation occurs at various points in the hut, when the traversing particle goes through electric fields, specifically, when they traverse through the fields of the atomic structure in the medium. The effects of Bremmstrahlung radiation can be seen directly in the data as either a widening of the missing mass and energy spectra (i.e. poorer resolution) or a shift in central values. In the case of $p(e,e'K^+)\Lambda$, the $\Lambda$ peak was broadened in an asymmetrically and, as discussed in Chapter \ref{Chapter-3-3-4}, the radiative corrections are important for defining the missing mass cuts.
 
@@ -1088,7 +1086,7 @@ The following distribution
 
 \noindent is used to randomly apply the radiative correction to the incident and scattered particles in SIMC, where $E_{min/max}$ are the range of the generated photon energy and $g=(\lambda_i+bt_i)$.
 
-## Monte Carlo Equivalent Yields{#Section-4.7} 
+\markedsection{Monte Carlo Equivalent Yields}{Monte Carlo Equivalent Yields}\label{Chapter-4-6}
 
 SIMC tracks individual events as they move through a spectrometer. This process involves using forward matrices to represent the necessary optics that focus and bend particles toward the detector hut. Only the events that pass through the apertures and do not decay during transportation to the detector hut are saved as "good events". After this, the backward trajectory reconstruction algorithm is applied, which reconstructs the particles' trajectory from the detector hut back to the target. The algorithm calculates the kinematic quantities of the event in a way similar to the actual data.
 
@@ -1125,7 +1123,7 @@ The experimental cross section data was analyzed by dividing it into bins based 
 
 Once the cross section was extracted from each bin in $\phi$, a fitting procedure was implemented to determine the dependence of the cross section on this angle. The average value of the cross sections in the $\phi$ bins represents the unseparated cross section. The interference terms, which are proportional to $\cos{\phi}$ and $\cos{2\phi}$ and depend on the first and second modes in $\phi$, were simultaneously determined from these fits.
 
-## Determining Cross Sections{#Section-5.1} 
+\markedsection{Determining Cross Sections}{Determining Cross Sections}\label{Chapter-5-1}
 
 To accurately determine the experimental cross section at a particular point in the acceptance center, it is crucial to have a thorough understanding of how the cross section varies with all kinematic variables. This minimizes the error from averaging the measured yield across the acceptance in one or two kinematic variables in equation \ref{eq:exp_sig}. A phenomenological cross-section model is utilized to achieve this.
 
@@ -1150,7 +1148,7 @@ The diamond cuts result from phase-space matching, which constrains the kinemati
 
 In addition to kinematic constraints of phase-space matching due to differing spectrometer acceptances for high and low $\epsilon$, the $\phi$ coverage is limited by the physical limitations of spectrometer rotation. As discussed in Chapter \ref{Chapter-1}, the $K^{+}$ momentum is at an angle $\theta_{Kq}$ with $\mathbf{q}$ of the virtual photon. The kinematics are said to be parallel if $\theta_{Kq}=0\degree$, where $t$ is minimized. The problem is that the spectrometer acceptance is not wide enough to achieve the full azimuthal coverage required for the LT separation. To overcome this constraint, additional measurements are required at $\theta_{Kq}\pm3\degree$. This is feasible for high $\epsilon$, but physical restrictions of the SHMS  imposed by the beamline did not allow a “right $\phi$ setting” (i.e., $\theta_{Kq}=-3\degree$). Figure \ref{fig:7-1_polar} shows the polar plots of the high and low $\epsilon$, which shows the $\phi$ coverage vs the radius, $t$.  Even with this constraint on low $\epsilon$, full azimuthal coverage was achieved through a combination of full coverage at high $\epsilon$ and simulated distributions from SIMC.
 
-## LT Separation Procedure {#Section-5.2} 
+\markedsection{LT Separation Procedure}{LT Separation Procedure}\label{Chapter-5-2}
 
 \input{figures/texs/fig:7-1_ratios.tex}
 
@@ -1162,7 +1160,7 @@ The measured unseparated cross section is averaged over the experimental $\phi$ 
 
 ### Model Cross Section
 
-To keep a cohesive picture of the experimental cross section across the landscape from model to data, the model must be evaluated at a particular point in the dynamic phase space. The dynamic phase space covers specific points in $Q^2$, $W$, $\epsilon$ and $\theta_{Kq}$ (i.e., $-t$). Previously calculated cross sections create the basis for the initial functional form of the cross section model. The latest pion electroproduction model used by G. Huber et al. served as this starting model \cite{huber_separated_2015}. Although there was a more recent kaon electroproduction model, the pion model covered a range in $Q^2$ that more closely aligned with that taken during KaonLT \cite{jlab_fpi-2_and_e93-018_collaboration_separated_2018}. It is worth noting that the initial model is somewhat arbitrary and is bound to change not just in terms of its parameterization but also in terms of its function form as it is iterated to match the acceptances and kinematics of the experiment at hand more closely. 
+To keep a cohesive picture of the experimental cross section across the landscape from model to data, the model must be evaluated at a particular point in the dynamic phase space. The dynamic phase space covers specific points in $Q^2$, $W$, $\epsilon$ and $\theta_{Kq}$ (i.e., $-t$). Previously calculated cross sections create the basis for the initial functional form of the cross section model. The latest pion electroproduction model used by G. Huber et al. served as this starting model [\cite{huber_separated_2015}]. Although there was a more recent kaon electroproduction model, the pion model covered a range in $Q^2$ that more closely aligned with that taken during KaonLT [\cite{jlab_fpi-2_and_e93-018_collaboration_separated_2018}]. It is worth noting that the initial model is somewhat arbitrary and is bound to change not just in terms of its parameterization but also in terms of its function form as it is iterated to match the acceptances and kinematics of the experiment at hand more closely. 
 
 The separated cross-section data's $Q^2$ and $t$ dependence are used to optimize the model. Dependence in $W$ was assumed to follow the phase space factor 
 
@@ -1178,9 +1176,9 @@ The separated cross-section data's $Q^2$ and $t$ dependence are used to optimize
   \label{eq:wfactor_n} 
 \end{equation}
 
-\noindent where $n=2.25\pm0.11$ for the analyzed kaon data \cite{horn_global_2012}. The analysis had restricted kinematics available, but it does paint an interesting picture of the $x$ dependence that may be applicable in further studies of the KaonLT data (discussed more in chapter \ref{Chapter-7}). In the end, equation \ref{eq:wfactor} was decided on, and a more in-depth $W$ dependence study would be done alongside the pion data available in KaonLT.
+\noindent where $n=2.25\pm0.11$ for the analyzed kaon data [\cite{horn_global_2012}]. The analysis had restricted kinematics available, but it does paint an interesting picture of the $x$ dependence that may be applicable in further studies of the KaonLT data (discussed more in chapter \ref{Chapter-7}). In the end, equation \ref{eq:wfactor} was decided on, and a more in-depth $W$ dependence study would be done alongside the pion data available in KaonLT.
 
-A new set of parameters can be generated by comparing the resulting data to the model's separated cross-sections across each response function (i.e., $\sigma_i$, where $i=(L, T, LT, TT))$. This new parameterization is performed using MINUIT, a function minimization and error analysis routine integrated into ROOT from its original FORTRAN version. MINUIT is a tool for analyzing the shape of a multi-parameter function and finding the minimum value of that function \cite{f_james_minuit_1994}. It offers several algorithms that search for parameter values that minimize a user-defined function. The default algorithm, MIGRAD, was used. It is generally the best minimizer for nearly all functions. This method involves a “variable metric with inexact line search, a stable updating scheme for the metric, and checks for positive definiteness” \cite{root_community_root_2024}. When a parameter’s minimum value is far from any limits, MINUIT accurately transforms the error matrix, and the parameter errors reported are expected to be precise and quite similar to those obtained without any limits. However, defining parameter errors becomes essentially meaningless if the minimum value is close to or at a limit. Therefore, each iteration should be checked while using this tool and stopped when things deviate (e.g., ratios deviate from unity).
+A new set of parameters can be generated by comparing the resulting data to the model's separated cross-sections across each response function (i.e., $\sigma_i$, where $i=(L, T, LT, TT))$. This new parameterization is performed using MINUIT, a function minimization and error analysis routine integrated into ROOT from its original FORTRAN version. MINUIT is a tool for analyzing the shape of a multi-parameter function and finding the minimum value of that function [\cite{f_james_minuit_1994}]. It offers several algorithms that search for parameter values that minimize a user-defined function. The default algorithm, MIGRAD, was used. It is generally the best minimizer for nearly all functions. This method involves a “variable metric with inexact line search, a stable updating scheme for the metric, and checks for positive definiteness” [\cite{root_community_root_2024}]. When a parameter’s minimum value is far from any limits, MINUIT accurately transforms the error matrix, and the parameter errors reported are expected to be precise and quite similar to those obtained without any limits. However, defining parameter errors becomes essentially meaningless if the minimum value is close to or at a limit. Therefore, each iteration should be checked while using this tool and stopped when things deviate (e.g., ratios deviate from unity).
 
 Before they are extracted, the response functions are coupled in the unseparated cross section, so it is possible that the initial model insufficiently describes the $Q^2$ and $t$ dependencies. The model needs to be adapted to encapsulate the physics behavior properly. One such set of model changes needed to occur with $\sigma_T$as the functional form initially used had too strong of a t-dependence. It was decided that the functional form of $\sigma_T$ better followed the functional form outlined in the global analysis of kaon and pion electroproduction data mentioned above. With this improved functional form for $\sigma_T$ and continuing to use the forms from the latest pion electroproduction model\footnote{It should be noted the other, albeit minor, difference from that outlined in the latest pion electroproduction model is the $+0.2$ term, which better described the low $-t$ behavior than the $-0.2$ used in that paper. } the following response functional forms were found
 
@@ -1210,7 +1208,7 @@ Before they are extracted, the response functions are coupled in the unseparated
 
 The unseparated cross section was used to fit the experimental $\phi$ acceptance for each $t$-bin while calculating the experimental cross section at each iteration. Both $\epsilon$ values were fitted simultaneously for the four response functions where L, T, LT, and TT are the parameters. These separated cross section terms are fit to the models described in equations \ref{eq:model_sig_l}-\ref{eq:model_sig_tt}. These fitted values are then used as inputs for the next iteration. This is repeated until there is little change in the separated cross section values relative to the previous iteration (i.e., it starts to converge). Once the correct models were found, it took 2-3 iterations for things to converge. Table \ref{tab:7-1_sig_params} shows the final set of parameters.
 
-## Error Analysis {#Section-5.3} 
+\markedsection{Error Analysis}{Error Analysis}\label{Chapter-5-3}
 
 The uncertainty in the extraction of the separated cross section is affected by both statistical and systematic uncertainties. Point-to-point uncertainties, also known as random or uncorrelated uncertainties, affect each $\epsilon$ setting independently. These particular types of systematics are amplified by a $1/\epsilon$ factor in $\sigma_L$, which is a result of the $\epsilon$ dependence. Minimized values for high and low $\epsilon$ were chosen in order to minimize this effect. When extracting the experimental separated cross sections, these random systematics are added to the statistical uncertainty separately at each $\epsilon$ point. To do this, the random systematics are included by adding them in quadrature
 
@@ -1244,7 +1242,7 @@ Each $\phi$ setting has a corresponding normalized uncertainty built from the su
   \label{eq:stat_error_yielddata} 
 \end{equation}
 
-\noindent where $N_{K^+}$ is the total number of good kaon events. A Poisson distribution generally provides a good description of such statistical uncertainties, and thus $\sqrt{N}$ is used \cite{bevington_data_2003}. In the case of the SIMC uncertainty, this is purely statistical, based on the total number of unweighted events 
+\noindent where $N_{K^+}$ is the total number of good kaon events. A Poisson distribution generally provides a good description of such statistical uncertainties, and thus $\sqrt{N}$ is used [\cite{bevington_data_2003}]. In the case of the SIMC uncertainty, this is purely statistical, based on the total number of unweighted events 
 
 \begin{equation} 
 	\delta Y_{\mathrm{SIMC}}=\frac{1}{\sqrt{N_{\mathrm{unweighted}}}}
@@ -1276,7 +1274,7 @@ In LT separation, two types of errors significantly determine the systematic unc
 
 \input{figures/texs/tab:7-1_pac_error.tex}
 
-Table \ref{tab:7-1_pac_error}, shows a modified version of the PAC proposal's projected systematics \cite{bosted_studies_2008}. The table includes an additional PID point-to-point systematic to account for the hole in the SHMS HGCer. To estimate the overall changes due to leakage and acceptance differences, the experimental cross section was analyzed with and without the hole cut, resulting in an estimated 1% uncertainty. 
+Table \ref{tab:7-1_pac_error}, shows a modified version of the PAC proposal's projected systematics [\cite{bosted_studies_2008}]. The table includes an additional PID point-to-point systematic to account for the hole in the SHMS HGCer. To estimate the overall changes due to leakage and acceptance differences, the experimental cross section was analyzed with and without the hole cut, resulting in an estimated 1% uncertainty. 
 
 The PAC proposal systematics were used as a baseline until more detailed systematic studies were complete. The general procedure is analogous for all point-to-point uncertainties. To address the acceptance uncertainty, geometric constraints were altered by varying acceptance cuts to explore the impact of detector acceptance on the measured cross section. Particle identification uncertainty was evaluated by comparing high and low epsilon (ε) cuts. The effect of different PID strategies was examined, particularly scrutinizing variations between stringent and lenient identification criteria for particles, on the cross section. Tracking uncertainty was tackled by exploring the performance of different tracking algorithms described in chapter \ref{Chapter-3}. Kinematics uncertainty was mitigated by systematically varying experimental parameters related to the kinematics of the reaction. This involved adjusting scattering angle, particle momentum, and beam energy to discern the impact of these factors on the observed cross sections. Monte Carlo simulation uncertainty was addressed by varying the input model. Radiative uncertainty was quantified through SIMC simulations conducted with and without the radiative flag.
 
@@ -1292,7 +1290,7 @@ Although the statistics differ, a common theme among the results was an agreemen
 
 There is also a distinct difference in $\sigma_L$ compared to $\sigma_T$ in the lowest $t$-bins, suggesting scaling. Interestingly, this difference appears much more dramatic for all settings of $W>3.0$. As these models are further optimized and systematics are fully understood, the feasibility of achieving the physics goals of KaonLT looks promising. 
 
-## $Q^2=2.115$, $W=2.95$
+\markedsection{$Q^2=2.115$, $W=2.95$}{$Q^2=2.115$, $W=2.95$}\label{Chapter-6-1}
 
 \input{figures/texs/fig:Q2p1W2p95_tphi.tex}
 \input{figures/texs/fig:Q2p1W2p95_unsep_xsect.tex}
@@ -1302,7 +1300,7 @@ There is also a distinct difference in $\sigma_L$ compared to $\sigma_T$ in the 
 
 \FloatBarrier
 
-## $Q^2=3.0$, $W=2.32$
+\markedsection{$Q^2=3.0$, $W=2.32$}{$Q^2=3.0$, $W=2.32$}\label{Chapter-6-2}
 
 \input{figures/texs/fig:Q3p0W2p32_tphi.tex}
 \input{figures/texs/fig:Q3p0W2p32_unsep_xsect.tex}
@@ -1312,7 +1310,7 @@ There is also a distinct difference in $\sigma_L$ compared to $\sigma_T$ in the 
 
 \FloatBarrier
 
-## $Q^2=3.0$, $W=3.14$
+\markedsection{$Q^2=3.0$, $W=3.14$}{$Q^2=3.0$, $W=3.14$}\label{Chapter-6-3}
 
 \input{figures/texs/fig:Q3p0W3p14_tphi.tex}
 \input{figures/texs/fig:Q3p0W3p14_unsep_xsect.tex}
@@ -1322,7 +1320,7 @@ There is also a distinct difference in $\sigma_L$ compared to $\sigma_T$ in the 
 
 \FloatBarrier
 
-## $Q^2=4.4$, $W=2.74$
+\markedsection{$Q^2=4.4$, $W=2.74$}{$Q^2=4.4$, $W=2.74$}\label{Chapter-6-4}
 
 \input{figures/texs/fig:Q4p4W2p74_tphi.tex}
 \input{figures/texs/fig:Q4p4W2p74_unsep_xsect.tex}
@@ -1332,7 +1330,7 @@ There is also a distinct difference in $\sigma_L$ compared to $\sigma_T$ in the 
 
 \FloatBarrier
 
-## $Q^2=5.5$, $W=3.02$
+\markedsection{$Q^2=5.5$, $W=3.02$}{$Q^2=5.5$, $W=3.02$}\label{Chapter-6-5}
 
 \input{figures/texs/fig:Q5p5W3p02_tphi.tex}
 \input{figures/texs/fig:Q5p5W3p02_unsep_xsect.tex}
@@ -1350,7 +1348,7 @@ There is also a distinct difference in $\sigma_L$ compared to $\sigma_T$ in the 
 
 Kaon electroproduction separated cross sections were extracted from the KaonLT (E12-09-011) experiment for $p(e,e’K_+)\Lambda$. There were a total of five $Q^2$/$W$ settings, each taken at high and low $\epsilon$. The separated cross sections show consistency with the expected exponential fall off with $-t$, suggesting $t$-channel dominance.
 
-## Jefferson Lab {#Section-7.1} 
+\markedsection{Jefferson Lab}{Jefferson Lab}\label{Chapter-7-1}
 
 The list of physics quantities available for studies in the KaonLT data set is plentiful. Even within the confines of the $p(e,e’K^+)\Lambda$ data analyzed in this thesis, many avenues and procedures need to be finished. These include, but not limited to:
 
@@ -1373,9 +1371,9 @@ Even with all this available data, there is still room for more data to fill out
 
 \input{figures/texs/tab:9-1_stat_table.tex}
 
-There is a possibility of completing the statistical objectives of the low epsilon settings, as well as expanding the Q²=2.115/W=2.95 settings. This expansion could be complementary to a new set of Q²/W settings that could broaden the ranges of x. Thinking even more globally, the expanded data set could potentially be through a Jlab 22 GeV upgrade \cite{accardi_strong_2023}. Even without upgrades to existing Hall C equipment, JLab 22 GeV would allow for high-quality LT-separated measurements to high $Q^2$. This expanded dataset could reach far beyond what was available at KaonLT 2018-19 and overlap with a new Electron-Ion Collider (EIC) \cite{kay_future_2023}.
+There is a possibility of completing the statistical objectives of the low epsilon settings, as well as expanding the Q²=2.115/W=2.95 settings. This expansion could be complementary to a new set of Q²/W settings that could broaden the ranges of x. Thinking even more globally, the expanded data set could potentially be through a Jlab 22 GeV upgrade [\cite{accardi_strong_2023}]. Even without upgrades to existing Hall C equipment, JLab 22 GeV would allow for high-quality LT-separated measurements to high $Q^2$. This expanded dataset could reach far beyond what was available at KaonLT 2018-19 and overlap with a new Electron-Ion Collider (EIC) [\cite{kay_future_2023}].
 
-## Electron Ion Collider{#Section-7.2} 
+\markedsection{Electron Ion Collider}{Electron Ion Collider}\label{Chapter-7-2}
 
 \input{figures/texs/fig:7-0_eic.tex}
 
@@ -1389,17 +1387,17 @@ In the recent EIC Yellow Report, several physics questions in the realm of meson
 
 As has been laid out, determining the FF,  whether that be $F^\pi$ or $F^K$, is a difficult task. For now, concentrating on $F^\pi$, the best method of measurement would be through electron-pion elastic scattering, but the $\pi^+$ has a very short lifetime of only 26.0 ns, and $\pi^+$ targets and beams with the necessary properties for measurements at modest-to-large $Q^2$ values are not yet available. Therefore, one must use exclusive electroproduction, $p(e, e′\pi^+)n$ via the Sullivan process to obtain a reliable pion target. To reduce background contributions, the cross section components owing to L and T virtual photons (and the LT, TT interference contributions) are normally separated via a Rosenbluth separation. However, LT separations are impractical at the EIC, as one cannot reach sufficiently low $\epsilon$ data to provide a good lever arm. 
 
-An alternate technique is proposed below to access $\sigma_L$ via a model validated with exclusive $\pi^−$/$\pi^+$ ratios from deuterium. Once $d\sigma_L/dt$ has been determined over a range of $−t$, from $−t_{\mathrm{min}}$ to $−t\approx 0.6\mathrm{GeV}^2$ (i.e., pion pole), the value of $F^\pi(Q^2)$ is determined by comparing the observed $d\sigma_L/dt$ values with the best available electroproduction model, incorporating off-shell pion and recoil nucleon effects. In principle, the obtained $F^\pi$ values depend on the model used, but one anticipates this dependence to be reduced at sufficiently small $−t$. Measurements over a range of $−t$ are essential as part of the model validation process \cite{huber_charged_2008, horn_pion_2016, horn_scaling_2008, volmer_measurement_2001, horn_determination_2006, tadevosyan_determination_2007, blok_charged_2008, huber_separated_2014, huber_separated_2015}. This means that JLab is likely to remain the only source of high-quality LT separated data over an extensive kinematic range for decades.
+An alternate technique is proposed below to access $\sigma_L$ via a model validated with exclusive $\pi^−$/$\pi^+$ ratios from deuterium. Once $d\sigma_L/dt$ has been determined over a range of $−t$, from $−t_{\mathrm{min}}$ to $−t\approx 0.6\mathrm{GeV}^2$ (i.e., pion pole), the value of $F^\pi(Q^2)$ is determined by comparing the observed $d\sigma_L/dt$ values with the best available electroproduction model, incorporating off-shell pion and recoil nucleon effects. In principle, the obtained $F^\pi$ values depend on the model used, but one anticipates this dependence to be reduced at sufficiently small $−t$. Measurements over a range of $−t$ are essential as part of the model validation process [\cite{huber_charged_2008, horn_pion_2016, horn_scaling_2008, volmer_measurement_2001, horn_determination_2006, tadevosyan_determination_2007, blok_charged_2008, huber_separated_2014, huber_separated_2015}]. This means that JLab is likely to remain the only source of high-quality LT separated data over an extensive kinematic range for decades.
 
 ### Structure Functions at the EIC
 
 In addition to using the FF to understand meson structure, another important aspect is the use of Parton Distribution Functions (PDFs) which are connected to Structure Functions (SFs) through their dimensionalities and dependent variables. SFs are used to depict the probability of finding a parton (quark or gluon) within a hadron, relative to its momentum fraction and energy scale, operating in two dimensions of $x$ and $Q^2$. On the other hand, FFs exist in one dimension of $Q^2$, giving insights into the spatial arrangement of electric charge within the hadron concerning momentum transfer. The relationship between SFs, FFs, and PDFs is complex: SFs, which are discovered through deep inelastic scattering experiments, unveil parton momentum distributions, while PDFs emerge as integrated forms of SFs, encapsulating total parton momentum contributions across all fractions. On the other hand, FFs provide insights into parton spatial arrangements and electromagnetic responses, and expound on charge distribution within the hadron vis-à-vis electromagnetic interactions. While SFs and FFs elucidate parton spatial and momentum distributions, respectively, PDFs provide specific information on parton momentum distributions within the hadron at designated energy scales. 
 
-Studies of $\pi$ and $K$ SF measurement feasibility was done using a fast Monte Carlo. The Monte Carlo is a custom event generator written in C++ and ROOT, which uses the random number generator TRandom3 in ROOT \cite{trotta_eic_2020}. The generator takes several inputs, including minimum and maximum $Q^2$ and $x$ values, initial ion and electron beam energies, flags for initial beam smearing, and the number of events to simulate. It calls upon various quantities, such as CTEQ6 PDF tables, nucleon SFs, and the tagged $\pi$ and $K$ SFs and splitting functions. The $\pi$ SF can be parametrized in many ways, and in this case, the $F_2^\pi$ SF is computed at NLO using pion PDFs determined by the 3D parton structure studies of N. Y. Cao et al., \cite{cao_towards_2021}. 
+Studies of $\pi$ and $K$ SF measurement feasibility was done using a fast Monte Carlo. The Monte Carlo is a custom event generator written in C++ and ROOT, which uses the random number generator TRandom3 in ROOT [\cite{trotta_eic_2020}]. The generator takes several inputs, including minimum and maximum $Q^2$ and $x$ values, initial ion and electron beam energies, flags for initial beam smearing, and the number of events to simulate. It calls upon various quantities, such as CTEQ6 PDF tables, nucleon SFs, and the tagged $\pi$ and $K$ SFs and splitting functions. The $\pi$ SF can be parametrized in many ways, and in this case, the $F_2^\pi$ SF is computed at NLO using pion PDFs determined by the 3D parton structure studies of N. Y. Cao et al., [\cite{cao_towards_2021}]. 
 
 \input{figures/texs/fig:MC_fpi_logxpi_10on135.tex}
 
-The relativistic vertex factor approach used in Tim Hobbs' study of the nucleon's meson cloud was employed to fix the details of the hadronic splitting function \cite{hobbs_phenomenological_2015}. This approach included a Gaussian interaction with ultraviolet regulator $\Lambda\! \sim\! 1\,$GeV that was dependent on $s_{\pi N}$. It is important to note that the EIC can be expected to be sensitive to both the meson splitting function and the meson flux, even though the details of the hadronic splitting were not varied in simulating EIC tagging measurements. The reach in $x$ for four $Q^2$ bins at the $10\times135$ energy setting is displayed in the plot depicted in figure \ref{fig:MC_fpi_logxpi_10on135}. It is worth noting that the pion SF simulations have been verified through their agreement with the experimental HERA data in that regime and with the GRV fit at higher $x$ \cite{chekanov_leading_2002}\cite{gluck_pionic_1992}.
+The relativistic vertex factor approach used in Tim Hobbs' study of the nucleon's meson cloud was employed to fix the details of the hadronic splitting function [\cite{hobbs_phenomenological_2015}]. This approach included a Gaussian interaction with ultraviolet regulator $\Lambda\! \sim\! 1\,$GeV that was dependent on $s_{\pi N}$. It is important to note that the EIC can be expected to be sensitive to both the meson splitting function and the meson flux, even though the details of the hadronic splitting were not varied in simulating EIC tagging measurements. The reach in $x$ for four $Q^2$ bins at the $10\times135$ energy setting is displayed in the plot depicted in figure \ref{fig:MC_fpi_logxpi_10on135}. It is worth noting that the pion SF simulations have been verified through their agreement with the experimental HERA data in that regime and with the GRV fit at higher $x$ [\cite{chekanov_leading_2002}][\cite{gluck_pionic_1992}].
 
 \input{figures/texs/fig:JAM_impact_lesspoints.tex}
 

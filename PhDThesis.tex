@@ -1,21 +1,55 @@
 \documentclass[
 12pt,
-natbib,
+%natbib,
 a4paper, 
-oneside, % Uncomment this for digital (see styles)
-%twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
-%openright, % Uncomment this for printing. Right side shifted. (see styles)
+%oneside, % Uncomment this for digital (see styles)
+twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
+% openright, % Uncomment this for printing. Right side shifted. (see styles)
+openany, % Removes blank pages when using twoside/openright since book format document type is used
  ]{book}
 % ]{scrbook}
 % ]{report}
 
+% Load the chicago package for Chicago style formatting
+% \usepackage{chicago}
+ \usepackage{natbib}
+%\usepackage[numbers]{natbib}
+ 
 % Ragged bottom prevents variable spacing text and floats (done usually to keep last lines in both pages same in book format.)
 \raggedbottom
+
+% Some latex symbols (e.g. degree)
+\usepackage{gensymb}
+\usepackage{amssymb}
 
 % Fonts
 \usepackage[english]{babel}
 \usepackage{fontspec}
 \usepackage{parskip}
+
+% Allow landscape orientation
+\usepackage{pdflscape}
+
+% Double space package
+\usepackage{setspace}
+
+% Fix figures to section
+\usepackage{placeins}
+
+% Footnotes for table
+\usepackage{threeparttable}
+
+% Indent first paragraph in each section
+\usepackage{indentfirst}
+
+% Used for code 
+\usepackage{listings}
+
+% Define indent spaces
+\setlength{\parindent}{4em}
+
+% Prevents long word overflow
+\sloppy
 
 % Add bibliography to TOC
 \usepackage[nottoc]{tocbibind}
@@ -25,17 +59,20 @@ oneside, % Uncomment this for digital (see styles)
 \graphicspath{ {figures/cropped/} }
 \usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem, siunitx, mathtools, amsfonts}
-\usepackage[font=small, labelfont=bf, singlelinecheck=false, width=.95\textwidth, labelsep=colon]{caption}
+% \usepackage[font=small, labelfont=bf, singlelinecheck=false, width=.95\textwidth, labelsep=colon]{caption} % Original version, singlelinecheck=false offsets to left
+\usepackage[font=small, labelfont=bf, width=.95\textwidth, labelsep=colon]{caption} 
 \usepackage[rightFloats, CaptionBefore]{styles/fltpage}
 \newtagform{brackets}{[}{]}
 \usetagform{brackets}
 \newcommand{\figuretitle}{}
-\DeclareCaptionFormat{myformat}{#1 #2 \textbf{\figuretitle} \\ #3}
+% \DeclareCaptionFormat{myformat}{#1 #2 \textbf{\figuretitle} \\ #3} % Original version, // goes to next line and removed \textbf{\figuretitle} which is the figure description
+\DeclareCaptionFormat{myformat}{#1 #2 #3}
 \captionsetup{format=myformat}
 \captionsetup[FPfigure]{format=myformat}
 \newenvironment{Mfigure}[1]
 	{\renewcommand{\figuretitle}{#1}
-	\begin{figure}[htbp]}
+          \begin{figure}[!htbp]
+          \centering} % Added for centering of figures
 	{\end{figure}}
 \newenvironment{MFPfigure}[1]
 	{\renewcommand{\figuretitle}{#1}
@@ -59,6 +96,18 @@ oneside, % Uncomment this for digital (see styles)
 %\raggedbottom
 %\setlength{\parskip}{1em plus .1em minus 1.em}
 
+% Packages specifically for EIC table
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{booktabs}
+
+% Used to make timeline
+\usepackage{tikz}
+
+% Allow multi-line footnotes
+\usepackage{bigfoot}
+\setlength{\footnotesep}{0.5cm} % Adjust the value as needed
+
 \usepackage{geometry}
 \geometry{margin=1in}
 
@@ -74,21 +123,8 @@ oneside, % Uncomment this for digital (see styles)
 \usepackage{etoolbox}
 \appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
 % reinstate the correct level for list of tables and figures
-
 \appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
 \appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
-
-%Create new style to add header on each page
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-% \newcommand{\mymark}{\chaptername\ \thechapter.\ \ \leftmark}
-\makeatletter
-\fancyhead[RO]{\if@mainmatter \slshape\nouppercase{\leftmark} \else \slshape\nouppercase{\leftmark} \fi}
-\fancyhead[LE]{\if@mainmatter \slshape\nouppercase{\rightmark} \else \slshape\nouppercase{\leftmark} \fi}
-\makeatother
-\cfoot{\fancyplain{}{\thepage}}
-\setlength{\headheight}{15pt}
 
 % Footnote related command
 \newcommand\pubnote[1]{%
@@ -118,21 +154,57 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
 
 \begin{document}
 
-	\frontmatter
 	\input{front_matter/title_page}
+        \clearpage
+
+        \frontmatter
+
+        % Redefine the plain page style for front matter pages
+        \fancypagestyle{plain}{
+          \fancyhf{} % Clear header and footer
+          \renewcommand{\headrulewidth}{0pt} % Remove header rule
+          \fancyfoot[C]{\thepage} % Centered page number in footer
+        }
+        % Apply the plain page style to front matter pages
+        \pagestyle{plain}
+       
+        \doublespacing
         \input{front_matter/abstract}
-	\input{front_matter/certificate}
-	\input{front_matter/copyrights}
+        \begin{singlespace}
+          \input{front_matter/certificate}
+          %\input{front_matter/copyrights}
+        \end{singlespace}
 	\input{front_matter/acknowledgment}
 
 	\printglossary[type=\acronymtype,title={Abbreviations}, style=alttree]
-        \tableofcontents
-	\addcontentsline{toc}{chapter}{\listfigurename}
-	\listoffigures
-	\addcontentsline{toc}{chapter}{\listtablename}
-	\listoftables
+        \begin{singlespace}
+          \tableofcontents
+          \listoffigures
+          \listoftables
+        \end{singlespace}
 
 	\mainmatter
+
+        % Create new style to add header on each page
+        \pagestyle{fancy}
+        \fancyhf{}
+        \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+        % \newcommand{\mymark}{\chaptername\ \thechapter.\ \ \leftmark}
+        \makeatletter
+        % Dynamic headers which show page number and section title (and number)
+        % RO, right side odd page numbers
+        % LE, left side even page numbers
+        \fancyhead[RO]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
+        \fancyhead[LO]{\slshape\nouppercase{\thepage}}
+        \fancyhead[LE]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
+        \fancyhead[RE]{\slshape\nouppercase{\thepage}}
+        \makeatother
+        % Add a line under the header
+        \renewcommand{\headrulewidth}{0.4pt} % Adjust line thickness as needed
+        \fancyfoot{} % Clear footer
+        \fancyfoot[C]{\if@mainmatter\thepage\else\relax\fi} % Page number in footer for main matter pages
+        \setlength{\headheight}{15pt}
+        
 \graphicspath{ {figures/compressed/} } 
 \include{chapters/Chapter1}
 \include{chapters/Chapter2}
@@ -141,16 +213,14 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
 \include{chapters/Chapter5}
 \include{chapters/Chapter6}
 \include{chapters/Chapter7}
-\include{chapters/Chapter8}
-\include{chapters/Chapter9}
-\include{chapters/Chapter10}
-\include{chapters/Chapter11}
-\include{chapters/Chapter12}
 \begin{appendices} 
 \end{appendices} 
-        
-	\input{helpers/bib} %Include bibliography
 
+        %\appendix
+        %\input{appendix/appendix_A}
+
+	\input{helpers/bib} %Include bibliography       
+        
         % acronymns etc
 	% \input{helpers/acronym} %Include add acronyms
         

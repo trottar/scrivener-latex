@@ -2,17 +2,18 @@
 12pt,
 %natbib,
 a4paper, 
-oneside, % Uncomment this for digital (see styles)
-%twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
-%openright, % Uncomment this for printing. Right side shifted. (see styles)
+%oneside, % Uncomment this for digital (see styles)
+twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
+% openright, % Uncomment this for printing. Right side shifted. (see styles)
+openany, % Removes blank pages when using twoside/openright since book format document type is used
  ]{book}
 % ]{scrbook}
 % ]{report}
 
 % Load the chicago package for Chicago style formatting
 % \usepackage{chicago}
-% \usepackage{natbib}
-\usepackage[numbers]{natbib}
+ \usepackage{natbib}
+%\usepackage[numbers]{natbib}
  
 % Ragged bottom prevents variable spacing text and floats (done usually to keep last lines in both pages same in book format.)
 \raggedbottom
@@ -125,18 +126,6 @@ oneside, % Uncomment this for digital (see styles)
 \appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
 \appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
 
-%Create new style to add header on each page
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-% \newcommand{\mymark}{\chaptername\ \thechapter.\ \ \leftmark}
-\makeatletter
-\fancyhead[RO]{\if@mainmatter \slshape\nouppercase{\leftmark} \else \slshape\nouppercase{\leftmark} \fi}
-\fancyhead[LE]{\if@mainmatter \slshape\nouppercase{\rightmark} \else \slshape\nouppercase{\leftmark} \fi}
-\makeatother
-\cfoot{\fancyplain{}{\thepage}}
-\setlength{\headheight}{15pt}
-
 % Footnote related command
 \newcommand\pubnote[1]{%
 	\begingroup
@@ -165,13 +154,25 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
 
 \begin{document}
 
-	\frontmatter
 	\input{front_matter/title_page}
+        \clearpage
+
+        \frontmatter
+
+        % Redefine the plain page style for front matter pages
+        \fancypagestyle{plain}{
+          \fancyhf{} % Clear header and footer
+          \renewcommand{\headrulewidth}{0pt} % Remove header rule
+          \fancyfoot[C]{\thepage} % Centered page number in footer
+        }
+        % Apply the plain page style to front matter pages
+        \pagestyle{plain}
+       
         \doublespacing
         \input{front_matter/abstract}
         \begin{singlespace}
           \input{front_matter/certificate}
-          \input{front_matter/copyrights}
+          %\input{front_matter/copyrights}
         \end{singlespace}
 	\input{front_matter/acknowledgment}
 
@@ -182,12 +183,33 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
           \listoftables
         \end{singlespace}
 
-	\mainmatter        
+	\mainmatter
+
+        % Create new style to add header on each page
+        \pagestyle{fancy}
+        \fancyhf{}
+        \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+        % \newcommand{\mymark}{\chaptername\ \thechapter.\ \ \leftmark}
+        \makeatletter
+        % Dynamic headers which show page number and section title (and number)
+        % RO, right side odd page numbers
+        % LE, left side even page numbers
+        \fancyhead[RO]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
+        \fancyhead[LO]{\slshape\nouppercase{\thepage}}
+        \fancyhead[LE]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
+        \fancyhead[RE]{\slshape\nouppercase{\thepage}}
+        \makeatother
+        % Add a line under the header
+        \renewcommand{\headrulewidth}{0.4pt} % Adjust line thickness as needed
+        \fancyfoot{} % Clear footer
+        \fancyfoot[C]{\if@mainmatter\thepage\else\relax\fi} % Page number in footer for main matter pages
+        \setlength{\headheight}{15pt}
+        
         \input{temp} %% This line is required to properly autogenerate tex files.
 
         %\appendix
         %\input{appendix/appendix_A}
-        
+
 	\input{helpers/bib} %Include bibliography       
         
         % acronymns etc

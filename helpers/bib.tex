@@ -1,6 +1,14 @@
 % This is helper file which you can use in every chapter if you want to have separate biblography for each chapter
 
 \clearpage
+
+% Redefine the plain page style (used for the first page of chapters and for pages with the \pagestyle{plain} command)
+\fancypagestyle{plain}{
+    \fancyhf{} % Clear header and footer
+    \renewcommand{\headrulewidth}{0pt} % Remove header rule
+    \fancyfoot[C]{\thepage} % Centered page number
+}
+\pagestyle{plain} % Use the plain page style for the bibliography
 % \bibliographystyle{plain} % lists references in the order of citation and includes numeric labels for each reference
 % \bibliographystyle{unsrt} % fixes reverse ordering of references from plain
 \bibliographystyle{chicago} % Use the Chicago style for bibliography
