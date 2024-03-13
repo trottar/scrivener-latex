@@ -2,8 +2,8 @@
 12pt,
 %natbib,
 a4paper, 
-%oneside, % Uncomment this for digital (see styles)
-twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
+oneside, % Uncomment this for digital (see styles)
+%twoside,  % Use twoside for printing. Flips header depending on page. (see styles)
 % openright, % Uncomment this for printing. Right side shifted. (see styles)
 openany, % Removes blank pages when using twoside/openright since book format document type is used
  ]{book}
@@ -143,11 +143,14 @@ pdfsubject={Physics},
 pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and hyperlinks
 
 % Comment following Hypersetup during printing
+%	urlcolor     = blue, %Colour for external hyperlinks
+%	linkcolor    = BurntOrange, %Colour of internal links
+%	citecolor   = teal %Colour of citations
 \hypersetup{ 
 	colorlinks   = true, %Colours links instead of ugly boxes
-	urlcolor     = blue, %Colour for external hyperlinks
-	linkcolor    = BurntOrange, %Colour of internal links
-	citecolor   = teal %Colour of citations
+	urlcolor     = black, %Colour for external hyperlinks
+	linkcolor    = black, %Colour of internal links
+	citecolor   = black %Colour of citations
 }
 
 \makeindex %Makes index file.
@@ -194,10 +197,10 @@ pdfkeywords={physics, nuclear, particles}, hidelinks]{hyperref} %References and 
         % Dynamic headers which show page number and section title (and number)
         % RO, right side odd page numbers
         % LE, left side even page numbers
-        \fancyhead[RO]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
-        \fancyhead[LO]{\slshape\nouppercase{\thepage}}
-        \fancyhead[LE]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
-        \fancyhead[RE]{\slshape\nouppercase{\thepage}}
+        \fancyhead[LO]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
+        \fancyhead[RO]{\slshape\nouppercase{\thepage}}
+        \fancyhead[RE]{\if@mainmatter\slshape\nouppercase{\rightmark}\fi}
+        \fancyhead[LE]{\slshape\nouppercase{\thepage}}
         \makeatother
         % Add a line under the header
         \renewcommand{\headrulewidth}{0.4pt} % Adjust line thickness as needed
